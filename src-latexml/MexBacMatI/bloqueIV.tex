@@ -1,0 +1,310 @@
+\chapter{Realizas transformaciones algebraicas I}
+
+\section{Polinomio de una variable}
+
+\subsection*{Definición}
+
+Un polinomio $P$ de una variable $X$ de grado $n \in \mathbb N$ es un objeto
+de la forma
+%%
+$$a_n X^n + a_{n-1} X^{n-1} + \ldots + a_1 X + a_0 = \sum_{i=0}^n a_i X^i$$
+%%
+donde $a_0, a_1, \ldots a_n$ son números constantes y $a_n \neq 0$.
+Informalmente, un polinomio sólo es una expresión con sumas, restas y
+multiplicaciones de números que incluye una variable $X$ representando
+cualquier número. Por ejemplo, $2X^2 - 5X + 1$.
+
+Las constantes
+$a_i$ se llaman los coeficientes del polinomio, $a_0$ el coeficiente constante
+y $a_n$ el coeficiente principal. El polinomio es dicho mónico o normalizado
+cuando el coeficiente principal es $a_n = 1$.
+
+Si ponemos $a_i = 0$ para $i > n$, el polinomio puede también escribirse
+%%
+$$
+\sum_{i=0}^n a_i X^i = \sum_{i=0}^{\infty} a_i X^i
+$$
+
+\subsection*{Ejemplos}
+
+$3 X^2 - 2 X + 1$ es un polinomio de grado dos con coeficientes $a_2=3\neq0$
+(coeficiente principal), $a_1=-2$ y $a_0=1$ (coeficiente constante).
+$Y^8 - 1$ es un polinomio mónico de variable $Y$ de grado ocho.
+$-5X^2 + X + 2Y$ no es un polinomio de una variable.
+
+\subsection*{Ejercicio 1}
+
+Encontrar los polinomios de una variable en la lista siguiente.
+Para cada uno, indicar el grado $n$,
+los coeficientes $a_0, \ldots a_n$, y si es mónico.
+
+\begin{enumerate}
+\item $X^9$
+\item $2 X^3 + 3X - \sqrt{5}$
+\item $Z^3 - 2T + 5$
+\item $\frac{3}{2}$
+\item $2Y - 5Y^3 + 9 + Y^4$
+\item $-T^2 + \frac{T}{2} + \sqrt{3}$
+\item $2 X^{3/2} - X + 2$
+\end{enumerate}
+
+\section{Suma, resta y multiplicación}
+
+\subsection*{Definición}
+
+Consideramos dos polinomios $P = \sum_{i = 0}^{\infty} a_i X^i$ y
+$Q = \sum_{i = 0}^{\infty} b_i X^i$, donde $a_i = 0$ para $i$ más grande que el
+grado de $P$ y $b_i = 0$ para $i$ más grande que el grado de $Q$.
+La suma, resta y multiplicación de $P$ y $Q$ son
+%%
+$$P + Q = \sum_{i = 0}^{\infty} {(a_i + b_i)} X^i$$
+$$P - Q = \sum_{i = 0}^{\infty} {(a_i - b_i)} X^i$$
+$$PQ = \sum_{i = 0}^{\infty} \left(\sum_{j = 0}^{i} a_{j} b_{i - j}\right) X^i$$
+
+Es fácil ver que el coeficiente de $X^i$ es cero si $i$ es más grande que los
+grados de $P$ y $Q$ y entonces aún tenemos polinomios.
+
+Informalmente, si vemos el polinomio como una expresión donde la variable $X$
+es un cualquier número, esos solo son las operaciones usuales sobre los números.
+
+\subsection*{Ejemplos}
+
+La suma de $2X^2 + 7$ y $3X^2 - X$ es $(2+3)X^2 + (0-1)X + (7+0) = 5X^2 - X + 7$.
+
+La resta de $2Y^2 + 7$ y $3Y^2 - Y$ es $(2Y^2 + 7) - (3Y^2 - Y) = 2Y^2 + 7 - 3Y^2 + Y = -Y^2 + Y + 7$.
+
+La multiplicación de $2a^2 + 7$ y $3a^2 - a$ es
+
+$(2a^2 + 7)(3a^2 - a) = 2a^2 \times 3a^2 + 2a^2 \times -a + 7 \times 3a^2 +
+7 \times -a = 6a^4 - 2a^3 + 21a^2 - 7a$.
+
+\subsection*{Ejercicio 2}
+
+Calcular los polinomios siguientes
+
+\begin{enumerate}
+\item $(z^4 - 2z + 8) + (2z^3 + 6z - 5)$
+\item $(2u^3 - 5u + 2) - (6u^7 + u^2 - 2u + 7)$
+\item ${(-T^3 + 2T^2 - 5)}{(7T + 1)}$
+\item $(X^2 + 1)(X - 2) + (5X+3) - (X^3 - 2X)$
+\end{enumerate}
+
+\section{Productos Notables y Factorización}
+
+Hemos visto como desarrollar un producto $PQ$ de dos polinomios
+de una variable. Aveces podemos
+hacer la operación inversa y factorizar un polinomio como un producto $R=PQ$.
+
+De manera general, podemos desarrollar productos de expresiones algebraicas
+y deducir la factorización reciproca. Aquí son productos notables.
+
+Factor común: $c(a + b) = ca + cb$.
+
+\begin{center}
+\begin{tikzpicture}
+  \draw (0,0) rectangle(7,3)
+              rectangle(2,0);
+  \path (1,1) node (a1) {$ac$};
+  \path (3.5,1) node (a2) {$bc$};
+  \path (7.5,1.5) node (c1) {$c$};
+  \path (1,3.5) node (c2) {$a$};
+  \path (4.5,3.5) node (c3) {$b$};
+\end{tikzpicture}
+\end{center}
+
+Cuadrado de un binomio:
+$${(a+b)}^2 = a^2 + 2ab + b^2$$
+$${(a-b)}^2 = a^2 - 2ab + b^2$$
+
+\begin{center}
+\begin{tikzpicture}
+  \draw (0,0) rectangle(4,4)
+              rectangle(1,1)
+              rectangle(0,0);
+  \path (2,2) node (a1) {$b^2$};
+  \path (.5,.5) node (a2) {$a^2$};
+  \path (.5,2) node (a3) {$ab$};
+  \path (2,.5) node (a4) {$ab$};
+  \path (.5,4.5) node (c1) {$a$};
+  \path (4.5,3) node (c2) {$b$};
+  \path (4.5,.5) node (c3) {$a$};
+  \path (3,4.5) node (c4) {$b$};
+\end{tikzpicture}
+\end{center}
+
+Producto de dos binomios conjugados:
+$$(a + b)(a - b) = a^2 - b^2$$
+
+Cubo de un binomio:
+$${(a+b)}^3  = a^3 + 3a^2b + 3ab^2 + b^3$$
+$${(a-b)}^3  = a^3 - 3a^2b + 3ab^2 - b^3$$
+
+\subsection*{Ejemplos}
+
+Podemos factorizar $3x^3 + 2x^2 + 2x - 7$ como $(x-1)(3x^2+5x+7)$.
+
+$(X-1)^2 = (X-1)(X-1) = X^2 - X - X + 1 = X^2-2X+1$
+
+$2^3 = {(1+1)}^3 = 1 + 3 + 3 + 1 = 8 = 2 \times 2 \times 2$
+
+\subsection*{Ejercicio 3}
+
+Desarrollar los polinomios siguientes, usando productos notables:
+
+\begin{enumerate}
+\item $(7+3a)^2$
+\item $(2x-3)(2x+3)$
+\item $(2T-1)^3$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+Factorizar los polinomios siguientes:
+
+\begin{enumerate}
+\item $21x^2 - 12x$
+\item $3a^2 + a-2$ (utiliza $a+1$ como factor común)
+\item $4z^2 - 4z + 1$ (cuadrado de un binomio)
+\item $T^2 - 49$ (binomios conjugados)
+\item $X^3 + 3X^2 + 3X + 1$ (cubo de un binomio)
+\end{enumerate}
+
+\section{Problemas con areas y volúmenes}
+
+\subsection*{Ejercicio 5}
+
+Juan tien un caja cúbica de lado $3+x$ cm.
+José tiene un caja de cúbica de lado $3$ cm y una caja con una base cuadrada de
+lado $x+5$ y de altura $x$ cm. Expresa los volúmenes de las cajas en funcíon de
+$x$ ¿Quien tiene lo más espacio para $x=1$cm y $x = 3$cm? ¿Para cualquiera
+valor de $x > 0$ Juan y José tienen lo mismo espacio?
+
+\subsection*{Ejercicio 6 (formato de papel)}
+
+\begin{center}
+\begin{tikzpicture}
+  \draw (0,0) rectangle(2.1,2.97)
+              rectangle(4.2,0);
+  \path (1,1.5) node (a1) {$A_5$};
+  \path (3.1,1.5) node (a2) {$A_5$};
+  \path (4.5,3.5) node (a3) {$A_4$};
+  \path (5,1.5) node (c1) {$21\text{cm}$};
+\end{tikzpicture}
+\end{center}
+
+El lado menor de una hoja A4 y el lado mayor de una hoja A5 ambos son 21cm.
+Además, las hojas tiene la misma proportion
+$k = \frac{\text{lado mayor}}{\text{lado menor}}$. Si cortamos una hoja A4
+al medio en su longitud, obtenemos dos hojas A5.
+
+\begin{enumerate}
+\item Expresar el lado mayor de una hoja A4 en función del lado menor de una
+      hoja A5.
+\item Expresar el lado mayor de una hoja A4 y el lado menor de una hoja A5 en
+      función de $k$.
+\item Determinar $k$.
+\item ¿Cual es el tamaño de una hoja A4?
+\end{enumerate}
+
+\subsection*{Ejercicio 7 (número áureo)}
+
+\begin{center}
+\begin{tikzpicture}
+  \draw (0,0) rectangle(5,3.09)
+              rectangle(1.91,0);
+  \path (1,3.5) node (c1) {$a$};
+  \path (4,3.5) node (c2) {$b$};
+  \path (5.5,1.5) node (c3) {$b$};
+
+\end{tikzpicture}
+\end{center}
+
+Consideramos une rectangulo de lado menor $a$, de lado mayor $b$ y de
+proporción $R = \frac{b}{a}$. Expresar la proporción del rectangulo de lado
+menor $b$ y de lado mayor $a+b$ en función de $\frac{1}{R}$. Si los dos
+rectangulos tienen la misma proporción, mostrar que $R^2 - R - 1 = 0$.
+
+Desarrollar el producto siguiente y deducir $R$:
+
+$$\left(2X-\sqrt{5}-1\right) \left(2X+\sqrt{5}-1\right)$$
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+\begin{enumerate}
+\item $X^9$. variable $X$, grado $n=9$, coeficientes $a_0 = a_1 = a_2 = \ldots a_8 = 0$, $a_9 = 1$. Mónico.
+\item $2 X^3 + 3X - \sqrt{5}$, variable $X$, grado $n=3$, coeficientes  $a_3 = 2$, $a_2 = 0$, $a_1 = 3$, $a_0 = -\sqrt{5}$.
+\item $Z^3 - 2T + 5$. No es un polinomio de una variable, tiene does variables
+  $T$ y $Z$.
+\item $\frac{3}{2}$. Grado $n=1$, $a_0 = \frac{3}{2}$. El coeficiente constante es también el coeficiente principal. Eso es llamado un polinomio constante. La
+  variable puede ser arbitraria.
+\item $2Y - 5Y^3 + 9 + Y^4$. Variable $Y$, grado $n=4$, $a_4 = 1$, $a_3=-5$, $a_2=0$, $a_1=2$, $a_0=9$.
+\item $-T^2 + \frac{T}{2} + \sqrt{4}$. Variable $T$, $n=2$, $a_2 = -1$, $a_1 = \frac{1}{2}$, $a_0 = \sqrt{4}$.
+\item $2 X^{3/2} - X + 2$. No es un polinomio, $\frac{3}{2} \notin \mathbb N$.
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+\begin{enumerate}
+\item $z^4 + 2z^3 + 4z + 3$
+\item $-6u^7 + 2u^3 -u^2 - 3u - 5$
+\item $-7T^4 + 13T^3 + 2T^2 -35T -5$
+\item $-2X^2 + 8X + 1$
+\end{enumerate}
+
+\subsection*{Ejercicio 3}
+
+\begin{enumerate}
+\item $9a^2 + 42a + 49$
+\item $4x^2-9$
+\item $8T^3-12T^2+6T-1$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+\begin{enumerate}
+\item $3x (7x - 4)$
+\item $(a+1)(3a-2)$
+\item $(2z-1)^2$
+\item $(T+7)(T-7)$
+\item $(X+1)^3$
+\end{enumerate}
+
+\subsection*{Ejercicio 5}
+
+El volúmen de la caja de Juan es $(3+x)^3 = x^3+9x^2+27x+27$cm³. Los volúmenes
+de las caja de José son $3^3=27$ cm³ y $x(x+5)^2 = x^3+10x^2+25x$ cm³ entonces
+tiene un espacio total de $x^3+10x^2+25x + 27$ cm³.
+
+Para $x=1$cm encontramos $5^3 = 125$ cm³ para Juan y $6^2 + 27 = 63$cm³ para
+José. Al contrario, si $x=3$cm encontramos $6^3 = 216$ cm³ para Juan y
+$6\times11^2 + 27 = 753$cm³ para José.
+
+Si Juan y José tienen el mismo despacio,
+$x^3+9x^2+27x+27 = x^3+10x^2+25x + 27$ y entonces
+$x^2 = 2x$. Finalmente, $x(x-2) = 0$ y $x = 2$ cm.
+
+\subsection*{Ejercicio 6}
+
+\begin{enumerate}
+\item El lado mayor de una hoja A4 sólo es el doble del lado menor de una hoja
+      A5!
+\item $21k$ y $\frac{21}{k}$
+\item $21k = 2 \frac{21}{k}$ entonces $k^2 = 2$ y $k = \sqrt{2}$.
+\item El lado menor mesura 21cm y el lado mayor
+  $21k = 21\sqrt{2} \approx 29,7\text{cm}$.
+\end{enumerate}
+
+\subsubsection*{Ejercicio 7}
+
+$\frac{a+b}{b} = \frac{a}{b} + 1  = \frac{1}{R} + 1$. Si
+$R = \frac{1}{R} + 1$, $R^2 - R - 1 = 0$.
+
+Obtenemos $4X^2-4X-4 = 4(X^2-X-1)$.
+
+Entonces, $R^2 - R - 1 = 0$ si y solo si
+$2R - \sqrt{5} - 1 = 0$ o $2R + \sqrt{5} - 1 = 0$ si y solo si
+$R = \frac{1 - \sqrt{5}}{2} \approx -0.618$ o
+$R = \frac{1 + \sqrt{5}}{2} \approx 1.618$. Porque $R > 0$, la
+única posibilidad es $R = \frac{1 + \sqrt{5}}{2}$.

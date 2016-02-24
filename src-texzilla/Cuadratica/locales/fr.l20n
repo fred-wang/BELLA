@@ -1,0 +1,13 @@
+<solvingEquation "Résolution d'équations quadratiques">
+<solveEquation "Résoudre l'équation suivante:">
+<showSolution "Montrer la solution">
+<newEquation "Nouvelle équation">
+<courseSummary "Résumé de cours">
+<p1 "Une équation quadratique à coefficients réels s'écrit">
+<p2 "Le discriminant de l'équation est">
+<p3 "Si le discriminant est nul, l'équation a une solution:">
+<p4 "Si le discriminant est strictement positif, l'équation a deux solutions:">
+<p5 "Sinon, l'équation a deux solutions complexes conjuguées:">
+<backToIndex "Retour à l'index">
+<license "Distribué sous license CC BY-SA 4.0">
+<bella "Projet BELLA">

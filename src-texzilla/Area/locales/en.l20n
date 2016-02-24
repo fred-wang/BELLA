@@ -1,0 +1,22 @@
+<areasGeometricShapes "Areas of basic geometric shapes">
+
+<findValue "Determine the area of the following geometric shape:">
+<showSolution "Show Solution">
+<newQuestion "New Question">
+<courseSummary "Course Summary">
+
+<description "The following table provides expressions to determine the area of classical geometric shapes:">
+<geometricShape "Geometric Shape">
+<areaExpression "Area">
+<triangle "Triangle">
+<square "Square">
+<rectangle "Rectangle">
+<rhombus "Rhombus">
+<parallelogram "Parallelogram">
+<trapezoid "Trapezoid">
+<circle "Circle">
+<ellipse "Ellipse">
+
+<backToIndex "Back to index">
+<license "Licensed under CC BY-SA 4.0">
+<bella "The BELLA Project">

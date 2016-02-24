@@ -1,0 +1,14 @@
+{
+  "name": "MexBacMatII",
+  "description": "Libro electronico del proyecto BELLA (Biblioteca Electrónica de Libros Libres para el Aprendizaje). Programa de estudio de educación media superior en México (Bachillerato) - Matemáticas II",
+  "version": "1.0",
+  "launch_path": "/index.xhtml",
+  "icons": {
+    "128": "/logos/128x128-mexico.png"
+  },
+  "developer": {
+    "name": "BELLA Project",
+    "url": "http://fred-wang.github.io/BELLA"
+  },
+  "default_locale": "es"
+}

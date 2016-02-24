@@ -1,0 +1,40 @@
+{
+  "name": "Euclidalgo",
+  "description": "Interactive book from the BELLA project (BELLA E-learning Library with Libre Authorship) on the determination of the greatest common divisor of two integers using the Euclidean Algorithm.",
+  "version": "1.2",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/logos/128x128.png"
+  },
+  "developer": {
+    "name": "BELLA Project",
+    "url": "http://fred-wang.github.io/BELLA"
+  },
+  "default_locale": "en",
+  "locales": {
+    "de": {
+      "description": "Interaktives Buch des BELLA Projekts (BELLA E-Learning Library with Libre Authorship) über die Bestimmung des größten gemeinsamen Teilers von zwei Zahlen mit Hilfe des euklidischen Algorithmus.",
+      "developer": {
+        "name": "BELLA Projekt"
+      }
+    },
+    "es": {
+      "description": "Libro interactivo del proyecto BELLA (Biblioteca Electrónica de Libros Libres para el Aprendizaje) sobre la determinación del máximo común divisor de dos enteros, usando el algoritmo de Euclides.",
+      "developer": {
+        "name": "Proyecto BELLA"
+      }
+    },
+    "fr": {
+      "description": "Livre intéractif du projet BELLA (Bibliothèque Électronique de Livres Libres pour l'Apprentissage) sur la détermination du plus grand commun diviseur de deux entiers en utilisant l'algorithme d'Euclide.",
+      "developer": {
+        "name": "Projet BELLA"
+      }
+    },
+    "pt": {
+      "description": "Livro interativo do projeto BELLA (Biblioteca Eletrônica de Livros Livres para o Aprendizado) sobre.",
+      "developer": {
+        "name": "Projeto BELLA"
+      }
+    }     
+  }     
+}

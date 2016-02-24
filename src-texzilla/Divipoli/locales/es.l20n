@@ -1,0 +1,16 @@
+<polynomialDivision "División de polinomios">
+<dividePolynomial "Efectuar la división de los polinomios siguientes:">
+<showSolution "Mostrar la solución">
+<newDivision "Nueva división">
+<courseSummary "Resumen del curso">
+<p1 "Para definir la división euclídea, suponemos que tenemos dos polinomios:">
+<polyA "dividendo">
+<polyB "divisor">
+<p2 "Existe un único par de polinomios con las propriedades siguientes:">
+<polyQ "cociente">
+<polyR "resto (debe ser nulo o de grado menor que el del divisor)">
+<p3 "Por ejemplo:">
+<p4 "Podemos generalizar el cálculo clásico sobre el papel de la división para los número enteros para efectuar la división euclídea de los polinomios.">
+<backToIndex "Volver al index">
+<license "Distribuido bajo la licencia CC BY-SA 4.0">
+<bella "Proyecto BELLA">

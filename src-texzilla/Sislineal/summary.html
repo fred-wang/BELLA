@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sislineal</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="localization" href="locales/manifest.json"/>
+    <script type="text/javascript" src="l20n.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1 data-l10n-id="courseSummary"></h1>
+    </header>
+
+    <p data-l10n-id="p1"></p>
+
+    $$
+    \left\{
+    \begin{aligned}
+    a_{1,1} x_1 + a_{1,2} x_2 + ... + a_{1,n} x_n &= b_1 \\
+    a_{2,1} x_2 + a_{2,2} x_2 + ... + a_{2,n} x_n &= b_2 \\
+    ... \\
+    a_{m,1} x_2 + a_{m,2} x_2 + ... + a_{m,n} x_n &= b_m
+    \end{aligned}
+    \right.
+    $$
+
+    <ul>
+      <li><span data-l10n-id="p2"></span> $n$</li>
+      <li><span data-l10n-id="p3"></span> $m$</li>
+      <li><span data-l10n-id="p4"></span> $x_1, x_2, ... x_n$</li>
+      <li><span data-l10n-id="p5"></span> $a_{i,j} \; \left( {1 \leq i \leq n}, {1 \leq j \leq m} \right)$</li>
+      <li><span data-l10n-id="p6"></span> $b_{i} \; \left( {1 \leq i \leq n} \right)$</li>
+    </ul>
+
+    <p data-l10n-id="p7"></p>
+
+    <ol>
+      <li><span data-l10n-id="p8"></span> ($L_i \leftrightarrow L_j$)</li>
+      <li><span data-l10n-id="p9"></span> ($L_i \leftarrow \lambda L_i$)</li>
+      <li><span data-l10n-id="p10"></span> ($L_i \leftarrow L_i + \lambda L_j$)</li>
+    </ol>
+
+    <p data-l10n-id="p11"></p>
+
+    $$
+    \left\{
+    \begin{aligned}
+    {\color{red} 1}x + y + z &= 1 \\
+    2x + 3y + 4z &= 5 \\
+    9x + 8y + 7z &= 6 \\
+    \end{aligned}
+    \right.
+    \;
+    \underset{
+    {L_2 \leftarrow L_2 - 2 L_1},
+    {L_3 \leftarrow L_3 - 9 L_1}}{\longrightarrow}
+    \;
+    \left\{
+    \begin{aligned}
+    x + y + z &= 1 \\
+    y + 2z &= 3 \\
+    -y - 2z &= -3 \\
+    \end{aligned}
+    \right.
+    $$
+
+    <p data-l10n-id="p12"></p>
+
+    <a data-l10n-id="backToIndex" href="index.html"></a>
+
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<solvingEquation "Resolvendo Equações Quadráticas">
+<solveEquation "Resolva a seguinte equação:">
+<showSolution "Mostrar Solução">
+<newEquation "Nova Equação">
+<courseSummary "Resumo do Curso">
+<p1 "Uma equação quadrática com coeficientes reais é escrita como">
+<p2 "O discriminante da equação é">
+<p3 "Se o discriminante é nulo, a equação possui uma solução:">
+<p4 "Se o discriminante é positivo, a equação possui duas soluções:">
+<p5 "Caso contrário, a equação possui duas soluções complexas conjugadas:">
+<backToIndex "Voltar ao índice">
+<license "Licenciado sob CC BY-SA 4.0">
+<bella "Projeto BELLA">

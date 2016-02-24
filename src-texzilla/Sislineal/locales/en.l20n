@@ -1,0 +1,20 @@
+<solvingSystem "Solving Linear System">
+<solveSystem "Solve the following linear system:">
+<showSolution "Show Solution">
+<newSystem "New System">
+<courseSummary "Course Summary">
+<p1 "A linear system of equations is written">
+<p2 "Number of unknowns:">
+<p3 "Number of equations:">
+<p4 "Unknowns:">
+<p5 "Coefficients:">
+<p6 "Constant terms:">
+<p7 "There are various techniques to solve linear systems. You can use the following elementary row operations to transform the system into an equivalent one:">
+<p8 "Swapping two rows">
+<p9 "Multiplying a row by a nonzero scalar">
+<p10 "Adding to one row a multiple of another">
+<p11 "In Gaussian elimination, you choose one nonzero coefficient (the pivot) in one column to eliminate the other coefficients in the column. For example:">
+<p12 "At the end, you obtain a reduced linear system that you can easily solve. There may be none, one or infinitely many solutions.">
+<backToIndex "Back to index">
+<license "Licensed under CC BY-SA 4.0">
+<bella "The BELLA Project">

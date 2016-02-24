@@ -1,0 +1,282 @@
+\chapter{Empleas los conceptos elementales de probabilidad}
+
+\section{Probabilidad clásica}
+
+\subsection{Definición}
+
+Wikipedia describe los conceptos elementales de probabilidad de la manera
+siguiente.
+
+La probabilidad es la característica de un evento, que hace que existan razones
+para creer que éste se realizará.
+
+La probabilidad $p$ de que suceda un evento $S$ de un total de $n$ casos
+posibles igualmente probables es igual a la razón entre el número de
+ocurrencias $h$ de dicho evento (casos favorables) y el número total de casos
+posibles $n$.
+
+$$
+p=P\left(S\right)=\frac {h}{n}
+$$
+
+La probabilidad es un número (valor) que varia entre 0 y 1. Cuando el evento es
+imposible se dice que su probabilidad es 0, si el evento es cierto y siempre
+tiene que ocurrir su probabilidad es 1.
+
+La probabilidad de no ocurrencia de un evento está dada por $q$, donde:
+
+$$
+q=P\left(no \; S\right)=1-\frac {h}{n}
+$$
+
+Sabemos que $p$ es la probabilidad de que ocurra un evento y $q$ es la
+probabilidad de que no ocurra, entonces $p + q = 1$.
+
+\subsection{Ejemplo}
+
+Cuando lanzamos una moneda al aire, hay $n=2$ eventos posibles para el
+lado de la moneda: ``aguila'' o ``sol''. Sea $S$ el evento de obtener ``sol''.
+La probabilidad de obtener ``sol'' es $p = \frac{1}{2}$ y la probabilidad
+de obtener ``aguila'' es $q = 1 - p = 1 - \frac{1}{2} = \frac{1}{2}$.
+Aquí, suponemos que el evento que la moneda desaparece es imposible
+es decir que su probabilidad es $0$.
+
+\subsection{Ejercicio 1}
+
+En una baraja de 52 naipes, cual es la probabilidad de tirar:
+
+\begin{enumerate}
+\item El siete de diamantes.
+\item Un rey.
+\item Una carta de picas.
+\item Una figura (As, rey, reina o paje).
+\item Un número par.
+\end{enumerate}
+
+\section{Leyes aditiva y Multiplicativa}
+
+\subsection{Resumen}
+
+Si $A$ y $B$ son does eventos mutuamente excluyente, tenemos
+%%
+$$
+P(A \text{o} B) = P(A) + P(B)
+$$
+
+Si $A$ y $B$ son no excluyentes, $P(A \text{y} B) \neq 0$ y
+%%
+$$
+P(A \text{o} B) = P(A) + P(B) - P(A \text{y} B)
+$$
+
+Si $A$ y $B$ son independientes,
+%%
+$$
+{P(A \text{y} B)} = {P(A)} \times {P(B)}
+$$
+
+Si $A$ y $B$ son dependientes, y $P\left(B/A\right)$ es la probabilidad
+de $B$ sabiendo que $A$ ocure, tenemos
+%%
+$$
+{P(A \text{y} B)} = {P(A)} \times {P\left(B/A\right)}
+$$
+
+\subsection{Ejemplo}
+
+Consideramos tres bolas en una caja, de color amarilla, blanca y celeste.
+Sea $A$ el evento de tirar la bola amarilla, $B$ el de tirar la bola blanca
+y $C$ el de tirar la bola celeste.
+
+Si tiramos un bola de la caja, la probabilidad de tirar la bola amarilla o
+la bola blanca es
+$P(A \text{o} B) = P(A) + P(B) = \frac{1}{3} + \frac{1}{3}$ por que
+$A$ y $B$ son excluyentes. Si $\bar{A}$ es la probabilidad de no tirar
+la bola amarilla, $\bar{A}$ y $C$ no son mutuamente excluyente porque
+$C$ implica $\bar{A}$:
+$P(\bar{A} \text{y} C) = P(C) = \frac{1}{3} \neq 0$. Entonces
+
+$
+P(\bar{A} \text{o} C) = P(\bar{A}) + P(C) - P(\bar{A} \text{y} C)
+= \frac{2}{3} + \frac{1}{3} - \frac{1}{3} = \frac{2}{3}
+$.
+
+Suponemos que hacemos este experimento dos veces.
+Sean $A_1, B_1, C_1$ los eventos del primer experimento y
+$A_2, B_2, C_2$ los eventos del segundo. $A_1$ y $B_2$ son independientes y
+entonces la probabilidad de tirar la bola amarilla en el primer experimento
+y la bola blanca en el segundo experimento es
+$P(A_1 \text{y} B_2) = {P(A_1)} \times {P(B_2)} = \frac{1}{3} \frac{1}{3} =
+\frac{1}{9}$.
+
+Finalmente, tiramos una bola (sean $A_1', B_1', C_1'$ los eventos
+corespondientes) y sin colocarla en la caja, tiramos una segunda bola
+(sean $A_2', B_2', C_2'$ los eventos corespondientes). La probabilad de
+tirar una bola amarilla y después una bola blanca es
+${P(A_1' \text{y} B_2')} = P(A_1') \times {P(B_2' / A_1')} =
+\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$.
+
+\subsection{Ejercicio 2}
+
+Consideramos una baraja de 52 naipes:
+
+\begin{enumerate}
+
+\item Tiramos una carta y, sin colacalar, tiramos una segunda carta.
+  Sea $A$ el evento ``tirar un rey como primera carta'' y $B$ el evento
+  ``tirar una figura como segunda carta''. Determine $P(A \text{y} B)$.
+
+\item Sea $C$ el evento ``tirar un rey'' y $D$ el evento
+  ``tirar un número par''. Determine $P(C \text{o} D)$.
+
+\item Tiramos tres cartas (colocamos cada carta después haber tirarla).
+  Sea $E$ el evento ``tirar el siete de diamantes como primera carta'',
+  $F$ el evento ``tirar un rey como segunda carta'',
+  $G$ el evento ``tirar una figura como tercera carta''. Determine
+  $P(E \text{y} F \text{y} G)$.
+
+\item Sea $H$ el evento ``tirar una carta de picas'' y $I$ el evento
+  ``tirar una figura''. Determine $P(H \text{y} I)$ y $P(H \text{o} I)$.
+
+\end{enumerate}
+
+\subsection{Ejercicio 3 (distribución binomial)}
+
+Realizamos un experimento con una probabilidad $p$ de éxito.
+
+\begin{enumerate}
+  \item ¿Cual es la probabilidad de fracaso del experimento?
+  \item Si realizamos el experimento dos veces, cual es la probabilidad
+    de tener ¿dos éxitos? ¿dos fracasos? ¿un éxito y un fracaso?
+  \item Realizamos el experimento tres veces. Cual es la probabilidad de
+    obtener un total de dos éxitos si al fin del segundo experimento ya hemos
+    obtenido ¿dos éxitos? ¿dos fracasos? ¿un éxito y un fracaso?
+  \item Realizamos el experimento $n$ veces y consideramos $0 \leq m \leq n$.
+    ¿Cual es la probabilidad de obtener $m$ éxitos si al fin del
+    experimento $n-1$ ya hemos obtenido ¿$m-1$ éxitos? ¿$m$ éxitos? ¿y en 
+    otro casos?
+  \item Notamos $N! = 1 \times 2 \times \ldots \times N$ y
+    $\binom{N}{K} = \frac{N!}{{K!}{(N-K)!}}$. Sea $A_m^n$ la probabilidad
+    de obtener $m$ éxitos en $n$ experimentos. Nuestra conjetura es
+    $$
+    P(A_m^n) = \binom{n}{m} p^m \left(1-p\right)^{n-m}
+    $$
+   
+    Verifique que la formula es correcta par $n = 1, 2$. Si es correcta para
+    $n-1$ experimentos, muestre que es también correcta para $n$
+    experimentos.
+  \item Jugamos a ``aguila'' o ``sol'' $10$ veces. ¿Cual es la probabilidad
+    de obtener $9$ éxitos?
+  \item Consideramos el experimento siguiente: tiramos $1$ carta en una baraja
+    y ganamos si la carta es de corazones. Indique las probabilidades $p$ y
+    $1-p$ de éxito/fracaso. Si realizamos este experimento $5$ veces,
+    ¿Cual es la probabilidad de obtener $3$ o más éxitos?
+\end{enumerate}
+
+
+\section{Soluciones de los ejercicios}
+
+\subsection{Ejercicio 1}
+
+Hay 52 eventos equiprobables corespondente a cada carta.
+
+\begin{enumerate}
+\item $\frac{1}{52}$ (un siete de diamantes)
+\item $\frac{4}{52} = \frac{1}{13}$ (4 reyes)
+\item $\frac{9 + 4}{52} = \frac{1}{4}$ (9 números de picas y 4 figuras de picas)
+\item $\frac{4 \times 4}{52} = \frac{4}{13}$ (4 figuras de 4 palos)
+\item $\frac{4 \times 5}{52} = \frac{5}{13}$ (números 2, 4, 6, 8 y 10 de 4 palos)
+\end{enumerate}
+
+\subsection{Ejercicio 2}
+
+\begin{enumerate}
+
+\item En ejercicio 1, hemos encontrado $P(A) = \frac{1}{13}$
+  y $P(\text{tirar una figura}) = \frac{16}{52}$. Aquí,
+  $P(B / A) = \frac{16 - 1}{52 - 1}$ porque hay una figura/carta de menos
+  cuando $A$ ocurre. Entonces
+  $P(A \text{y} B) = P(A) \times P(B / A) = 
+  \frac{1}{13} \frac{15}{51} = \frac{5}{221}$.
+
+\item En ejercicio 1, hemos encontrado $P(C) = \frac{1}{13}$ y
+  $P(D) = \frac{5}{13}$. Los dos eventos son mutuamente excluyente entonces
+  $P(C \text{o} D) = \frac{1}{13} + \frac{5}{13} = \frac{6}{13}$.
+
+\item Los tres eventos son independientes, entonces
+  $P(E \text{y} F \text{y} G) = {P(E)} \times {P(F)} \times {P(G)}$.
+  En el ejercicio 1, hemos encontrado
+  $P(E) = \frac{1}{52}$, $P(F) = \frac{1}{13}$ y $P(G) = \frac{4}{13}$.
+  Finalmente, $P(E \text{y} F \text{y} G) = \frac{1}{2197}$.
+
+\item En ejercicio 1, hemos encontrado
+  $P(H) = \frac{1}{4}$ y $P(I) = \frac{4}{13}$.
+  $H \text{y} I$ es el evento ``tirar una figura de picas''. Hay $4$ figuras
+  de picas (as, rey, reina y paje) entonces
+  $P(H \text{y} I) = \frac{4}{52}=\frac{1}{13} = P(H) P(I)$ (en particular
+  $H$ y $I$ son independientes).
+  $P(H \text{o} I) = P(H) + P(I) - P(H \text{y} I) =
+  \frac{1}{4} + \frac{4}{13} - \frac{1}{13} = \frac{25}{52}$.
+\end{enumerate}
+
+\subsection{Ejercicio 3 (distribución binomial)}
+
+\begin{enumerate}
+  \item $1-p$
+  \item La probabilidad de obtener dos éxitos es $p \times p = p^2$.
+    La probabilidad de obtener dos fracasos es ${(1-p)} \times {(1-p)}
+    = {(1-p)}^2$. La probabilida de obtener un éxito y un fracaso 
+    es $1 - p^2 - {(1-p)}^2$. Es también la probabilidad del evento
+    ``éxito seguido de un fracaso o fracaso seguido de un éxito'' es decir
+    $2 p{(1-p)}$.
+  \item Si ya hemos obtenido $2$ éxitos, necesitamos un fracaso al tercer 
+    experimento, lo que ocure con una probabilidad de $1-p$.
+    Si hemos obtenido $0$ éxito, es imposible obtener un total de $2$ éxitos
+    con el último experimento.
+    Si ya hemos obtenido $1$ éxito, necesitamos un éxito al tercer 
+    experimento, lo que ocure con una probabilidad de $p$.
+  \item De la misma manera, es imposible obtener $m$ éxitos excepto
+    si ya hemos obtenido $m-1$ o $m$ éxitos. Eso ocurre respectivamente
+    con probabilidad $p$ y $1-p$.
+
+  \item 
+    Para $n=1$, obtenemos
+    $P(A_0^1) = \binom{1}{0} p^0 \left(1-p\right)^{1-0} = 1-p$
+    $P(A_1^1) = \binom{1}{1} p^1 \left(1-p\right)^{1-1} = p$.
+    Para $n=2$, obtenemos
+    $P(A_0^2) = \binom{2}{0} p^0 \left(1-p\right)^{2-0} = \left(1-p\right)^2$
+    $P(A_2^2) = \binom{2}{2} p^2 \left(1-p\right)^{2-2} = p^2$ y
+    $P(A_1^2) = \binom{2}{1} p^1 \left(1-p\right)^{2-1} = 2 p \left(1-p\right)$.
+    Por la pregunta precediente,
+%%
+    $$
+    P(A_m^n) = P(A_{m-1}^{n-1}) P(A_m^n / A_{m-1}^{n-1}) +
+    P(A_{m}^{n-1}) P(A_m^n / A_{m}^{n-1}) =
+    p {P(A_{m-1}^{n-1})} + \left(1-p\right) {P(A_{m}^{n-1})}
+    $$
+
+    Si suponemos que nuestra conjetura es corecta para ${P(A_{m-1}^{n-1})}$
+    y ${P(A_{m}^{n-1})}$, obtenemos
+%%
+    $$
+    P(A_m^n) = \left( 
+    \binom{n-1}{m-1} + \binom{n -1}{m}
+    \right) p^m \left(1-p\right)^{n-m}
+    $$
+
+    Pero
+    $\binom{n-1}{m-1} + \binom{n -1}{m}  = 
+    \frac{\left(n-1\right)!}{\left(n-m\right)! m!} 
+    \left(m + \left(n-m\right)\right) = \binom{n}{m}$
+
+  \item La probabilidad para un juego es $p = \frac{1}{2}$.
+    Entonces
+    $P(A_{10}^{10}) = \binom{10}{9} \left(\frac{1}{2}\right)^{9} 
+    \left(\frac{1}{2}\right)^{10-9} = \frac{10}{2^{10}} = \frac{5}{512}
+    = 0.009765625$
+
+  \item $p = \frac{1}{4}$ y $1-p = \frac{3}{4}$.
+    La probabilidad de obtener $3$ o más éxitos es
+    $P(A_{3}^{5}) + P(A_{4}^{5}) + P(A_{5}^{5}) =
+    \frac{53}{512} = 0.103515625$.
+\end{enumerate}

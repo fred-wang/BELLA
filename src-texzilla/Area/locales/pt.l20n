@@ -1,0 +1,22 @@
+<areasGeometricShapes "Área de figuras geométricas básicas">
+
+<findValue "Determine a área da seguinte figura geométrica:">
+<showSolution "Mostrar Solução">
+<newQuestion "Nova Questão">
+<courseSummary "Resumo do Curso">
+
+<description "A tabela a seguir possui expressões para determinar a área de algumas figuras geométricas clássicas:">
+<geometricShape "Figura Geométrica">
+<areaExpression "Área">
+<triangle "Triângulo">
+<square "Quadrado">
+<rectangle "Retângulo">
+<rhombus "Losango">
+<parallelogram "Paralelogramo">
+<trapezoid "Trapézio">
+<circle "Círculo">
+<ellipse "Elipse">
+
+<backToIndex "Voltar ao índice">
+<license "Licenciado sob CC BY-SA 4.0">
+<bella "Projeto BELLA">

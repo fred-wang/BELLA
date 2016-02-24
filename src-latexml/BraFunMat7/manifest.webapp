@@ -1,0 +1,14 @@
+{
+  "name": "BraFunMat7",
+  "description": "Libro electronico del proyecto BELLA (Biblioteca Eletrônica de Livros Livres para o Aprendizado). Currículo do Estado de São Paulo, 7ª série do Ensino Fundamental, Matemática e suas tecnologias",
+  "version": "1.0",
+  "launch_path": "/index.xhtml",
+  "icons": {
+    "128": "/logos/128x128-brazil.png"
+  },
+  "developer": {
+    "name": "BELLA Project",
+    "url": "http://fred-wang.github.io/BELLA"
+  },
+  "default_locale": "pt-BR"
+}

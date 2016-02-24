@@ -1,0 +1,463 @@
+\chapter{Relações (3º Bimestre)}
+
+\section{Construction of Funções and Graphs}
+
+We recall that for any sets $X, Y$, a function $f: X \rightarrow Y$ associates
+to each element $x \in X$ a unique element $y \in Y$ denoted $y = f(x)$.
+We also write $f: x \mapsto f(x)$.
+For example if $X \subseteq {\mathbb C}{[u]}$ is the set of nonzero polymials
+of the variable $u$ with complex coefficients and $Y=\mathbb N$ we can define
+the function $\deg: X \rightarrow Y$ that associates to each nonzero polynomial
+its degree e.g. $\deg(u^2 + 1) = 2$. We already saw many numeric functions $f$
+from (some subset of) $\mathbb R$ to $\mathbb R$, which can be represented
+in a cartesian coordinate systems as a graph of points $(x,f(x))$:
+
+\begin{enumerate}
+\item The polynomial functions $x \mapsto P(x)$ for $P$ a polynomial,
+  including the linear ($\deg P = 1$) and cuadratic functions ($\deg P = 2$).
+\item The rational functions $x \mapsto \frac{P(x)}{Q(x)}$ where
+  $P,Q$ are polynomials, defined on the set
+  $X = \{ x \in \mathbb R : Q(x) \neq 0 \}$. This includes
+  $x \mapsto \frac{1}{x}$ on
+\item The trigonometric functions and their inverse:  $\cos$, $\sin$, $\tan$,
+  $\arccos$ etc
+\item The logarithm function $\ln$ and exponential function $\exp$.
+\end{enumerate}
+
+If $f: X \rightarrow Y$ is some function and $g: Y' \subseteq Y \rightarrow Z$
+is another function, we can define the composition function $g \circ f$
+which associates to each $x \in X$ the element $g(f(x)) \in Z$. For example
+$x \mapsto \exp{(x-2)}$ is the composition of $x \mapsto x-2$ and
+$y \mapsto \exp{y}$.
+
+If we consider a numeric $f: \mathbb R \rightarrow \mathbb R$,
+we can compose $f$ with the function $t_K: x \mapsto x + K$ for some
+$K \in \mathbb R$. This gives the function $x \mapsto f(x) + K$ whose graph
+is the graph of $f$ translated by $K$ (upwards if $K>0$) ; and the function
+$x \mapsto f(x+K)$ whose graph is the graph of $f$ translated by $-K$
+(leftwards if $K<0$). If we compose $f$ with the function $x \mapsto -x$
+then we obtain the function $x \mapsto f(-x)$ whose graph is
+the symmetric of the graph of $f$ with respect to the $y$-axis and
+the function $x \mapsto -f(x)$ whose graph is
+the symmetric of the graph of $f$ with respect to the $x$-axis.
+Finally for any $\lambda > 0$, if we compose $f$ with the function
+$x \mapsto \lambda x$ then we obtain the function $x \mapsto f(\lambda x)$ whose
+graph is the graph of $f$ scaled by a factor $\frac{1}{\lambda}$ along the
+$x$-axis and the function $x \mapsto \lambda f(x)$ whose graph is
+is the graph of $f$ scaled by $\lambda$ along the $y$-axis.
+
+Let $f: X \rightarrow Y$ and $Y' = \{ f(x) : x \in X \} \subseteq Y'$ be the
+image of $f$. If we suppose that for any $y \in Y'$ there is a unique $x \in X$
+such that $y = f(x)$ then we can define the inverse function
+$f^{-1}: Y' \rightarrow X$ that associates to each $y \in Y'$ the unique
+$x \in X$ such that $y = f(x)$. For example the inverse of $\exp$ is $\ln$.
+As we have seen, for numeric function the graph of $f^{-1}$ is the symmetic
+of the graph of $f$ with respect to the reta $y=x$.
+
+\subsection*{Exercício 1}
+
+We consider the function on $\mathbb R$ defined by $f(x) = {|x - 2|} + 3$.
+
+\begin{enumerate}
+\item Draw the graph of $x \mapsto x$ $x \mapsto |x|$ and $f$ on $[-5,5]$.
+\item Compare the graph of the three functions.
+\item Deduce an axis of symmetry for the graph of $f$ as well as its minimum.
+\end{enumerate}
+
+\subsection*{Exercício 2}
+
+We consider the function $f$ such that $f(x) = \frac{1}{x}$ if $x \neq 0$
+and $f(0) = 0$.
+We also consider the function $g$ defined by
+$g(x) = -\frac{6x+8}{2x+1}$ for $x \neq -\frac{1}{2}$ and
+$g\left(-\frac{1}{2}\right)=-3$.
+
+\begin{enumerate}
+\item Draw the graph of $f$. Is the function continuous?
+\item Show that $f$ is invertible. What is its inverse? How do you see that on
+  the graph of $f$?
+\item For all $x \neq 0$, compare $f^{-1}(x)$ and $\frac{1}{f(x)}$.
+\item Find $\alpha$ such that
+  $g(x) = g\left(-\frac{1}{2}\right) + \frac{\alpha}{2x+1}$ for any
+  $x \neq -\frac{1}{2}$.
+\item How to draw the graph of $g$ from the graph of $f$?
+\end{enumerate}
+
+\subsection*{Exercício 3}
+
+Let $a,b$ be two real numbers such that $a > 3$. We define the function
+$f(x) = x^3 + 3x^2 + ax + b$.
+
+\begin{enumerate}
+\item Calculate $f(x) - {(x+1)}^3$
+\item Show that for any real numbers such that $x_1 < x_2$ we have
+  $f(x_1) < f(x_2)$.
+\item Let $M > 0$ and $x_2 = M+1+|b|$ Show that $f(x_2) > M$.
+\item Let $x_1 = -M - 2 - |b|$, $\alpha = x_1+1$
+  and $\beta = {(x_1+1)}^2+a-3$. Show that $\alpha < -M + b$ and
+  $\beta > 1$.
+\item Let $\gamma=\alpha\beta+2-a+b$. Compare $f(x_1)$ with $\gamma$, and
+  deduce that $f(x_1) < -M$.
+\item Let $y_0$ be any real number. Find $M > 0$ that $-M < y_0 < M$.
+\item Deduce that there is $x_0 \in [x_1,x_2]$ such that $f(x_0) = y_0$.
+\item Conclude that $f$ is invertible.
+\item Draw the graphs $f$ and $g: x \mapsto f^{-1}(x)$ on $[-6,6]$ for
+  $a=4$ and $b=-2$.
+\item The graphs of $f,g$ intersect at a unique point.
+  Determine its coordinates.
+\end{enumerate}
+
+\section{Qualidades das Funções}
+
+We now focus on numeric functions $f: X \rightarrow Y$ from a subset
+$X \subseteq \mathbb R$ to $Y=\mathbb R$. For simplicity, we assume that
+$X = (a,b)$ is a nonempty open interval.
+
+$f$ is continuous a the point $x_0 \in X$ is when $x \in X$ gets close to
+$x_0$ then $f(x)$ gets close to $f(x_0)$. That is
+$\lim_{x \rightarrow x_0} f(x) = f(x_0)$. The gráfico of the function does not
+have ``hole''.
+
+A function $f$ is increasing if for all $x < y$ we have $f(x) < f(y)$.
+It is decreasing if for all $x < y$ we have $f(x) > f(y)$.
+Similarly, we say that $f$ is nonincreasing or nondecreasing if we have
+nonstrict inequalities.
+
+At a point $x_0 \in X$ we can consider $h$ small enough such that $x_0+h \in X$.
+The coefficient $$t_h=\frac{f(x_0+h) - f(x_0)}{h}$$
+is called the taxa de variação. Suppose that $h > 0$ or equivalently
+$x_0 < x_0+h$. Then $t_h < 0$ if $f(x_0) < f(x_0+h)$ and
+Then $t_h > 0$ if $f(x_0) > f(x_0+h)$ and $t_h=0$ if $f(x_0) = f(x_0+h)$.
+Hence the taxa de variação gives an indication of how $f$ varies between
+$x_0$ and $x_0+h$. Actually, the amplitude $|t_h|$ indicates how fast
+$f$ varies between $x_0$ and $x_0+h$: slowly if $|t_h|$ is small and
+quickly if $|t_h|$ is large. If $h < 0$, $t_h$ gives similar indication of
+the variation of $f$ between $x_0+h < x_0$ and $x_0$.
+
+We can also consider the linear function
+$$g_h: x \mapsto t_h {(x - x_0)} + f(x_0)$$
+We have $g_h(x_0) = f(x_0)$ and $g_h(x_0+h) = f(x_0+h)$ so its graph is the reta
+passing by the points $(x_0, f(x_0))$ and $(x_0+h, f(x_0+h))$.
+Sometimes, the $t_h$ has a limit $t$ when $h$ gets close to $0$.
+Then the graph of the linear function $g: x \mapsto t{(x-x_0)} + f(x_0)$ is
+the tangent of the graph of $f$ at point $(x_0,f(x_0))$.
+Moreover we obtain
+$\lim_{h \rightarrow 0} f(x_0+h) = \lim_{h \rightarrow 0} h t_h + f(x_0) = f(x_0)$
+so $f$ is continuous at point $x_0$.
+Also, if $\lim_{h \rightarrow 0} t_h > 0$ this means that for $h$ small enough
+the taxa de variação is always positive and so that $f$ is increasing in a small
+interval around the around the point $x_0$. Similarly, if
+$\lim_{h \rightarrow 0} t_h < 0$, the function $f$ is decreasing in a small
+interval around the around the point $x_0$.
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+
+\item We consider the constant function $f(x) = b$. Express the
+  taxa de variação between two points $x_0,x_0+h$.
+  What is the limit when $h \rightarrow 0$?
+
+\item We consider a linear function $f(x) = ax + b$. Express the
+  taxa de variação between two points $x_0,x_0+h$. What is the limit when
+  $h \rightarrow 0$. What can you say about the tangent of the graph of $f$
+  at point $x_0$? What can you say about the variation of $f$?
+
+\item We consider a function $f(x) = x^n$ for some $n \geq 1$.
+  Use the formula of Newtow binomial to express the taxa de variação between
+  two points $x_0,x_0+h$ in the form $(n-1) x_0^{n-1} + h A_{x_0,h}$.
+  Deduce the limit when $h \rightarrow 0$. What is its value at $x = 0$?
+
+\item Let $a,b$ be two real numbers and $f,g$ be two functions.
+  Give the expression of the taxa de variação of $x \mapsto {af(x)+bg(x)}$
+  between $x_0,h$ in function of the taxa de variaçãos of $f,g$.
+  What can you say when $h \rightarrow 0$?
+
+\item Deduce the limit of the taxa de variação of
+  function $f(x) = 2x^3 + 12x^2 - 30x + 7$ between point $x_0,h$.
+
+\item What can you say about the sign of the function
+  $6x^2 + 24x - 30$?
+
+\item Describe the variations of $f$ on the intervals
+  $(-\infty,-5)$, $(-5,1)$ and $(1,+\infty)$?
+  (we admit that it is implied by the sign of the limit of the taxa de variação)
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+\begin{enumerate}
+\item Let $h \neq 0$.
+  Use the exponential function to express
+  $$\gamma_h = \lim_{N \rightarrow +\infty}
+  \frac{\left(\sum_{n=0}^N \frac{h^n}{n!}\right) - 1}{h}$$
+\item For any point $x$, express the taxa de variação between $x$ and $x+h$
+  using $\gamma_h$.
+\item What can you say about the sign of $\gamma_h$?
+\item For any $N \geq 1$, let
+  $A_N(h) = \sum_{n=0}^{N-2} \frac{h^{n}}{{(n+2)}!}$. Show that
+  $$\frac{\left(\sum_{n=0}^N \frac{h^n}{n!}\right) - 1}{h} = 1 + h A_N(h)$$
+\item Show that for any $N$ we have
+  $$
+  \left|A_N(h)-\frac{1}{2}\right| \leq
+  \sum_{n=1}^{N-2} {|h|}^n
+  $$
+\item Let
+  $A(h) = \frac{\gamma_h-1}{h} =
+  \lim_{N\rightarrow +\infty} A_N(h)$.
+  Show that for any $|h| < 1$,
+  $$
+  \left|A(h)-\frac{1}{2}\right| \leq \frac{|h|}{1-{|h|}}
+  $$
+\item What is $\lim_{h \rightarrow} \gamma_h$?
+\item Conclude that $\lim_{h \rightarrow 0} \frac{e^{x+h}-e^{h}}{h} = e^x$.
+\item Deduce the equation of the
+  tangent of the graph of $\exp$ at any point $x_0$.
+\item What is the equation of the tangent of $x \mapsto \ln x$
+  at point $(y_0, x_0)$ where $y_0=e^{x_0} > 0$?
+\item Deduce that
+  $\lim_{h \rightarrow 0} \frac{\ln{(1+h)}}{h} = 1$.
+\end{enumerate}
+
+\section{Solução do Exercícios}
+
+\subsection*{Exercício 1}
+
+\begin{enumerate}
+\item
+  \begin{center}
+  \begin{tikzpicture}[scale=.5]
+    \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+    \draw[->] (0,-5) -- (0,8) node[left] {$y$};
+    \draw[ultra thick, red] (-5,-5)  node[left] {$x\mapsto x$} -- (5,5);
+    \draw[thin, green] (-5,5) node[left]{$x\mapsto |x|$} -- (0,0) -- (5,5);
+    \draw[blue] (-5,10) node[left]{$f$} -- (2,3) -- (5,6);
+  \end{tikzpicture}
+  \end{center}
+\item
+  $x \mapsto x$ is a reta passing by the origin.
+  $x \mapsto x$ and $x \mapsto |x|$ take the same values for $x \geq 0$
+  so their graph coincides for these values. When $x \leq 0$,
+  $|x| = -x$ so their graph are symmetric with respect to the $x$-axis.
+  The graph of $f$ is obtained by translating the graph of $x \mapsto |x|$
+  by the vector $(+2,+3)$.
+\item The $y$-axis is an axis of symmetic for the graph of $x \mapsto |x|$
+  so the reta $x = 2$ is an axis of symmetry for $f$.
+  Also the minimum of $x \mapsto |x|$ is $0$ reached at $x=0$,
+  so the minimum of $f$ is $3$ reached at $x=2$.
+\end{enumerate}
+
+\subsection*{Exercício 2}
+
+\begin{enumerate}
+\item The function continuous except at the point $x = 0$. When $x < 0$ gets
+  close to $0$, $-\frac{1}{x}$ tends to $-\infty$. When $x > 0$ gets
+  close to $0$, $\frac{1}{x}$ tends to $+\infty$. However, $f(0) = 0$.
+
+  \begin{center}
+  \begin{tikzpicture}[scale=.5]
+    \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+    \draw[->] (0,-7) -- (0,7) node[left] {$y$};
+    \draw[color=green] (-6,-6)--(6,6) node [above]{$x=y$};
+    \draw[color=red]
+    (-7,-0.14285714285714285)--(-6.7,-0.14925373134328357)--(-6.4,-0.15625)--(-6.1,-0.1639344262295082)--(-5.8,-0.1724137931034483)--(-5.5,-0.18181818181818182)--(-5.2,-0.1923076923076923)--(-4.9,-0.2040816326530612)--(-4.6,-0.2173913043478261)--(-4.3,-0.23255813953488372)--(-4,-0.25)--(-3.7,-0.27027027027027023)--(-3.4,-0.29411764705882354)--(-3.1,-0.3225806451612903)--(-2.8,-0.35714285714285715)--(-2.5,-0.4)--(-2.2,-0.45454545454545453)--(-1.9000000000000004,-0.5263157894736841)--(-1.5999999999999996,-0.6250000000000001)--(-1.2999999999999998,-0.7692307692307694)--(-1,-1) (1,1)--(1.3,0.7692307692307692)--(1.6,0.625)--(1.9,0.5263157894736842)--(2.2,0.45454545454545453)--(2.5,0.4)--(2.8,0.35714285714285715)--(3.1,0.3225806451612903)--(3.4,0.29411764705882354)--(3.7,0.27027027027027023)--(4,0.25)--(4.3,0.23255813953488372)--(4.6,0.2173913043478261)--(4.9,0.2040816326530612)--(5.2,0.1923076923076923)--(5.5,0.18181818181818182)--(5.8,0.1724137931034483)--(6.1,0.1639344262295082)--(6.4,0.15625)--(6.7,0.14925373134328357)--(7,0.14285714285714285)
+    (-0.14285714285714285,-7)--(-0.14925373134328357,-6.7)--(-0.15625,-6.4)--(-0.1639344262295082,-6.1)--(-0.1724137931034483,-5.8)--(-0.18181818181818182,-5.5)--(-0.1923076923076923,-5.2)--(-0.2040816326530612,-4.9)--(-0.2173913043478261,-4.6)--(-0.23255813953488372,-4.3)--(-0.25,-4)--(-0.27027027027027023,-3.7)--(-0.29411764705882354,-3.4)--(-0.3225806451612903,-3.1)--(-0.35714285714285715,-2.8)--(-0.4,-2.5)--(-0.45454545454545453,-2.2)--(-0.5263157894736841,-1.9000000000000004)--(-0.6250000000000001,-1.5999999999999996)--(-0.7692307692307694,-1.2999999999999998)--(-1,-1) (1,1)--(0.7692307692307692,1.3)--(0.625,1.6)--(0.5263157894736842,1.9)--(0.45454545454545453,2.2)--(0.4,2.5)--(0.35714285714285715,2.8)--(0.3225806451612903,3.1)--(0.29411764705882354,3.4)--(0.27027027027027023,3.7)--(0.25,4)--(0.23255813953488372,4.3)--(0.2173913043478261,4.6)--(0.2040816326530612,4.9)--(0.1923076923076923,5.2)--(0.18181818181818182,5.5)--(0.1724137931034483,5.8)--(0.1639344262295082,6.1)--(0.15625,6.4)--(0.14925373134328357,6.7)--(0.14285714285714285,7);
+    \fill[red] (0,0) circle(.2);
+  \end{tikzpicture}
+  \end{center}
+
+\item For any $x,y \neq 0$ we have $x = y$ iff
+  $f(x) = \frac{1}{x} = \frac{1}{y} = f(y)$.
+  Moreover, for any $x \neq 0$ we have $f(x) = \frac{1}{x} \neq 0 = f(0)$.
+  Hence $f$ is its own inverse that is $f^{-1} = f$. We can see that on the
+  graph of $f$ since $x=y$ is an axis of symmetry.
+\item
+  We have $f^{-1}(1) = 1 = \frac{1}{f(1)}$ but in general for
+  $x \neq 0,1$, $f^{-1}{(x)} = f(x) = \frac{1}{x} \neq x =
+  \frac{1}{\frac{1}{x}} = \frac{1}{f(x)}$.
+\item For any $\alpha$, we have
+  $g\left(-\frac{1}{2}\right) + \frac{\alpha}{2x+1} =
+  -3 + \frac{\alpha}{2x+1} = -\frac{6x+{(3-\alpha)}}{2x+1}$
+   so we can pick $\alpha = -5$.
+ \item
+   By translating the graph of $f$ horizontally by a distance of $1$
+   leftwards, we obtain the graph of
+   $-1 \mapsto 0$ and $x \mapsto \frac{1}{x+1}$. By scaling
+   this graph by a factor $\frac{1}{2}$ along the $x$-axis
+   and a factor $5$ along the $y$-axis we obtain the
+   graph of $-\frac{1}{2} \mapsto 0$ and
+   $x \mapsto \frac{5}{2x+1}$. By translating this graph vertically by a
+   distance of $3$ upwards, we obtain the graph of
+   $-\frac{1}{2} \mapsto 3$ and
+   $x \mapsto 3 + \frac{5}{2x+1}$. Finally, by taking the symmetric of this
+   graph with respect to the $y$-axis we obtain the graph of
+   $g: -\frac{1}{2} \mapsto -3$ and $g: x \mapsto -3 - \frac{5}{2x+1} =
+   -\frac{6x+8}{2x+1}$.
+\end{enumerate}
+
+\subsection*{Exercício 3}
+
+\begin{enumerate}
+\item We find $x^3 + 3x^2 + ax + b -x^3 -3x^2-3x-1 =
+  {(a-3)}x + b-1$.
+\item By the previous question,
+  $f(x_1) = {(x+1)}^3 + {(a-3)}x + b-1$. But if
+  $x_1 < x_2$ we have $x_1+1 < x_2+1$ and so ${(x_1+1)}^3 < {(x_2+1)}^3$.
+  Since $a > 3$, we also have ${(a-3)}x_1 < {(a-3)}x_2$.
+  Finally, $f(x_1) < f(x_2)$.
+\item $f(x) = x^3 + 3x^2 + ax + b$ so if $x_2={M+1+|b|}$ we have
+  $x_2^3, x_2^2, x_2 > 0$ and $a > 3 > 1$ so $f(x_2) >
+  x_2+1+b = {M+1+|b|+b} > M$.
+\item $\alpha = x_1+1={-M-1-|b|}$. But $-M-1<-M$ and $-|b| \leq -b$ so
+  $\alpha < -M-b$. Actually, $\alpha=x_1+1 < -1$ and
+  so ${(x_1+1)}^2 > 1$. Since $a > 3$, we also have
+  $\beta = {(x_1+1)}^2 + a - 3 > 1$.
+\item Let $\gamma=\alpha\beta+3-a+b-1=
+  {(x_1+1)}^3 + {(a-3)}{(x_1+1)} + 3 -a + b-1 =
+  {(x_1+1)}^3 + {(a-3)}x_1 + b-1 = f(x_1)$.
+  By the previous question, $\alpha\beta < -M - b$ and
+  so $f(x_1)=\gamma=\alpha\beta+3-a+b-1 < \alpha\beta+b< -M$.
+\item For example $M=|y_0|+1$ gives $-M < -|y_0| \leq y \leq |y_0| < M$.
+\item We have proved that $f(x_1) < -M < y_0 < M < f(x_2)$.
+  In particular by the second question we necessarily have $x_1 < x_2$.
+  Now, since the graph of a polynomial is continuous it intersects
+  the reta of equation $y = y_0$ at some point $x_0 \in [x_1,x_2]$.
+\item For any real number $y_0$ we have found $x_0$ such that $f(x_0) = y_0$.
+  Moreover such $x_0$ is unique because if $x > x_0$ we have
+  $f(x) > f(x_0) > y_0$ and if $x < x_0$ we have
+  $f(x) < f(x_0) < y_0$. So we can define the inverse $g=f^{-1}$.
+\item To do so, we first draw the graph of $f$.
+  We note that $f(-2) = -6$ and $f(1) = 6$ so it is enough to compute values
+  $f(x)$ on $x \in [-2,1]$. Then graph of $g$ is obtained by considering the
+  values $(f(x), x)$. We note that the graphs are symmetric to each other
+  with respect to reta of equation $x=y$.
+  \begin{center}
+  \begin{tikzpicture}[scale=.5]
+    \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+    \draw[->] (0,-7) -- (0,7) node[left] {$y$};
+    \draw[color=green] (-6,-6)--(6,6) node [above]{$x=y$};
+    \draw[color=red](-2,-6)--(-1.85,-5.464124999999999)--(-1.7,-5.042999999999999)--(-1.55,-4.716375)--(-1.4,-4.464)--(-1.25,-4.265625)--(-1.1,-4.101)--(-0.95,-3.949875)--(-0.8,-3.792)--(-0.6499999999999999,-3.607125)--(-0.5,-3.375)--(-0.3500000000000001,-3.075375)--(-0.19999999999999996,-2.6879999999999997)--(-0.050000000000000044,-2.192625)--(0.10000000000000009,-1.5689999999999995)--(0.25,-0.796875)--(0.3999999999999999,0.14399999999999924)--(0.5499999999999998,1.2738749999999985)--(0.7000000000000002,2.6130000000000013)--(0.8500000000000001,4.181625)--(1,6) node[right]{$f$};
+    \draw[color=blue](-6,-2)--(-5.464124999999999,-1.85)--(-5.042999999999999,-1.7)--(-4.716375,-1.55)--(-4.464,-1.4)--(-4.265625,-1.25)--(-4.101,-1.1)--(-3.949875,-0.95)--(-3.792,-0.8)--(-3.607125,-0.6499999999999999)--(-3.375,-0.5)--(-3.075375,-0.3500000000000001)--(-2.6879999999999997,-0.19999999999999996)--(-2.192625,-0.050000000000000044)--(-1.5689999999999995,0.10000000000000009)--(-0.796875,0.25)--(0.14399999999999924,0.3999999999999999)--(1.2738749999999985,0.5499999999999998)--(2.6130000000000013,0.7000000000000002)--(4.181625,0.8500000000000001)--(6,1) node[right]{$f^{-1}$};
+  \end{tikzpicture}
+  \end{center}
+
+\item
+  The intersection happens for $x$ such that
+  $(x,f(x)) = (f^{-1}{f(x)}, f(x)) = (f(x), x)$ so
+  it is the unique fixed point of $f$.
+  We saw that
+  $f(x) = { {(x+1)}^3 + {(a-3)}x + b-1 } = {(x+1)}^3 + x - 3$.
+  So $f(x) = x$ iff ${(x+1)}^3 = 3$ iff $x = \sqrt[3]{3} - 1 \approx 0.442$.
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+\item $\frac{f(x_0+h)-f(x_0)}{h} = \frac{b-b}{h} = 0$ which has limit $0$.
+
+\item The variation is
+  $\frac{a{(x_0+h)}+b - {(ax_0+b)}}{h} = \frac{ah}{h} = a$ which has limit $a$
+  when $h \rightarrow 0$. The tangent of the graph of $f$ at point $x_0$ has
+  equation $y = ax + b$. Indeed the graph of $f$ is uma reta, so it is its own
+  tangent!
+
+\item
+  It is $\frac{{(x_0+h)}^n - x_0^n}{h} =
+  \sum_{k=1}^{n} \binom{n}{k} x_0^{n-k} h^{k-1} =
+  {(n-1)} x_0^{n-1} + h \sum_{k=2}^{n} \binom{n}{k} x_0^{n-k} h^{k-2}$
+  When $h \rightarrow 0$, we obtain $(n-1)x_0^{n-1}$. Note that the case $n=1$
+  is consistent with the previous formula.
+
+\item
+  We have
+  $$\frac{{(af({x_0+h})+bg({x_0+h}))} - \left(af(x_0)+bg(x_0)\right)}{h} =
+  a \frac{f({x_0+h}) - f(x)}{h} + b \frac{g({x_0+h}) - g(x_0)}{h}$$
+
+  So if the limits of the taxa de variaçãos $f,g$ given by
+  $\alpha = \lim_{h\rightarrow0} \frac{f({x_0+h}) - f(x_0)}{h}$
+  and $\beta = \lim_{h\rightarrow0} \frac{g({x_0+h}) - g(x_0)}{h}$ exist,
+  then the limit of the  taxa de variação $af+bg$ exists too and is
+  $a\alpha+b\beta$.
+
+\item We need to compute the limit of the taxa de variação of
+\item Deduce the tangent of the graph of $y = 2x^3 + 12x^2 - 30x + 7$ at
+  $x_0=7$. We can do it directly or use the previous results.
+
+  $f(x) = 2x^3 + 12x^2 - 30x +7$ at point $x_0$.
+  We saw that this limit for $x \mapsto x^3$,
+  $x \mapsto x^2$ and $x \mapsto -30x+7$ are
+  respectively $3x_0^2$, $2x_0$ and $-30$. So by the previous question,
+  $$\lim_{h\rightarrow0} \frac{f({x_0+h}) - f(x_0)}{h} = 6x_0^2 + 24x_0 - 30$$
+
+\item We have $\Delta = 1296 = 36^2$ and we find the factorization
+  $6x^2 + 24x - 30 = 6{(x-1)}{(x+5)}$?
+  The function is positive if $x < -5$ or $x > 1$ and negative if $-5 < x < 1$.
+
+\item By the previous question,
+  $f$ is increasing on $(-\infty,-5)$, decreasing on $(-5,1)$ and
+  increasing on $(1,+\infty)$.
+
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+\begin{enumerate}
+\item The limit is
+  $\frac{\left(\sum_{n=0}^\infty \frac{h^n}{n!}\right) - 1}{h} = \frac{e^h-1}{h}$
+\item Taxa de variação is
+  $$\frac{e^{x+h}-e^x}{h} = e^x \frac{e^h-1}{h} = \gamma_h e^x$$
+\item
+  We have $e^x > 0$ for all $x$.
+  Since $\exp$ is increasing, $e^{x+h}<e^x$ if $h < 0$ and
+  $e^{x+h}>e^x$ if $h > 0$. Hence $\gamma_h > 0$.
+\item
+  $\frac{\left(\sum_{n=0}^N \frac{h^n}{n!}\right) - 1}{h} =
+  \frac{\left(\sum_{n=1}^N \frac{h^n}{n!}\right)}{h} =
+  \sum_{n=1}^N \frac{h^{n-1}}{n!} = 1 + h \sum_{n=2}^N \frac{h^{n-2}}{n!}$.
+  But the last expression is $1+hA_N(h)$.
+\item By the triangular inequality,
+  $$
+  \left|A_N(h)-\frac{1}{2}\right| =
+  \left|\sum_{n=1}^{N-2} \frac{h^{n}}{{(n+2)}!}\right|
+  \leq
+  \sum_{n=1}^{N-2} \frac{{|h|}^n}{{(n+2)}!}
+  $$
+  But since $(n+2)! > 1$, the latter last sum is at most the geometric sum
+  $$\sum_{n=1}^{N-2} {|h|}^n = {|h|} \frac{1-{|h|}^{N-2}}{1-{|h|}}$$
+\item
+  Since $|h| < 1$, $|h|^{n-2} \rightarrow_{N\rightarrow+\infty} 0$ and the
+  previous
+  inequality becomes becomes when $N \rightarrow +\infty$:
+  $\left|A(h)-\frac{1}{2}\right| \leq \frac{|h|}{1-{|h|}}$
+\item $\gamma_h = 1 + h A(h)$. When $h \rightarrow 0$,
+  $\frac{|h|}{1-{|h|}} \rightarrow \frac{0}{1} = 0$ and so
+  $A(h) \rightarrow \frac{1}{2}$. Finally $\gamma_h \rightarrow 1$.
+\item We saw at the second question that
+  $\frac{e^{x+h}-e^x}{h} = \gamma_h e^x$.
+  Since $\gamma_h \rightarrow 1$ we have
+  $$\frac{e^{x+h}-e^x}{h} \rightarrow e^x$$
+  previous question.
+\item It is of the form $y = a x + b$ where
+  $a = e^{x_0} = \lim_{h \rightarrow 0} \frac{e^{x_0+h}-e^{x_0}}{h}$.
+  We find $y = e^{x_0} x + {(1-x_0)}e^{x_0}$
+\item Since $\exp^{-1} = \ln$, the tangent of $\ln$ at point
+  $(y_0,x_0)$ is the symmetric of the is the tangent of $\exp$ at point
+  $(x_0,y_0)$ with respect to the axis $y=x$.
+  It has equation
+  $x = e^{x_0} y + {(1-x_0)}e^{x_0} = y_0 y + {(1 - \ln y_0)} y_0$
+  that is $y = \frac{1}{y_0} x + {(\ln y_0 - 1)}$.
+
+\item The numerator satisfies $\ln{(1+h)} \rightarrow_{h \rightarrow 0} = 0$
+  and the denominator $h \rightarrow_{h \rightarrow 0} = 0$ so
+  we can not deduce the limit by taking the quotient of the two limits!
+  Instead we write it as the taxa of variation between $1, 1+h$:
+  $$
+  \frac{\ln{(1+h)}}{h} = \frac{\ln{(1+h)} - \ln(1)}{h}
+  $$
+  The limit when $h \rightarrow 0$ is then the coeffcient of the tangent
+  at point $x = y_0 = 1$. By the previous question, it is
+  $\frac{1}{y_0} = 1$ so
+  $$
+  \lim_{h \rightarrow 0} \frac{\ln{(1+h)}}{h} = 1
+  $$
+\end{enumerate}

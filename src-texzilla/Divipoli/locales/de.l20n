@@ -1,0 +1,16 @@
+<polynomialDivision "Division von Polynomen">
+<dividePolynomial "Führe die Division der folgenden ganzrationalen Funktionen durch:">
+<showSolution "Lösung anzeigen">
+<newDivision "Neue Division">
+<courseSummary "Kurs-Zusammenfassung">
+<p1 "Um eine euklidische Division mit Rest zu definieren, nehmen wir an, dass wir zwei Polynome haben:">
+<polyA "Dividend">
+<polyB "Divisor">
+<p2 "Es gibt ein einzigartiges Paar von Polynomen mit den folgenden Eigenschaften:">
+<polyQ "Quotient">
+<polyR "Rest (muss Null oder einen Grad kleiner als der des Divisors sein)">
+<p3 "Zum Beispiel:">
+<p4 "Wir können die klassische schriftliche Division von Zahlen verallgemeinert benutzen, um die euklidische Division der Polynome durchzuführen.">
+<backToIndex "Zurück zur Startseite">
+<license "Lizensiert unter CC BY-SA 4.0">
+<bella "BELLA Projekt">

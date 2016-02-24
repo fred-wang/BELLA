@@ -1,0 +1,15 @@
+<euclidalgo "Utiliser l'algorithme d'Euclide">
+<euclidalgoQuestion "Appliquer l'algorithme d'Euclide aux entiers suivants:">
+<showSolution "Montrer la solution">
+<newQuestion "Nouvelle question">
+<courseSummary "Résumé de cours">
+<p1 "On souhaite déterminer le plus grand commun diviseur de deux entiers:">
+<p2 "On commence par effectuer la division euclidienne des entiers:">
+<p3 "Si le reste est non nul, on peut effectuer une autre division euclidienne où l'ancien diviseur devient le dividende et le reste devient le diviseur:">
+<p4 "On continue de la sorte jusqu'à trouver un reste nul:">
+<p5 "Le dernier reste non nul est le plus grand commun diviseur désiré.">
+<quotient "quotient">
+<remainer "reste">
+<backToIndex "Retour à l'index">
+<license "Distribué sous license CC BY-SA 4.0">
+<bella "Projet BELLA">

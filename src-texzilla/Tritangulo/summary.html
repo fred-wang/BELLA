@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tritangulo</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="localization" href="locales/manifest.json"/>
+    <script type="text/javascript" src="l20n.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1 data-l10n-id="courseSummary"></h1>
+    </header>
+
+    <p data-l10n-id="description"></p>
+
+    <div style="margin: auto; width: 250px">
+      <svg width="250px" height="200px">
+        <g transform="translate(25,25)">
+          <path d="M 0 0 L 200 0 L 0 150 z M 10 0 L 10 10 L 0 10" style="stroke: black; fill: none;"/>
+          <g transform="translate(100,-20)"><switch><foreignObject width="100" height="100">$\color{red}{a}$</foreignObject></switch></g>
+          <g transform="translate(-20,75)"><switch><foreignObject width="100" height="100">$\color{red}{b}$</foreignObject></switch></g>
+          <g transform="translate(100,75)"><switch><foreignObject width="100" height="100">$\color{red}{c}$</foreignObject></switch></g>
+          <path d="M 180 0 A 10 10 0 0 0 184 12" style="stroke: blue; fill: none;"/>
+          <g transform="translate(160,0)"><switch><foreignObject width="100" height="100">$\color{blue}{\beta}$</foreignObject></switch></g>
+          <path d="M 0 130 A 10 10 0 0 1 16 138" style="stroke: blue; fill: none;"/>
+          <g transform="translate(0, 110)"><switch><foreignObject width="100" height="100">$\color{blue}{\alpha}$</foreignObject></switch></g>
+        </g>
+      </svg>
+    </div>
+
+    $$
+    \alpha + \beta = 90°
+    $$
+
+    $$
+    a^2 + b^2 = c^2
+    $$
+
+    $$
+    {\cos(\alpha)} = {\sin(\beta)} = \frac{b}{c}
+    $$
+
+    $$
+    {\cos(\beta)} = {\sin(\alpha)} = \frac{a}{c}
+    $$
+
+    $$
+    {\tan(\alpha)} = \frac{\sin(\alpha)}{\cos(\alpha)} = {\cot(\beta)} = \frac{\cos(\beta)}{\sin(\beta)} = \frac{a}{b}
+    $$
+
+    $$
+    {\tan(\beta)} = \frac{\sin(\beta)}{\cos(\beta)} = {\cot(\alpha)} = \frac{\cos(\alpha)}{\sin(\alpha)} = \frac{b}{a}
+    $$
+
+    <p><a data-l10n-id="backToIndex" href="index.html"></a></p>
+
+  </body>
+
+</html>

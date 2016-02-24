@@ -1,0 +1,148 @@
+#!gmake
+#
+# Copyright (C) 2014 Frédéric Wang
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+LATEXML_DOCUMENTS=`@FIND@ src-latexml -name manifest.webapp | @SED@ "s/src-[a-z]*\///" | @SED@ "s/\/manifest.webapp//"`
+DOCUMENTS=`@FIND@ src-latexml src-texzilla -name manifest.webapp | @SED@ "s/src-[a-z]*\///" | @SED@ "s/\/manifest.webapp//"`
+MATHML_FONTS=https://github.com/fred-wang/MathFonts/archive/gh-pages.zip
+TEXZILLA_MIN=http://fred-wang.github.io/TeXZilla/TeXZilla-min.js
+L20N_MIN=https://raw.github.com/l20n/builds/master/l20n.min.js
+RECEIPT_VERIFIER=https://raw.githubusercontent.com/mozilla/receiptverifier/master/receiptverifier.js
+
+help:
+	@echo
+	@echo "make help"
+	@echo "  Display this help message."
+	@echo
+	@echo "make all"
+	@echo "  Build the FirefoxOS Web apps."
+	@echo
+	@echo "make pdf"
+	@echo "  Build the PDF files from the LaTeX sources, for quick preview."
+	@echo
+	@echo "make extract"
+	@echo "  Extract the FirefoxOS Web apps so that they can be viewed in the simular or in a Gecko browser."
+	@echo
+	@echo "make clean"
+	@echo "  Remove temporary files, including the PDF preview."
+	@echo
+	@echo "make distclean"
+	@echo "  Remove all untracked files, including the webapp archives."
+	@echo
+
+deps/math-fonts.zip:
+	mkdir -p deps
+	@WGET@ $(MATHML_FONTS) -O $@
+	touch $@
+
+deps/TeXZilla.js:
+	mkdir -p deps
+	@WGET@ $(TEXZILLA_MIN) -O $@
+	touch $@
+
+deps/l20n.js:
+	mkdir -p deps
+	@WGET@ $(L20N_MIN) -O $@
+	touch $@
+
+deps/receiptverifier.js:
+	mkdir -p deps
+	@WGET@ $(RECEIPT_VERIFIER) -O $@
+	touch $@
+
+deps/webfonts/GUST-FONT-LICENSE.txt: deps/math-fonts.zip
+	mkdir -p deps/webfonts
+	@UNZIP@ -j -d deps/webfonts $< MathFonts-gh-pages/LatinModern/*.woff \
+		MathFonts-gh-pages/LatinModern/GUST-FONT-LICENSE.txt
+	touch $@ # touch the LICENSE so that make considers it "up to date".
+
+base: logos deps/webfonts/GUST-FONT-LICENSE.txt webfonts.css \
+	deps/TeXZilla.js deps/l20n.js deps/receiptverifier.js
+
+webapps/%.zip: src-latexml/% src-latexml/latexml.css
+	rm -f $@
+	mkdir -p webapps
+	rm -rf tmp; mkdir tmp
+	 # Copy the style and web fonts
+	cp -r deps/webfonts webfonts.css src-latexml/latexml.css tmp
+	 # Copy the logo file
+	LOGOFILE=`@GREP@ '"128": "/logos/' $</manifest.webapp | @SED@ 's|^.\+"/logos/\([^"]\+\)"$$|\1|'`; mkdir tmp/logos; cp logos/$$LOGOFILE tmp/logos
+	cp $</manifest.webapp tmp
+	cd tmp; @LATEXMLC@ --pmml --mathtex  \
+			   --timeout=1200 \
+	                   --dest index.xhtml --splitat=section \
+	                   --css=latexml.css --css=webfonts.css ../$</index.tex
+	for f in `ls tmp/*.xhtml`; do \
+		@SED@ -i 's/href="."/href="index.xhtml"/' $$f; \
+	done
+	cd tmp; @ZIP@ -r ../$@ *
+	rm -rf tmp
+
+webapps/%.zip: src-texzilla/% src-texzilla/%/locales src-texzilla/style.css
+	rm -f $@
+	mkdir -p webapps
+	rm -rf tmp; mkdir tmp
+	 # Copy the style and web fonts
+	cp -r deps/webfonts webfonts.css src-texzilla/style.css tmp
+	 # Copy the logo file
+	LOGOFILE=`@GREP@ '"128": "/logos/' $</manifest.webapp | @SED@ 's|^.\+"/logos/\([^"]\+\)"$$|\1|'`; mkdir tmp/logos; cp logos/$$LOGOFILE tmp/logos
+	 # Copy all the files
+	cp -r $</* tmp
+	 # Apply the TeXZilla streamfilter to HTML files
+	for f in `cd $<; ls *.html`; do \
+		cat $</$$f | @TEXZILLA@ streamfilter > tmp/$$f; \
+	done
+	 # Copy TeXZilla.js/l20n.js/receiptverifier.js if it is used by one
+	 # HTML file.
+	for f in TeXZilla.js l20n.js receiptverifier.js; do \
+		if [ -n "`cd $<; @FIND@ -name '*.html' | xargs grep $$f`" ]; \
+		then \
+			cp deps/$$f tmp/; \
+		fi; \
+	done
+	cd tmp; @ZIP@ -r ../$@ *
+	rm -rf tmp
+
+pdf/%.pdf: src-latexml/%
+	mkdir -p pdf
+	rm -rf tmp; mkdir -p tmp; cp -r $< tmp/tmp
+	 # run LaTeX twice to generate references
+	cd tmp/tmp; @XELATEX@ index.tex; @XELATEX@ index.tex;
+	mv tmp/tmp/*.pdf $@
+	rm -rf tmp
+
+all: base
+	@for doc in $(DOCUMENTS); do \
+		rm -rf webapps/$$doc; \
+		@MAKE@ webapps/$$doc.zip; \
+	done
+
+pdf: base
+	@for doc in $(LATEXML_DOCUMENTS); do \
+		@MAKE@ pdf/$$doc.pdf; \
+	done
+
+extract: all
+	@for doc in $(DOCUMENTS); do \
+		cd webapps; \
+		rm -rf $$doc; \
+		@UNZIP@ $$doc.zip -d $$doc; \
+		cp ../fake-receiptverifier.js $$doc/receiptverifier.js; \
+		cd ..; \
+	done
+
+clean:
+	@for doc in $(DOCUMENTS); do \
+		rm -rf webapps/$$doc; \
+	done
+	rm -f pdf/*.pdf
+
+distclean: clean
+	rm -rf webapps pdf deps
+	rm -rf autom4te.cache config.log config.status Makefile
+
+.PHONY: pdf

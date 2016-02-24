@@ -1,0 +1,197 @@
+\chapter{Resuelve ecuaciones cuadráticas II}
+
+\section{Función cuadrática}
+
+Una función cuadrática es de la forma $f(x) = ax^2 + bx + c$ donde $a, b, c$
+son constantes reales y $a \neq 0$. Podemos utilizar el resultado del
+capítulo precediente para escribir
+%%
+$$f(x) = a \left( x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a}$$
+%%
+donde $\Delta = b^2 - 4 a c$. Tenemos
+${f\left(-\frac{b}{2a}\right)} = -\frac{\Delta}{4a}$.
+Para todo $x \in \mathbb R$, ${f\left(-\frac{b}{2a}\right)}
+\leq f(x)$ si $a > 0$ y
+${f\left(-\frac{b}{2a}\right)} \geq f(x)$ si $a < 0$. Entonces, la función
+tiene un extremo (máximo si $a <0$ y mínimo si $a > 0$) en $x = -\frac{b}{2a}$.
+De la formula arriba, vemos que si $a > 0$ la función $f$ es decreciendo para
+$x \leq -\frac{b}{2a}$ y creciendo para $x \geq -\frac{b}{2a}$, y la inversa
+si $a < 0$.
+
+La función $f$ interesecta el eje $X$ en los soluciones reales de la ecuación
+$f(x) = ax^2 + bx + c = 0$. Si $\Delta = 0$, solo tiene un cero
+$x = -\frac{b}{2a}$. Si $\Delta > 0$ intersecta el eje $X$ en exactamente dos
+puntos. Si $\Delta < 0$ no intersecta el eje $X$.
+
+\subsection*{Ejercicio 1}
+
+Escribir las funciones cuadrática siguientes en la forma
+$$f(x) = a \left( x - x_0 \right)^2 + M$$. Indicar el extremo y sus
+interseciónes con el eje $X$.
+
+\begin{enumerate}
+\item $f(x) = 3x^2 - 30x+75$
+\item $f(x) = x^2 + x - 6$
+\item $f(x) = -x^2 + 14x - 57$
+\item $f(x) = 2x^2 + 16x + 37$
+\item $f(x) = -9x^2-234x-1521$
+\item $f(x) = -x^2-9x+136$
+\end{enumerate}
+
+\section{Representación Gráfica}
+
+Consideramos el caso $f(x) = ax^2$ y $a > 0$. Sean $p = \frac{1}{4{a}}$,
+$F = {(0, p)}$ y $D$ es la recta $y = -p$. La distancia del punto $(x, {f(x)})$
+a la recta $D$ es $p + ax^2$. Y su distancia hasta el punto $F$ es
+$\sqrt{x^2 + (ax^2 - p)^2}$. Notamos que
+${(p+ax^2)}^2 = a^2 x^4 + 2pax^2 + p^2$ y que
+$x^2 + (ax^2 - p)^2 = a^2 x^4 + {(x^2 - 2pax^2)} + p^2$. Pero
+$2pax^2 = \frac{2ax^2}{4a} = \frac{x^2}{2}$, entonces los dos distancias son
+iguales y los puntos $(x, {f(x)})$ son sobre la parábola de directriz $D$ y
+de foco $F$. A la inversa, podemos mostrar que la ecuación de esta parábola es
+$y = ax^2$.
+
+\begin{center}
+ \begin{tikzpicture}[domain=-5:5]
+   \draw (0,0) node[below] {$0$};
+   \draw[->] (-5,0) --(5,0) node[above] {$x$};
+   \draw[->] (0,-2) --(0,5) node[right] {$y$};
+   \draw[color=orange] plot[domain=-4:4] (\x,.25 * \x * \x) node[left] {$y=\frac{x^2}{4}$};
+   \fill[red] (0,1) circle (2pt) node[right] {$F=(0,1)$};
+   \draw[->,color=blue] (-5,-1) --(5,-1) node[above] {$(D): y = -1$};
+
+   \draw[style=dashed,color=green] (0,1) --(-3,2.25) node[left] {$(x,{f(x)})$} -- (-3,-1);
+   \draw[color=green] (-3,-.7) --(-2.7,-.7) -- (-2.7,-1);
+ \end{tikzpicture}
+\end{center}
+
+Para $a > 0$, la parábola se abre ``hacia arriba''. Para $y = -ax^2$ obtenemos
+su simetrico en el eje $X$.
+Entonces, para $a < 0$, aún obenemos la parábola de foco
+$\left(0, \frac{1}{4{a}}\right)$ y de directriz $y = -\frac{1}{4{a}}$ que se
+abre ``hacia abajo''. De manera general, la ecuación
+%%
+$$y = a \left( x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a}$$
+%%
+es la misma parábola traslada por el vector
+$\left(-\frac{b}{2a}, -\frac{\Delta}{4a}\right)$, es decir la parábola de foco
+$\left(-\frac{b}{2a}, \frac{1 - \Delta}{4{a}}\right)$ y de directriz
+$y = -\frac{1 + \Delta}{4{a}}$, y se abre abajo o ariba según en signo de $a$.
+Eso se acuerda con la analis de la funcíon cuadrática $f(x) = ax^2+bx+c$.
+
+\subsection*{Ejercicio 2}
+
+Trazar el gráfico de las funciones cuadrática siguientes.
+Indicar el extremo y los ceros. ¿Qué decir de la forma de las parábolas?
+
+\begin{enumerate}
+\item $f(x) = \frac{x^2}{4} - \frac{x}{2}$
+\item $g(x) = -\frac{x^2}{4} - \frac{x}{2} - \frac{1}{2}$
+\end{enumerate}
+
+\subsection*{Ejercicio 3 (problema)}
+
+Nota: como lo veramos en el capítulo V de la parte Matemática II, existe
+una constante $\pi$ tal que el perímetro de un círculo de radio $r$ es
+$2 \pi r$ y su área $\pi r^2$.
+
+Cortemos una cuerda de largo $L$ en dos cuerdas:
+una cuerda de largo $0 \leq x \leq L$ con la que formamos un cuadro y
+una cuerda de largo $L-x$ con la que formamos un círculo.
+
+\begin{enumerate}
+\item Expresar el lado del cuadro y el radio del círculo en función de $x$.
+\item Expresar las areas del cuadro y del disco en función de $x$.
+\item Sea $A(x)$ la suma de las areas del cuadro y del circulo.
+  Poner $A(x)$ en forma $a \left( x - x_0 \right)^2 + M$.
+\item Deducir la mínima area que podemos hacer en función del largo $L$.
+\item Gráficar $A$ para $L = \pi + 4$.
+\end{enumerate}
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+\begin{enumerate}
+\item $f(x) = 3{(x-5)}^2 \geq 0$. Mínimo 0 en $x = 5$, que es tambíen
+  la única solución de $f(x) = 0$.
+\item $f(x) = \left(x + \frac{1}{2}\right)^2 - \frac{25}{4}$. mínimo
+  $-\frac{25}{4}$ en $x = -\frac{1}{2}$. Dos ceros:
+  $x = 2$ y $x=-3$.
+\item $f(x) = -{(x-7)}^2 - 8 < 0$. Máximo $-8$ en $x = 7$.
+\item $f(x) = 2{(x+4)}^2 + 5 > 0$. Mínimo $5$ en $x = -4$.
+\item $f(x) = -9{(x+13)}^2 \leq 0$. Máximo 0 en $x = -13$, que es tambíen
+  la única solución de $f(x) = 0$.
+\item $f(x) = -\left( x + \frac{9}{2} \right)^2 + \frac{625}{4}$.
+  Máximo $\frac{625}{4}$ en $ x = -\frac{9}{2}$. Dos ceros:
+  $x = 8$ y $x = -17$.
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+\begin{enumerate}
+\item $f(x) = \frac{1}{4} \left(x-1\right)^2 - \frac{1}{4}$. Mínimo
+$-\frac{1}{4}$ en $x = 1$. La parábola se abre ``hacia arriba'' y intersecta
+  el eje $X$ en $x = 0$ y $x = 2$.
+\item $g(x) = -\frac{1}{4} \left(x+1\right)^2 - \frac{1}{4}$. Máximo
+$-\frac{1}{4}$ en $x = -1$. La parábola se abre ``hacia abajo'' y no intersecta
+  el eje $X$
+\end{enumerate}
+
+\begin{center}
+ \begin{tikzpicture}[domain=-5:5]
+   \draw (0,0) node[above] {$0$};
+   \draw[->] (-5,0) --(5,0) node[above] {$x$};
+   \draw[->] (0,-5) --(0,5) node[right] {$y$};
+   \draw[color=orange] plot[domain=-3:5] (\x,.25 * \x * \x - .5 * \x) node[left] {$y=f(x)$};
+   \draw[color=blue] plot[domain=-5:3] (\x,-.25 * \x * \x - .5 * \x - .5) node[left] {$y=g(x)$};
+    \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+      \draw (\x,-.1) --(\x,.1) node[above] {$\x$};
+
+    \foreach \y in {-4,-3,-2,-1,1,2,3,4}
+      \draw (-.1,\y) --(.1,\y) node[right] {$\y$};
+
+   \draw[style=dashed,color=red] (-1,0) --(-1,-.25) -- (0, -.25) node[below] {$-\frac{1}{4}$} -- (1,-.25) -- (1,0);
+
+ \end{tikzpicture}
+\end{center}
+
+\subsection*{Ejercicio 3}
+
+\begin{enumerate}
+\item Los perimetros son $4c = x$ y $2 \pi r = L - x$ entonces
+  el lado del cuadro es $c = \frac{x}{4}$ y el radio del círculo es
+  $r = \frac{L-x}{2 \pi}$.
+\item La area del cuadro es $c^2 = \frac{x^2}{16}$ y la area del disco
+  es $\pi r^2 = \frac{{(L-x)}^2}{4\pi}$.
+\item La area total es $A(x) = \frac{\pi+4}{16\pi} x^2 - \frac{L}{2\pi}x + \frac{L^2}{4\pi}$ entonces
+%%
+$$
+A(x) = \frac{\pi+4}{16 \pi} \left( x - \frac{4L}{\pi+4}\right)^2 +
+\frac{L^2}{4\left(\pi+4\right)}
+$$
+
+\item $\frac{\pi+4}{16 \pi} > 0$ entonces $A$ tiene un
+  mínimo $\frac{L^2}{4\left(\pi+4\right)}$ en
+  $x = \frac{4L}{\pi+4}$. Tenemos $x \geq 0$ y $x \leq \frac{4L}{0+4} = L$,
+  entonces esa solución es admisible.
+
+\item El mínimo es $1 + \frac{\pi}{4} \approx 1.79$ en $x = 4$.
+
+\begin{center}
+ \begin{tikzpicture}[domain=0:8,yscale=.5]
+   \draw (0,0) node[left] {$0$};
+   \draw[->] (0,0) --(8,0) node[above] {$x$};
+   \draw[->] (0,0) --(0,10) node[right] {$y$};
+   \draw[color=orange] plot[domain=0:8] (\x,0.14207747154594*\x*\x-1.136619772367581*\x+4.058637708132611) node[left] {$y=A(x)$};
+    \foreach \x in {1,2,3,4,5,6,7}
+      \draw (\x,-.1) --(\x,.1) node[above] {$\x$};
+    \foreach \y in {1,3,5,7,9}
+      \draw (-.1,\y) --(.1,\y) node[above] {$\y$};
+
+   \draw[style=dashed,color=red] (4,0) --(4,1.785398163397448) -- (0, 1.785398163397448) node[left] {$1 + \frac{\pi}{4}$};
+
+ \end{tikzpicture}
+\end{center}
+
+\end{enumerate}

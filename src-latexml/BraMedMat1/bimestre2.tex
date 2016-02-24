@@ -1,0 +1,401 @@
+\chapter{Relações (2º Bimestre)}
+
+\section{Funções e Proporcionalidades}
+
+Given duas grandezas $x$ e $y$, we can often express latter in function of the
+latter. For example if $y$ is the volume of a cube and $x$ the length of one
+side of the cube, we can write $y = x^3$. There are very simple
+relação entre duas grandezas called proporcionalidades: the grandeza $y$ is
+proportional to the grandeza $x$ if $y$ can be expressed as $x$ multiplied
+by a constant factor. For instance, if $y$ is the perimeter of a square and
+$x$ the length of a side we have $y = 4x$. More generally we define:
+
+\begin{enumerate}
+\item $y$ e (diretamente) proporcional a $x$ si
+  $y = {k x}$ for some constant $k$.
+\item $y$ e inversamente proporcional a $x$ si $y = \frac{k}{x}$
+  for some constant $k$.
+\item $y$ e proporcional com o quadrado de $x$ si $y = {k x^2}$ for some
+  constant $k$.
+\end{enumerate}
+
+\subsection*{Exercício 1}
+
+Describe por meio de funções the relation between these duas grandezas and
+indicate whether it is a relation of proporcionalidad:
+
+\begin{enumerate}
+\item The length of a circumference
+  and the area of a disk in function of its radius.
+\item The number $N$ of even natural number $i$ such that $1 \leq i \leq n$,
+  in function of $n \geq 1$.
+\item The area of a square in function of the length of its diagonal.
+\item The number of ways to order $n$ objects in function of $n$.
+  For example, the $n=3$ objects $A,B,C$ can be ordered in six ways:
+  $(A,B,C)$, $(B,C,A)$, $(C,A,B)$, $(B,A,C)$, $(A,C,B)$ and $(C,B,A)$.
+\item $AD$ in function of $AC$ where $AB = 5\text{cm}$ and
+  $AE = 2\text{cm}$ and $(DE)$ is parallel to $(BC)$.
+  \begin{center}
+\begin{tikzpicture}
+  \draw (0,0)node[left]{$A$} -- (0,4)
+  node[left]{$B$}-- (3,4)node[right]{$C$} -- cycle;
+  \draw (0,2)node[left]{$D$}--(1.5,2)node[right]{$E$};
+\end{tikzpicture}
+\end{center}
+\item The mass of a quantity of water in function of its capacity.
+\end{enumerate}
+
+\section{Função de 1º grau e de 2º grau}
+
+As seen in el 3º bimestre de la 7a série do Ensino Fundamental,
+se $a, b$ são números constantes o $a \neq 0$,
+$y = {f(x)} = a x + b$ é uma função de 1º grau and is represented in a cartesian
+coordinate system as uma reta passing by the coordinates $(0, b)$ and
+$(-\frac{b}{a}, 0)$. $a$ indicates the crescimento ($a > 0$) o decrescimento
+($a < 0$) of the function and its slope (more horizontal when $|a|$
+takes values near $0$ and more vertical when $|a|$ takes large values).
+
+As seen in el 2º bimestre de la 8a série do Ensino Fundamental,
+se $a, b, c$ são números constantes o $a \neq 0$,
+$y = {f(x)} = a x^2 + b x + c$ é uma função de 2º grau and is represented in a
+cartesian coordinate system as a parabola. If $\Delta = b^2 - 4ac$ then
+$f$ reaches its minimum $-\frac{\Delta}{4a}$ at $x = -\frac{b}{2a}$.
+If $\Delta \geq 0$, the parabola also intersects the horizontal axis at points
+$x = \frac{-b\pm\sqrt{\Delta}}{2a}$. The reta $x -\frac{b}{2a}$ is the
+axis of symmetry of the parabola and the sign of $a$ indicates whether the
+branches go upwards ($a > 0$) or downwards ($a < 0$).
+
+\subsection*{Exercício 2}
+
+Identifique os gráficos de
+$y = \frac{x^2}{2} - 2x + 4$,
+$y= \frac{x^2}{2} - 3x + 4$,
+$y= 3x-6$,
+$y=\frac{x^2}{4} - x + 3$,
+$y= x-2$,
+$y=1$
+$y= -2x + 5$,
+$y=-\frac{x^2}{4} -\frac{x}{4} + \frac{3}{2}$,
+na figura a seguir:
+
+\begin{center}
+  \begin{tikzpicture}[domain=-5:11, xscale=.5, yscale=0.2]
+    \draw[->] (-10.5,0) -- (10.5,0) node[right] {$x$}; 
+    \draw[->] (0,-20.5) -- (0,40.5) node[above] {$y$};
+    \draw[color=green] plot (\x,{.5*\x*\x - 2*\x + 4}) node[left] {$y=a(x)$};
+    \draw[color=yellow] plot (\x,{.5*\x*\x -3*\x + 4}) node[left] {$y=b(x)$};
+    \draw[color=orange] plot (\x,{3*\x - 6}) node[left] {$y=c(x)$};
+    \draw[color=cyan] plot (\x,{.25*\x*\x - \x + 3}) node[left] {$y=d(x)$};
+    \draw[color=purple] plot (\x,{\x - 2}) node[left] {$y=e(x)$};
+    \draw[color=red]  plot (\x,1)       node[above] {$y=f(x)$}; 
+    \draw[color=blue] plot (\x,{-2*\x+5}) node[left] {$y=g(x)$};
+    \draw[color=gray] plot (\x,{-.25*\x*\x -.25*\x+1.5}) node[left] {$y=h(x)$};
+  \end{tikzpicture}
+\end{center}
+
+\subsection*{Exercício 3}
+
+Without drawing the function, indicate the increasing/descreasing intervals,
+zeros, signs and extremum of the following functions:
+
+\begin{enumerate}
+\item $f(x) = 3x - 7$
+\item $g(x) = -5x + 8$
+\item $h(x) = -5x^2 - 5x + 30$
+\item $i(x) = 7x^2 - 14x + 15$
+\item $j(x) = 2x^2 -20x+50$
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+Determine the functions of degree $1$ or $2$ with the following properties:
+
+\begin{enumerate}
+\item $f$ has limit $-\infty$ in $+\infty$, $+\infty$ in $+\infty$ and
+  $f(3) = 2 \times {f(2)} = 1$.
+\item $g(x) < 0$ if $x < 4$, $g(x) > 0$ if $x > 4$ and the graph of
+  $g$ does not intersect the reta $y = 2x$.
+\item $h(x) < 0$ if $x < 4$, $h(x) > 0$ if $4 < x < 8$ and
+  $h(x) < 0$ if $x > 8$. The reta $y = 8x - 68$ is the tangent of
+  the graph of $h$ at $x=10$.
+\item $x = 1$ is an axis of symmetry of the graph of $i$ and
+  $y = 2$ a tangent. We have $i(5) = -{i(1)}^2$.
+\item The limits of $j$ at $\pm\infty$ are distinct and $y = 2x + 5$ is
+  the tangent of the graph of $j$ at $x=15$.
+\item For all $x_0$, the tangent of the graph of $k$ at the point $x_0$ is
+  $y = {(6x_0+5)}x-{(3x_0^2+2)}$.
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+For any $x \geq 6$ we consider the following figure:
+
+  \begin{center}
+    \begin{tikzpicture}
+      \fill (0,0) circle(.08);
+      \fill (6,0) circle(.08);
+      \draw (-1.5,0)node[below]{$(-\frac{3}{2},0)$} -- (0,0)node[below]{$(0,0)$}
+      -- (8,0)node[below right]{$(x,0)$}
+      -- (8,6.283185307179586)node[above]{$(x,2\pi)$}
+      -- (-1.5,6.283185307179586)node[above]{$(-\frac{3}{2},2\pi)$} --  cycle;
+      \draw (6,0)node[below]{$(6,0)$} circle(2);
+      \draw (2.5, 3) node{$A(x)$};
+      \draw (6, 1) node[above]{$B(x)$};
+\end{tikzpicture}
+  \end{center}
+
+  \begin{enumerate}
+  \item Express the area $A(x)$ of the rectangle in function of $x$.
+  \item Express the area $B(x)$ of the disk in function of $x$.
+  \item We define $C(x) = \frac{B(x) - A(x)}{\pi}$. How do the areas
+    rectangle and of the disk compare according to the sign of $C$?
+  \item Determine $C(x)$ and its sign in function of $x$.
+  \item Compare the areas of the rectangle and of the disk in function of $x$.
+  \end{enumerate}    
+
+\subsection*{Exercício 5}
+
+Let $t$ be any real number. We define the function $\varphi_t$ by
+$\varphi_t(x) = {(3t^2+5)}x^2-{(6t^3+10t)}x + {(3t^4+3t^2+28t-81)}$ for any $x$.
+  
+\begin{enumerate}
+\item Determine the zeros, sign, extremum, increasing/descreasing intervals
+  of $\varphi_0$.
+\item Show that $\varphi_9(x) > 0$ for all $x$. Determine the extremum and
+  increasing/descreasing intervals of $\varphi_9$.
+\item Let $\psi_t(x) = \varphi_t(x) + 2(t-7)^2 - 17$. What is the determinant
+  $\Delta_t$ of $\psi_t$? Deduce the zeros, sign, extremum,
+  increasing/descreasing intervals of $\psi_t$.
+\item What can you say about the graphs of $\psi_t$ and $\varphi_t$?
+ Deduce the increasing/descreasing intervals of $\varphi_t$
+ and its extremum $M(t)$.
+\item Indicate whether $\varphi_t$ has zero, one or two zeros in function
+  of the value of $t$. What is the value of $t$ for which the extremum of
+  $\varphi_t$ is maximum?
+\end{enumerate}
+
+\section{Solução do Exercícios}
+
+\subsection*{Exercício 1}
+
+\begin{enumerate}
+\item These are expressed as $L = 2 \pi r$ and $A = \pi r^2$ where $r$ is
+  the radius and $\pi$ is a constant. Hence $L$ is proportional to $r$ and
+  $A$ is proportional to the square of $r$.
+\item For $n=1$ there is not any such even number.
+  For $n=2$ or $n=3$ there is only one such even numbers ($2$).
+  For $n=4$ or $n=5$ there are two such even numbers ($2$ and $4$).
+  More generally, we have
+  $$N=\begin{cases} \frac{n}{2}, & \text{if}\;n\;\text{is even} \\ \frac{n-1}{2}, & \text{if}\;n\;\text{is odd} \end{cases}$$
+  So $N$ is proportional to $n$ if and only if $n$ is even.
+\item If $l$ is the length of the side of a square and $d$ the one of its
+  diagonal then el Teorema de Pitágoras gives
+  $d^2 = l^2 + l^2$ that is $l^2 = \frac{d^2}{2}$. Hence the area $l^2$ is
+  proportional to the square of the diagonal $d$.
+  
+\item There is only $1$ way to order $n=1$ object.
+  There are $2 = 2 \times 1$ ways to order $n = 2$ objects ($(A,B)$ or $(B,C)$).
+  For $n=3$, the example shows that there are $6 = 3 \times 2 \times 1$.
+
+  More generally, to order $n$ objects we put one of them at the first position
+  ($n$ choices possible), then a second one a the second position
+  (it remains $n-1$ choices), then a third one a the third position
+  (it remains $n-2$ choices) ... and finally take the remaining object
+  ($1$ choice possible).
+  Hence there are $N = n \times {(n-1)} \times {(n-2)} \times {(n-3)}
+  \dots \times 3 \times 2 \times 1$ possibilities.
+  The expressions
+  $N \times n = n^2 \times {(n-1)} \times {(n-2)} \times {(n-3)}
+  \dots \times 3 \times 2 \times 1$,
+  $\frac{N}{n} = {(n-1)} \times {(n-2)} \times {(n-3)}
+  \dots \times 3 \times 2 \times 1$ and
+  $\frac{N}{n^2} = {(1-\frac{1}{n})} \times {(n-2)} \times {(n-3)}
+  \dots \times 3 \times 2 \times 1$ are not constants (for example we
+  can choose $n$ such that they become arbitrarily large) and so
+  we don't have a proportinal relation.
+
+\item The Teorema de Tales, gives
+  $\frac{AD}{AB} = \frac{AE}{AC}$ and so
+  $AD = \frac{10 \text{cm}^2}{AC}$ and $AD$ is invertly proportional to
+  $AC$.
+\item As an approximation, the mass of a liter of water is $1\text{kg}$.
+  So if $m$ is the mass of water (in kilograms) and $c$ its capacity
+  (in liter) we have $m = c \times 1 {\text{kg}\cdot\text{L}^{-1}}$. So
+  $m$ is directly proportional to $c$ (here
+  $k = 1 {\text{kg}\cdot\text{L}^{-1}}$ but we may have a different constant
+  if we change the units).
+\end{enumerate}
+
+\subsection*{Exercício 2}
+
+$y = \frac{x^2}{2} - 2x + 4$, $y= \frac{x^2}{2} - 3x + 4$,
+$y=\frac{x^2}{4} - x + 3$ and
+$y=-\frac{x^2}{4} -\frac{x}{4} + \frac{3}{2}$ are parabolas,
+$y= 3x-6$, $y= x-2$, $y= -2x + 5$, are retas non-parallel to the $x$-axis
+and $y = 1$, is uma reta parallel to the $x$-axis. Hence the horizontal
+red line is necessarily $f(x) = 1$. The blue line corresponds to a decreasing
+linear function so it is the one with a negative cofficient:
+$g(x) = -2x + 5$. If we compare the slopes of the purple and orange lines
+we deduce that the latter has the smallest coefficient and so
+$e(x) = x - 2$ while $c(x) = 3x-6$. The discriminant of the functions
+$y = \frac{x^2}{2} - 2x + 4$, $y= \frac{x^2}{2} - 3x + 4$,
+$y=\frac{x^2}{4} - x + 3$ and
+$y=-\frac{x^2}{4} -\frac{x}{4} + \frac{3}{2}$ are respectively
+$-4$, $1$, $-2$ and $\frac{25}{16}$. Hence the parabolas intersecting the
+$x$-axis are those with positive discriminant: $y= \frac{x^2}{2} - 3x + 4$
+and $y=-\frac{x^2}{4} -\frac{x}{4} + \frac{3}{2}$. The sign of the coefficient
+in $x^2$ indicates whether the branches go upwards (yellow parabola) or
+downwards (gray parabola) and so $b(x) = \frac{x^2}{2} - 3x + 4$ and
+$h(x) = -\frac{x^2}{4} -\frac{x}{4} + \frac{3}{2}$. To distinguish the two
+parabolas that do not intersect the $x$-axis, we compare the absolute value
+of the coefficient in $x^2$: the green parabola grows faster than the
+cyan parabola and so $a(x) = \frac{x^2}{2} - 2x + 4$ and
+$d(x) = \frac{x^2}{4} - x + 3$.
+
+\subsection*{Exercício 3}
+
+\begin{enumerate}
+\item $f(x) = 3x - 7$. The coefficient $3$ is positive so $f$ is increasing.
+  We have $f(x) = 0$ iff $x = \frac{7}{3}$.
+  The limit of $f$ in $-\infty$ is $-\infty$. The limit of $f$ in $+\infty$
+  is $+\infty$.  $f(x)$ is negative for $x < 0$ and positive for $x > 0$
+\item $g(x) = -5x + 8$. The coefficient $-5$ is negative so $g$ is decreasing.
+  We have $g(x) = 0$ iff $x = \frac{8}{5}$. The limit of $g$ in $-\infty$
+  is $+\infty$.  The limit of $g$ in $+\infty$ is $-\infty$. $g(x)$ is positive
+  for $x < 0$ and negative for $x > 0$.
+\item $h(x) = -5x^2 - 5x + 30$.
+  The discriminant is $\Delta = 625 = 25^2 > 0$ so $h$ has
+  two zeros: $x_1 = -3$ and $x_2 = 2$. $-5 < 0$ so $h$ has limit $-\infty$
+  in $\pm\infty$, $h(x) < 0$ if $x < x_1$ or $x > x_2$ and
+  $h(x) > 0$ if $x \in (x_1,x_2)$.
+  $h$ reaches a maximum $-\frac{\Delta}{4 \times -5} = \frac{125}{4}$ at
+  $x_0 = -\frac{-5}{2 \times -5} = -\frac{1}{2}$. $h$ is increasing on
+  $(-\infty, x_0]$  and decreasing on $[x_0, +\infty)$.
+  
+\item $i(x) = 7x^2 - 14x + 15$.
+  The discriminant is $-224 < 0$ so $i$ does not have any zero.
+  $7 > 0$ so $i$ has limit $+\infty$ in $\pm\infty$ and
+  and $i(x) > 0$ for all $x$. $i$ reaches a minimum
+  $-\frac{\Delta}{4 \times 7} = 8$ at
+  $x_0 = -\frac{14}{2 \times 7} = 1$. $h$ is decreasing on
+  $(-\infty, x_0]$  and increasing on $[x_0, +\infty)$.
+  
+\item $j(x) = 2x^2 -20x+50$. The discriminant is zero so $j$ has only one
+  zero $x_0 = 5$. $2 > 0$ so $j$ has limit $+\infty$ in $\pm\infty$ and
+  $i(x) > 0$ for all $x \neq x_0$. $j$ reaches its minimum $0$ at $x_0$.
+  $h$ is decreasing on
+  $(-\infty, x_0]$  and increasing on $[x_0, +\infty)$.
+      
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+\item $f$ is a linear function since the limit at $\pm\infty$ are distinct.
+  If $f(x) = ax +b$ then $3a+b= 4a+2b = 1$
+  so $1 = {2(3a+b)} - {(4a+2b)} = 2a$ that is $a = \frac{1}{2}$ and
+  $b = 1 - 3a = -\frac{1}{2}$. We necessarily have $f(x) = \frac{x-1}{2}$
+  and we verify that this has the desired properties.
+\item By continuity, $g$ has a single zero $x = 4$. $g$ is not a function of
+  degree two or otherwise it would have constant sign. Hence $g$ is a linear
+  function. Since $g$ is parallel to the reta
+  $y = 2x$, $g$ can be written $g(x) = 2x + b$. Since we have $g(4) = 0 =
+  8 + b$ so $b = -8$. Hence $g(x) = 2x - 8$
+  and we verify that this has the desired properties.
+\item By continuity, $h$ has two zeros $x_1=4$ and $x_2=8$. So $h$ is of the
+  form $h(x) = a {(x-4)} {(x-8)}$. If the graph of $h$
+  intersects the reta $y = 8x - 68$
+  then $h(10) = a {(10-4)} {(10-8)} = 12a = {8\times10-68} = 12$ so
+  necessarily $a=1$ and $h(x) = {(x-4)} {(x-8)}$. We easily verify the sign
+  of $h(x)$. To verify that $y = 8x - 68$ is a tangent, we note that
+  $h(x) - {(8x - 68)} = x^2 - 20x +100 = {(x-10)}^2$ so indeed the graph
+  of $h$ intersects the reta $y = 8x - 68$ only at only one point
+  (given by $x=10$).
+\item If $x = 1$ is an axis of symmetry of the graph then $i$ is of degree
+  two and more precisely $i(x) = a {(x-1)}^2 + b$ for some constants $a,b$.
+  If moreover $y = 2$ is a tangent, then $i(1) = 2 = b$.
+  Then we deduce $i(5) = -{i(1)}^2 = -4 = 16a+2$ so $a = -\frac{3}{8}$.
+  Finally we verify that $i(x) = -\frac{3}{8} {(x-1)}^2 + 2$ has the desired
+  properties.
+\item Since the limits at $\pm\infty$ are distinct, $j$ is a linear function.
+  Since $y = 2x + 5$ is a tangent of the graph, we actually have
+  $j(x) = 2x+5$.
+\item The graph of $k$ is not uma reta since the tangents are for example
+  distinct at the points $x_0=0$ and $x_0=1$.
+  So $k$ is of a function of degree two.
+  The tangent at point $x_0 = -\frac{5}{6}$ is the horizontal
+  reta $y = -\frac{49}{12}$ so $k$ is of the form
+  $k(x) = a\left(x+\frac{5}{6}\right)^2 -\frac{49}{12}$.
+  The tangent at point $x_0 = 0$ is $y=5x-2$ so
+  $k(0) = 5x_0-2 = -2 = a \frac{5^2}{6^2} -\frac{49}{12}$.
+  We obtain $a = 3$. After expansion, we obtain
+  $k(x) = 3x^2 + 5x -2$.
+  We also find ${k(x)} - \left({(6x_0+5)}x-{(3x_0^2+2)}\right) = 3{(x-x_0)}^2$
+  which shows that
+  indeed ${(6x_0+5)}x-{(3x_0^2+2)}$ is the tangent at the point $x=x_0$.
+
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+    \begin{enumerate}
+  \item $A(x) = {(2\pi)} \times {(x+\frac{3}{2})} = {2\pi x} + {3\pi}$.
+  \item $B(x) = \pi {(x - 6)}^2 = \pi x^2 - {12\pi x} + 36 \pi$.
+  \item Since $\pi > 0$
+    the area of rectangle is smaller than the one of the disk if
+    $C(x) > 0$, it is larger if $C(x) < 0$ and is is equal if $C(x) = 0$.
+  \item We have
+    $C(x) = \frac{B(x) - A(x)}{\pi} = x^2 -14x + 33$.
+    The discriminant of $C$ is
+    $\Delta = 14^2 - 4 \times 33 = 64=8^2$ and $C$ has two zeros:
+    $x_1 = \frac{14-8}{2} = 2$ and $x_2 = \frac{14+8}{2} = 11$.
+    Hence $C(x) > 0$ if $x < 2$ or $x > 11$ and $C(x) < 0$ if $x \in ]2,11[$.
+  \item The area of the disk is smaller than
+    the one of the rectangle for any $6 \leq x < 11$. The areas are equal to
+    $A(x)=B(x)=25\pi$ for $x=11$. Finally the area of the disk is larger than
+    the one of the rectangle for any $x > 11$.
+  \end{enumerate}    
+
+\subsection*{Exercício 6}
+
+ \begin{enumerate}
+\item $\varphi_0(x) = 5x^2 - 81$. So $\varphi_0$ has two zeros
+  $x_\pm = \pm \frac{9 \sqrt{5}}{5}$. $\varphi_0(x) > 0$ if $x < x_-$ or
+  $x > x_+$ and $\varphi_0(x) < 0$ if $x \in (x_-,x_+)$. $\varphi_0$ is
+  decreasing on $(-\infty,0)$, it reaches its minimum $\varphi_0(x) = -81$
+  at $x = 0$ and is increasing on $(0, +\infty)$.
+\item $\varphi_9(x) = 248x^2-4464x+20097$. We have
+  $\Delta = 4464^2 - 4 \times 248 \times 20097 = -8928 < 0$ and
+  $\varphi_9(0) = 20097 > 0$ so $\varphi_9 > 0$. $\varphi_9$ reaches
+  its minimum $-\frac{\Delta}{4 \times 248} = 9$ at
+  $x = -\frac{-4464}{2 \times 248} = 9$. Hence
+  $\varphi_0$ is decreasing on $(-\infty,9)$ and increasing on
+  $(9, +\infty)$
+\item We find
+  $\psi_t(x) = {(3t^2+5)}x^2-{(6t^3+10t)}x + {(3t^4+5t^2)}$.
+  We have $\Delta_t ={(6t^3+10t)}^2 - 4 \times {(3t^2+5)} \times {(3t^4+5t^2)}
+  = 0$. Hence $\psi_t$ has only one zero at
+  $x = -\frac{-{(6t^3+10t)}}{2{(3t^2+5)}} = t$.
+  Moreover, $3t^2+5 \geq 5 > 0$ so $\psi_t(x) \geq 0$ for all $x$,
+  $\psi_t$ is decreasing on $(-\infty,t)$ and increasing
+  on $(t,+\infty)$.
+
+\item If $k_t = 17 - 2(t-7)^2$ then
+  $\varphi_t =  \psi_t + k_t$ that is the graph of $\varphi_t$ is just
+  the graph of $\psi_t$ translated vertically by $k_t$.
+  Hence $\psi_t$ is also decreasing on $(-\infty,t)$ and increasing
+  on $(t,+\infty)$. It reaches a minimum
+  $M(t) = k_t = 17 - 2(t-7)^2$ at $x = t$.
+
+\item If $7 - \sqrt{\frac{17}{2}} < t < 7 + \sqrt{\frac{17}{2}}$
+  (for example $t = 9$) then
+  the minimum of $\varphi_t$ is $M(t) > 0$ and so $\varphi_t$ does not have
+  any zero and actually $\varphi_t > 0$.
+  If $t < 7 - \sqrt{\frac{17}{2}}$ (for example $t = 0$) or
+  $t > 7 + \sqrt{\frac{17}{2}}$ then the minimum of $\varphi_t$ is $M(t) < 0$
+  and so $\varphi_t$ has two zeros.
+  For $t = 7 \pm \sqrt{\frac{17}{2}}$, $\varphi_t$ has exactly one zero
+  (which is its minimum $M(t) = 0$) reached at $x = t$.
+  The minimum $M(t)$ of $\varphi_t$ is maximum for
+  $t = 7$, with value $M(t) = 17$.
+\end{enumerate}

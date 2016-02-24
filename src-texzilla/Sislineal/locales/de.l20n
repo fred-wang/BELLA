@@ -1,0 +1,20 @@
+<solvingSystem "Lösen linearer Systeme">
+<solveSystem "Löse das folgende lineare System:">
+<showSolution "Lösung anzeigen">
+<newSystem "Neues System">
+<courseSummary "Kurs-Zusammenfassung">
+<p1 "Ein lineares Gleichungssystem wird notiert">
+<p2 "Anzahl der Unbekannten:">
+<p3 "Anzahl der Gleichungen:">
+<p4 "Unbekannte:">
+<p5 "Koeffizienten:">
+<p6 "Konstanten:">
+<p7 "Es gibt mehere Techniken, um lineare Systeme zu lösen. Es können die folgenden grundlegenden Reihenoperation benutzt werden, um das System in ein Gleichheitssystem zu überführen:">
+<p8 "Tauschen von zwei Reihen">
+<p9 "Multiplizieren einer Reihe mit einem Skalar, der nicht Null ist">
+<p10 "Hinzufügen einer Reihe, die ein Vielfaches einer anderen Reihe ist.">
+<p11 "Im gaußschen Eliminationsverfahren kann ein Koeffizient, welcher nicht Null ist (Pivotelement), in einer Spalte ausgewählt werden, um die anderen Koeffizienten in der Spalte zu eliminieren. Zum Beispiel:">
+<p12 "Zum Schluss ist ein reduziertes lineares System entstanden, welches einfach gelöst werden kann. Es kann keine, eine oder unendlich viele Lösungen geben.">
+<backToIndex "Zurück zur Startseite">
+<license "Lizensiert unter CC BY-SA 4.0">
+<bella "BELLA Projekt">

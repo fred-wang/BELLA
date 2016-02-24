@@ -1,0 +1,48 @@
+@namespace "http://www.w3.org/1999/xhtml";
+
+/* Update LaTeXML css style to get some kind of "mobile UI" */
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #b50, #e80);
+}
+
+.ltx_page_main {
+  padding: 0;
+}
+
+.ltx_page_header, .ltx_page_footer {
+  border: 0;
+}
+
+.ltx_page_header a[rel="up"] {
+  font-size: 250%;
+}
+
+.ltx_page_header a[rel!="up"] {
+  font-size: 0.8em;
+}
+
+.ltx_page_header a {
+  color: white !important;
+}
+
+.ltx_page_footer a {
+  color: white !important;
+}
+
+.ltx_page_logo {
+  display: none;
+}
+
+.ltx_page_content {
+  background: #ffc;
+  padding: .5em;
+}
+
+/* Links */
+a, a:visited {
+  color: blue;
+}
+a:hover {
+  color: red;
+}

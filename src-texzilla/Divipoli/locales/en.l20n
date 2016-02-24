@@ -1,0 +1,16 @@
+<polynomialDivision "Division of polynomials">
+<dividePolynomial "Perform the division of the following polynomials:">
+<showSolution "Show Solution">
+<newDivision "New Division">
+<courseSummary "Course Summary">
+<p1 "To define the Euclidean division, we suppose that we have two polynomials:">
+<polyA "dividend">
+<polyB "divisor">
+<p2 "There is a unique couple of polynomials with the following properties:">
+<polyQ "quotient">
+<polyR "remainder (must be null or have degree less than the one of divisor)">
+<p3 "For example:">
+<p4 "We can generalize the classical pencil-and-paper computation for the long division of integers to perform the Euclidean division of polynomials.">
+<backToIndex "Back to index">
+<license "Licensed under CC BY-SA 4.0">
+<bella "The BELLA Project">

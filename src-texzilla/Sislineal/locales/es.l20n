@@ -1,0 +1,20 @@
+<solvingSystem "Resolver sistemas lineales">
+<solveSystem "Resolver el sistema lineal siguiente:">
+<showSolution "Mostrar la solución">
+<newSystem "Nuevo sistema">
+<courseSummary "Resumen del curso">
+<p1 "Un sistema de ecuaciones lineales se escribe">
+<p2 "Número de incógnitas:">
+<p3 "Número de ecuaciones:">
+<p4 "Incógnitas:">
+<p5 "Coeficientes:">
+<p6 "Términos constantes:">
+<p7 "Hay muchas técnicas para resolver un sistema lineal. Puedes utilizar las operaciones elementales sobre las líneas siguientes para transformar el sistema en un sistema equivalente:">
+<p8 "Intercambiar dos líneas">
+<p9 "Multiplicar una línea por un escalar non nulo">
+<p10 "Sumar a una ecuación un múltiplo de otra">
+<p11 "En la eliminación de Gauss, elija un coeficiente non nulo (el pivote) en una columna para eliminar otros coeficientes en la columna. Por ejemplo:">
+<p12 "Al final, obtienes un sistema lineal reducido que puedes resolver fácilmente. Es posible que haya ningún, uno o una infinidad de soluciones.">
+<backToIndex "Volver al index">
+<license "Distribuido bajo la licencia CC BY-SA 4.0">
+<bella "Proyecto BELLA">

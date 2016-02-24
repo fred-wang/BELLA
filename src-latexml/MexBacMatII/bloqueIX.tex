@@ -1,0 +1,366 @@
+\chapter{Aplicas la estadística elemental}
+
+\section{Población y muestra}
+
+\subsection{Definición}
+
+Una población estadística es cualquier conjunto de elementos sobre el que
+realizamos observaciones. Una muestra estadística es un subconjunto de una
+población que es representativo de la totalidad de la población.
+
+\subsection{Ejercicio 1}
+
+En 2012, la población de México era de 120 milliones de habitantes. El número
+de habitantes inscritos para las elecciones federales eran de 80 milliones.
+Un sondeo fue realizado en Junio 2012 con 12480 personas y 25\% de estas
+personas indicarón una intención de voto para Enrique Peña Nieto.
+Indique la población estadística correspondiente a la votación y la muestra
+estadística utilizada para estimar el resultado.
+
+\section{Medidas de tendencia central}
+
+\subsection{Definición (data no agrupados)}
+
+Consideramos $n$ datos $x_1, x_2, \ldots, x_n$. La media (aritmética) de esos
+valores es
+%%
+$$\mu = E(x) =
+\overline{x} = \frac{x_1 + x_2 + \ldots + x_n}{n} = \frac{1}{n}\sum_{i=1}^n x_i$$
+
+La moda es el valor lo más repetido en estos datos. Es posible que no sea
+única.
+
+Si ordenados las valores
+de menor a mayor, la mediana es el valor de la variable a la mitad de los datos
+(si hay un número impar de datos)
+o la media de las valores dos variables a la mitad (si hay un número par de
+datos).
+
+\subsection{Ejemplo}
+
+Consideramos los datos $x_1 = x_4 = x_5 = 3$, $x_2 = x_6 = 1$,
+$x_3 = 0$ y $x_7 = 10$. La media es $\frac{3+1+0+3+3+1+10}{7} = 3$. La moda
+es $3$, valor tomado por $x_1, x_4, x_5$. Podemos ordenar las variables:
+$x_3 = 0, 1, 1, {\color{red}3}, 3, 3, 10 = x_7$ y entonces la mediana es también $3$.
+
+Ahora, añadimos el dato $x_8 = 1$. La media se vuelve
+$\frac{3+1+0+3+3+1+10+1}{8} = 2.75$. Hay dos modas de frecuencia $3$ posibles:
+$3$ (valor tomado por $x_1, x_4, x_5$) y
+$1$ (valor tomado por $x_2, x_6, x_8$). Podemos ordenar las variables:
+$x_3 = 0, 1, 1, {\color{red} 1}, {\color{red} 3}, 3, 3, 10 = x_7$ y entonces
+la mediana es $\frac{1+3}{2} = 2$.
+
+\subsection{Ejercicio 2}
+
+Calcule la media, moda y mediana de estos datos
+
+\begin{enumerate}
+\item $1.60\text{m}, 1.58\text{m}, 1.66\text{m}, 1.72\text{m}, 1.67\text{m}, 1.73\text{m}, 1.65\text{m}, 1.66\text{m}, 1.70\text{m}, 1.80\text{m}$
+\item $18 \text{años}, 25 \text{años}, 22 \text{años},  \text{22} \text{años},
+   \text{22} \text{años},  \text{18} \text{años},
+   \text{24} \text{años},  \text{20} \text{años},  \text{29} \text{años}$
+\end{enumerate}
+
+\subsection{Definición (data agrupados)}
+
+En esta sección, consideramos datos agrupados en clases
+${[a_1, b_1]}, {[a_2, b_2]}, \ldots, {[a_n, b_n]}$ con
+$b_1 < a_2, b_2 < a_3 \ldots b_{n-1} < a_n$. Para $1 \leq k \leq n$, la
+frecuencia de la clase $[a_k, b_k]$ es $f_k > 0$ y el total es 
+$N = \sum_{k=1}^n f_k$. La media (aritmética) de estos datos es
+%%
+$$
+\mu = E(x) =
+\overline{x} = \frac{1}{N} \sum_{k=1}^n f_k \frac{a_k + b_k}{2}
+$$
+
+Para determinar la moda, consideramos el número $k$ tal que la frecuencia $f_k$ 
+es máximal y ponemos
+%%
+$$
+\text{Moda}
+= a_k + \left( \frac{f_{k} - f_{k-1}}{{(f_k - f_{k+1})} + {(f_{k} - f_{k-1})}}
+\right) \left(b_k - a_k \right)
+$$
+
+Aquí, suponemos que $1 < k < n$ y que $f_{k-1}, f_{k+1} < f_k$. Para utilizar
+la formula de manera más general, podemos poner $f_0 = f_{n+1} = 0$ y
+tomar $M = \frac{a_k+b_k}{2}$ si $f_k = f_{k-1} = f_{k+1}$. Igual al caso
+no agrupados, la moda no es definida de manera única si hay muchos
+intervalos de frecuencia máximal.
+
+Para definir la mediana, consideramos las frecuencias acumuladas
+$F_k = \sum_{i=1}^k f_i$ para $0 \leq k \leq n$ ($F_0 = 0$ y
+$F_n = N$). Sea $k$ el menor
+entero tal que $F_k \geq \frac{N}{2}$. La mediana es dado por la formula
+%%
+$$
+\text{Mediana} =
+a_k + \left( \frac{\frac{N}{2} - F_{k-1}}{f_k}
+\right) \left(b_k - a_k \right)
+$$
+
+\subsection{Ejercicio 3}
+
+Determine las clases, frecuencias y frecuencias acumuladas de estos datos.
+Calcule la media, moda y mediana.
+
+\begin{center}
+\begin{tabular}{| c | c | c |}
+  \hline
+  Población (2013) & País o dependencia \\
+  \hline
+  100 a 200 millones & Brasil, México \\
+  \hline
+  30 a 100 millones &  Colombia, Argentina, Perú \\
+  \hline
+  10 a 30 millones & Venezuela, Chile, Ecuador, Guatemala,
+  Cuba, Haití, Bolivia \\
+  \hline
+  1 a 10 millones & República Dominicana, Honduras, Paraguay, El Salvador,
+  Nicaragua, Costa Rica, Rico Puerto Rico, Panamá, Uruguay \\
+  \hline
+  Menos de 1 millión & Guadalupe, Martinica, Guayana Francesa, San Martín,
+  San Bartolomé, San Pedro y Miquelón \\
+  \hline
+\end{tabular}
+
+Fuente: es.wikipedia.org
+\end{center}
+
+\subsection{Ejercicio 4}
+
+Consideramos datos que podemos agrupar en frecuencias $f_1, \ldots, f_n$:
+$x_1 = x_2 = \ldots = x_{F_1} < x_{F_1+1} = x_{F_1+2} = \ldots = x_{F_2} < \ldots
+= x_{F_{n-1}} < x_{F_{n-1}+1} = x_{F_{n-1}+2} = \ldots =
+x_{F_{n}}$ donde las $F_k$ son las frecuencias acumuladas.
+Exprese la media y moda de esos datos no agrupados.
+
+Si consideramos los clases con uno elemento
+$a_k = b_k = x_{F_{k-1}} = x_{F_{k-1}+2} = \ldots = x_{F_{k}}$, exprese
+la media y moda de esos datos agrupados y compare con las formulas para
+datos no agrupados. ¿Que decir de la mediana?
+
+\section{Medidas de dispersión}
+
+\subsection{Definición (data no agrupados)}
+
+Consideramos $n$ datos $x_1, x_2, \ldots, x_n$. Para obtener el rango, restamos el
+valor mínimo del valor máximo. La varianza es
+%%
+$$
+V(x) =
+\frac{1}{n}
+\sum_{i=1}^n \left(x_i - \overline{x}\right)^2
+$$
+%%
+y la desviación típica
+%%
+$$
+\sigma = \sqrt{V(x)}
+$$
+
+\subsection{Ejemplo}
+
+Consideramos $x_1 = 0, x_2 = 20$ y $x_3 = 10$. La media es
+$\frac{0+20+10}{3} = 10$. El rango es $20 - 0 = 20$. La varianza es
+$\frac{\left(0-10\right)^2 + \left(10-10\right)^2 + \left(20-10\right)^2}{3}
+= \frac{200}{3}$ y la desviación típica
+$10 \sqrt{\frac{2}{3}} \approx 8.16$.
+
+Ahora, añadimos los dato $x_4 = 13, x_5 = 17$. La media se vuelve
+$\frac{0+20+10+13+17}{5} = 12$. El rango siempre es $20 - 0 = 20$ pero
+la varianza es 
+$\frac{\left(0-12\right)^2 + \left(10-12\right)^2 + \left(20-12\right)^2
++ \left(13-12\right)^2 + \left(17-12\right)^2}{5}
+= \frac{238}{5}$ y la desviación típica
+$\sqrt{\frac{238}{5}} \approx 6.89$.
+
+\subsection{Ejercicio 5}
+
+Calcule el rango, la varianza y la desviación típica de los datos del
+ejercicio 2.
+
+\subsection{Ejercicio 6}
+
+Muestre que 
+%%
+$$
+V(x) =
+\frac{1}{n}
+\left(\sum_{i=1}^n x_i^2\right) - \overline{x}^2
+$$
+
+\subsection{Definición (data agrupados)}
+
+En esta sección, consideramos datos agrupados en clases
+${[a_1, b_1]}, {[a_2, b_2]}, \ldots, {[a_n, b_n]}$ con
+$b_1 < a_2, b_2 < a_3 \ldots b_{n-1} < a_n$. Para $1 \leq k \leq n$, la
+frecuencia de la clase $[a_k, b_k]$ es $f_k > 0$ y el total es 
+$N = \sum_{k=1}^n f_k$.
+
+El rango es $b_n - a_1$. La varianza es
+%%
+$$
+V(x) =
+\frac{1}{N}
+\sum_{k=1}^n f_k \left(\frac{a_k+b_k}{2} - \overline{x}\right)^2
+$$
+%%
+y la desviación típica queda $\sigma = \sqrt{V(x)}$. 
+
+\subsection{Ejercicio 7}
+
+Calcule el rango, la varianza y la desviación típica de los datos del
+ejercicio 3.
+
+\section{Soluciones de los ejercicios}
+
+\subsection{Ejercicio 1}
+
+La población estadística correspondiente a la votación es el conjunto de los
+habitantes inscritos para las elecciones federales. La muestra estadística
+es el conjunto de los 12480 personas que fueron interrogadas.
+
+\subsection{Ejercicio 2}
+
+\begin{enumerate}
+\item
+La media es
+$\frac{1.6+1.68+1.66+1.72+1.67+1.73+1.65+1.66+1.7+1.8}{10} = 1.687\text{m}$,
+la moda $1.66\text{m}$ (dos veces) y la mediana
+$\frac{1.68+1.67}{2} = 1.675\text{m}$.
+
+\item
+La media es $\frac{18+25+22+22+22+24+24+21+20}{9} = 22 \text{años}$.
+La moda es $22 \text{años}$ (tres veces) y la mediana es tambíen $22 \text{años}$.
+
+\end{enumerate}
+
+\subsection{Ejercicio 3}
+
+\begin{center}
+\begin{tabular}{| c | c | c | c | }
+  \hline
+  $[a_k, b_k]$ & $f_k$ & $F_k$ \\
+  \hline
+  $[0,1]$ & $6$ & $6$\\
+  \hline
+  $[1,10]$ & $9$ & $15$ \\
+  \hline
+  $[10,30]$ & $7$ & $22$ \\
+  \hline
+  $[30,100]$ & $3$ & $25$ \\
+  \hline
+  $[100,200]$ & $2$ & $N=27$ \\
+  \hline
+\end{tabular}
+\end{center}
+
+La media es $\mu = \frac{1}{27} \left(
+150 \times 2 + 65 \times 3 + 20 \times 7 + 5.5 \times 9 + 0.5 \times 6 \right)
+\approx 25.5 \text{milliones}$. La moda se obtene para el interval $[1,10]$
+($f_k=9$):
+
+$$
+1 + \frac{9-6}{9-6 + 9-7} \left(10-1\right) = 6.4 \text{milliones}
+$$
+
+Tenemos $\frac{27}{2} = 13.5$ entonces la mediana se obtene también para 
+el interval $[1,10]$. Obtenemos:
+
+$$
+1 + \frac{13.5 - 6}{15} \left(10-1\right) = 5.5 \text{milliones}
+$$
+
+\subsection{Ejercicio 4}
+
+La formula de la media es
+$\overline{x} =
+\frac{1}{N}{\left(x_1 + x_2 + \ldots + x_N\right)} =
+\frac{1}{N} {\sum_{k=1}^n \sum_{i=1}^{f_k}  x_{(F_{k-1} + i)}}
+$ y entonces
+%%
+$$
+\overline{x} =
+\frac{1}{N} {\sum_{k=1}^n f_k a_k}
+$$
+
+La moda es el valor $a_k = b_k$ con la frecuencia $f_k$ máximal.
+
+Para datos agrupados, obtenemos $\frac{a_k+b_k}{2} = a_k$ y
+$b_k - a_k = 0$. Entonces encuentramos las mismas formulas para la media y la
+moda. 
+
+De la misma manera, la formula de la mediana para los datos agrupados se vuelve
+a $a_{k'}$ para un $1 \leq k' \leq n$. Cuando $N$ es par, es posible que
+$F_{k-1} < \frac{N}{2} < F_{k-1}+1$ y la formula de
+los datos no grupados es $\frac{b_{k-1}+a_{k}}{2}$ que no coresponde a
+un $a_{k'}$. Pero podemos verificar que en otros casos, las formulas son 
+son equivalentes para datos grupados y no grupados.
+
+\subsection{Ejercicio 5}
+
+\begin{enumerate}
+\item
+El rango es $1.80 - 1.58 = 0.22 \text{m} = 22 \text{cm}$.
+La varianza es
+%%
+$$\frac{\left(1.6-1.675\right)^2+\left(1.68-1.675\right)^2+\left(1.66-1.675\right)^2+\left(1.72-1.675\right)^2+\left(1.67-1.675\right)^2+\left(1.73-1.675\right)^2+\left(1.65-1.675\right)^2+\left(1.66-1.675\right)^2+\left(1.7-1.675\right)^2+\left(1.8-1.675\right)^2}{10} =
+0.002805$$
+%%
+ y entonces la desviación típica es
+$\sqrt{0.002805} \approx 0.05 \text{m} = 5 \text{cm}$.
+
+\item
+El rango es $25-18 = 7 \text{ans}$. La varianza es
+$\frac{38}{9} \approx  4.22$ y la desviación típica es
+$\sqrt{38}{3} \approx 2 \text{ans}$.
+
+\end{enumerate}
+
+
+\subsection{Ejercicio 6}
+
+$$
+V(x) =
+\frac{1}{n}
+\sum_{i=1}^n \left(x_i - \overline{x}\right)^2
+$$
+%%
+y $\left(x_i - \overline{x}\right)^2 =
+x_i^2 - {2 x_i \overline{x}} + \overline{x}^2$ entonces
+%%
+$$
+V(x) =
+\frac{1}{n}
+\left(\sum_{i=1}^n x_i^2\right)
+- \frac{2}{n}
+\left(\sum_{i=1}^n x_i\right) \overline{x}
++ \frac{n}{n} \overline{x}^2
+$$
+%%
+y finalmente $V(x) = 
+\frac{1}{n}
+\left(\sum_{i=1}^n x_i^2\right) - 2\overline{x}^2 + \overline{x}^2 =
+\frac{1}{n}
+\left(\sum_{i=1}^n x_i^2\right) - \overline{x}^2$.
+
+
+\subsection{Ejercicio 7}
+
+El rango es $200 - 0 = 200 \text{milliones}$. La varianza es
+%%
+$$
+V =
+\frac{1}{27}
+\left(
+2 \times \left(150 - \mu \right)^2 +
+3 \times \left(65 - \mu \right)^2 +
+7 \times \left(20 - \mu \right)^2 +
+9 \times \left(5.5 - \mu \right)^2 +
+6 \times \left(0.5 - \mu \right)^2 
+\right) \approx 1602
+$$
+%%
+y la desviación típica $\sigma = \sqrt{V} \approx 40 \text{milliones}$.

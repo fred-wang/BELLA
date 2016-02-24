@@ -1,0 +1,28 @@
+@import url("webfonts.css");
+
+body {
+  margin: 0;
+  background: #ffc;
+}
+
+header, footer {
+  background: linear-gradient(45deg, #b50, #e80);
+  color: white;
+  padding: .2em;
+  font-size: 0.8em;
+}
+footer {
+  text-align: right;
+}
+
+/* Links */
+a, a:visited {
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+
+footer a, footer a:visited {
+  color: white;
+}

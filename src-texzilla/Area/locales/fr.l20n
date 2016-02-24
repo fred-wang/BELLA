@@ -1,0 +1,21 @@
+<areasGeometricShapes "Aires de figures géométriques élémentaires">
+
+<findValue "Déterminez l'aire de la figure géométrique suivante:">
+<showSolution "Montrer la solution">
+<newQuestion "Nouvelle question">
+<courseSummary "Résumé de cours">
+
+<description "Le tableau suivant fournit des expressions pour determiner l'aire de figures géométriques classiques:">
+<geometricShape "Figure géométrique">
+<areaExpression "Aire">
+<triangle "Triangle">
+<square "Carré">
+<rectangle "Rectangle">
+<rhombus "Losange">
+<parallelogram "Parallélogramme">
+<trapezoid "Trapèze">
+<circle "Disque">
+<ellipse "Ellipse">
+<backToIndex "Retour à l'index">
+<license "Distribué sous license CC BY-SA 4.0">
+<bella "Projet BELLA">

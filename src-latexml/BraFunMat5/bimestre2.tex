@@ -1,0 +1,498 @@
+\chapter{Números/Relações (2º Bimestre)}
+
+\section{Números decimais}
+
+\subsection*{Representação}
+
+In the first bimestre we described the decimal representation of a natural
+number $N$ with digits $c_n,c_{n-1}, \ldots c_0$ (from left to right) as a sum
+%%
+$$N = {c_n \times 10^n} + \dots + {c_2 \times 10^2} + c_1 \times 10 + c_0$$
+
+Here the ``weight'' of digit $c_0$ is $1$, the weight of $c_1$ is $10$,
+and we continue like with successive power of $10$. We can generalize this
+by considering digits $c_{-1}$ of weight $\frac{1}{10}$, $c_{-2}$ of weight
+$\frac{1}{10^2}$ etc A decimal number is such a number of the form
+%%
+$$D = {c_n \times 10^n} + \dots + {c_2 \times 10^2} + c_1 \times 10 + c_0 +
+{c_{-1} \times \frac{1}{10}} +
+{c_{-2} \times \frac{1}{10^2}} + \cdots +
+{c_{-m} \times \frac{1}{10^{m}}}
+$$
+%%
+where $n,m \geq 0$ and the digits take values $0,1,2,3,4,5,6,7,8,9$. The
+typical way to represent such a decimal number is to write the digits
+$c_n,c_{n-1},\dots c_{1}, c_{0}, c_{-1}, c_{-2}, \dots c_{-m}$ from left to right
+and to use a decimal separators between the digit $c_0$ and $c_{-1}$. This
+separator varies from country to country.
+In Brazil, we generally use a comma but
+in computers or calculator we often use a point as a decimal mark. For example
+%%
+$${1234.567} = {1234,567} = 1000 + 200 + 30 + 4 + \frac{5}{10} + \frac{6}{100} +
+\frac{7}{1000}$$
+
+Decimal number should be familiar when using money: for example
+$10.50 \text{R\$}$ means $10$ reales and $50$ centavos.
+If $m=0$ that is there are no digits $c_{-1}, \dots$ then the decimal mark can
+be ommited: we find our classical representation of natural numbers.
+
+\subsection*{Exercício 1}
+
+\begin{enumerate}
+\item Order the following decimal numbers: $0.001$, $10$, $2.89$, $2.890$,
+  $10.00$, $50.2013$.
+\item Is the decimal representation of a number (natural or decimal) unique?
+\item Are all the natural numbers some decimal numbers?
+\item
+  By definition, $12.34 = 10 + 2 + \frac{3}{10} = \frac{4}{100}$. Can you write
+  it as a fraction? Are all the decimal numbers some fractions?
+\item Given a decimal writing $D$ as above, what is the decimal
+  writing of $10D$? of $100D$? of $D \div 10$? of $D \div 100$?
+  We can consider $D=5$ or $D=0.7$.
+\end{enumerate}
+
+\subsection*{Exercício 2 (difficult)}
+
+We now consider the fraction $f=\frac{1}{3}$ and decimal number
+%%
+$$D = {c_n \times 10^n} + \dots + {c_2 \times 10^2} + c_1 \times 10 + c_0 +
+{c_{-1} \times \frac{1}{10}} +
+{c_{-2} \times \frac{1}{10^2}} + \cdots +
+{c_{-m} \times \frac{1}{10^{m}}}
+$$
+%%
+where $n,m \geq 0$ and the digits take values $0,1,2,3,4,5,6,7,8,9$. We want
+to know if we can write $f = D$.
+
+\begin{enumerate}
+\item Calculate $3D$ for $D=1000.0003$, $D=1.0001$, $D=0.4001$,
+  $D=0.2$, $D=0.29$ and $D=0.299$ and compare with $3f = 1$.
+\item If $c_0 \geq 1$, show that $3D > 1$. Can we have $f = D$?
+\item Deduce that $f=D$ implies $c_n = c_{n-1} = \ldots = c_{0} = 0$. We now assume
+  that all these digits are zero.
+\item Show that $c_{-1} \geq 4$ implies $3D > 1$.
+\item Now write
+%%
+  $$3D = \frac{3 c_{-1}}{10} +
+  \frac{3 \left(c_{-2} + \frac{c_{-3}}{10} + \cdots \frac{c_{-m}}{10^{m-2}}\right)}{100}
+  $$
+
+  Show that the rightmost fraction can not exceed $\frac{3}{10}$. Deduce
+  that if $c_{-1} \leq 2$ we have $3D < 1$.
+
+\item Deduce that $f=D$ implies $c_{-1}=3$. We now assume that below.
+
+\item Show that $10f - 3 = f$. What is the decimal writing of $10D - 3$?
+  Deduce that $f=D$ implies $c_{-2} = 3$. We now assume that below.
+
+\item Show that $100f - 33 = f$. What is the decimal writing of $100D - 33$?
+  Deduce that $f=D$ implies $c_{-3} = 3$.
+
+\item Deduce that $f=D$ implies that the decimal writing of
+  $D$ is $0.333333 \cdots 333$. What about the decimal writing of $3D$?
+
+\item Conclude that $f = \frac{1}{3}$ is not a decimal number.
+
+\end{enumerate}
+
+\subsection*{Transformação em fração decimal}
+
+As we have seen in Exercício 1, we can always write a decimal number as a
+fraction
+%%
+$$D=
+\frac{{c_n \times 10^{n+m}} + \dots + {c_2 \times 10^{2+m}} + {c_1 \times 10^{1+m}} + {c_0 \times 10^m} +
+{c_{-1} \times 10^{m-1}} +
+{c_{-2} \times 10^{m-2}} + \cdots +
+{c_{-m}}}{10^{m}}
+$$
+%%
+that we can of course reduce. Said otherwise, the numerator is a natural number
+with the same digits as $D$ and the denominator is a power of $10$ to shift
+the decimal separator as wanted.
+For example $679.203=\frac{679203}{1000}$. We can of course try to reduce the
+fraction, as seen in bimestre 1.
+
+Exercício 2 showed that fractions like $\frac{1}{3}$ can not always be
+written as a decimal number. However, we can always try to approximate
+a fraction using "an infinite number of digits after the decimal separator".
+For example we would have $\frac{1}{3} = 0.3333333333333333 \dots$ with an
+infinite number of $3$'s. We notice that the decimal writing is eventually
+periodic that is we repeat the same digit $3$ at the end.
+
+More generally, a fraction $\frac{a}{b}$ can be approximated by doing the usual
+long division algoritm for $a \div b$ that we learn at school.
+Because the remainder can only take a finite number of values
+$0, 1, \dots {b-1}$ and so at some point we will just repeat the same operation
+in the algorithm. As an example let's determine the decimal expansion of
+$\frac{24}{11}$:
+
+$$\frac{24}{11} = \frac{22+2}{11} =
+2 + \frac{1}{10} \times \frac{20}{11}$$
+$$\frac{20}{11} = \frac{11+9}{11}  = 1 + \frac{1}{10} \times \frac{90}{11}$$
+$$\frac{90}{11} = \frac{88+2}{11}  = 8 + \frac{1}{10} \times \frac{20}{11}$$
+$$\frac{20}{11} = \frac{11+9}{11}  = 1 + \frac{1}{10} \times \frac{90}{11}$$
+$$\frac{90}{11} = \frac{88+2}{11}  = 8 + \frac{1}{10} \times \frac{20}{11}$$
+
+We can continue like this with the sequence of remainers $9,2,9,2,9,\ldots$
+repeating indefinitely and so $\frac{24}{11} = 2.181818181818\ldots$ with the
+sequence $18$ repeating indefinitely.
+
+\subsection*{Exercício 3}
+
+Determine a fração reduzida correspondente to the following decimal numbers:
+
+\begin{enumerate}
+\item $a = 23$
+\item $b = 12.35$
+\item $c = 1.40625$
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+Utilize o algoritmo da divisão para determinar a expansão decimal das frações:
+
+\begin{enumerate}
+\item $\frac{3}{8}$
+\item $\frac{203}{16}$
+\item $\frac{17}{13}$
+\end{enumerate}
+
+\subsection*{Operações}
+
+Since we saw that all the decimal numbers are fractions, we can now perform
+sum and subtraction of decimal numbers. However, these operations are really
+just like the operations on natural numbers, except that we have to take care
+of the decimal separators. For example
+$12.3+1.5 = 12+\frac{3}{10}+1+\frac{5}{10} = 13+\frac{8}{10} = 13.8$ is
+exactly the same as $123+15=138$.
+
+\subsection*{Exercício 5}
+
+Calculate
+
+\begin{enumerate}
+\item $1.23+0.16$
+\item $121.230+3.57$
+\item $103.739-2.12$
+\item $2.2-1.35$
+\item $1.29+3.22-2.3-1.2$
+\end{enumerate}
+
+\section{Sistemas de medida}
+
+\subsection*{Medidas de comprimento, massa e capacidade}
+
+The International System of Units provide some units of measure that should
+be already been familiar:
+
+\begin{enumerate}
+\item The length or distance (meter denoted $\text{m}$)
+\item The mass (kilogram denoted $\text{kg}$).
+\item The time (second denoted $\text{s}$).
+\item The temperature (kelvin denoted $\text{K}$).
+\end{enumerate}
+
+From these units, we can derive other units for surface ($\text{m}^2$),
+volume ($\text{m}^2$), speed ($\text{m}/\text{s}$) or density
+($\text{kg}/\text{m}^3$). People often use other equivalent units like
+the litre ($1\text{L}=0.001 \text{m}^3$), the minutes/hours ($60$ and $3600$
+seconds) or the degree Celsius and Fahrenheit for the temperature.
+
+\subsection*{Exercício 6}
+
+The density of liquid water is $1000 \text{kg}/\text{m}^3$ while a liter is
+defined by $1\text{L}=0.001 \text{m}^3$. What is the mass of one liter of
+water?
+
+\subsection*{Exercício 7}
+
+The meter was initially defined to be $\frac{1}{10000000}$ of the distance
+between the of the distance from the Earth's equator to the North Pole.
+It was then replaced by the length of the path travelled by light in vacuum
+during a time interval of $\frac{1}{299792458}$ seconds.
+
+\begin{enumerate}
+\item What is the approximate speed of the light in $10^8 \text{m}/\text{s}$?
+\item What is the approximate circumference of the earth in $10^7 \text{m}$?
+  What can you say about electromagnetic communication on Earth?
+\item The distance from the Earth to the Moon is approximately
+  $4\times10^8 \text{m}$. How long does communication between the Earth and
+  the Moon take (in seconds)?
+\item The minimal and maximal distance between Earth to Mars are approximately
+  $5\times10^{10} \text{m}$ and $4 \times10^{11} \text{m}$
+  How long does communication between the Earth and the Mars take (in minutes)?
+\end{enumerate}
+
+\subsection*{Exercício 8}
+
+If $T_1$ is a temperature in Kelvin and $T_2$ a temperature in degree Celsius
+then we can go from one to another by the formula $T_2 = T_1 + 273.15$.
+
+Guilherme who lives near Campos do Jordão says that the temperature in his
+city is around $10\text{°C}$ in August. His friend Flavio from Rio de Janeiro
+says that it's is about twice as hot where he lives.
+
+\begin{enumerate}
+\item What is the temperature in Kelvin at Campos do Jordão?
+\item What would then be the temperature in Kelvin in Rio de Janeiro according
+  to Flavio's remark?
+\item What would then be the temperature in degree Celsius in Rio de Janeiro?
+\item What can you say about Flavio's remark?
+\end{enumerate}
+
+\section*{Sistema métrico decimal: múltiplos e submúltiplos da unidade}
+
+We saw that unity of mass in the International System of Units ``kilogram''.
+The prefix ``kilo'' actually means $1000$ times a gram, that is
+$1 \text{kg} = 1000 \text{g}$. This is generally convenient to express
+large or small values instead of using power of tens as in previous exercises.
+More generally, we have the following prefixes and factors:
+
+\begin{center}
+  \begin{tabular}{ l | l | l }
+    \hline
+tera& 	T& 	1000000000000 \\ \hline
+giga& 	G& 	1000000000 \\ \hline
+mega& 	M& 	1000000 \\ \hline
+kilo& 	k& 	1000 \\ \hline
+hecto& 	h& 	100 \\ \hline
+deca& 	da& 	10 \\ \hline
+deci& 	d& 	0.1 \\ \hline
+centi& 	c& 	0.01 \\ \hline
+milli& 	m& 	0.001 \\ \hline
+micro& 	\textmu&0.000001 \\ \hline
+nano& 	n& 	0.000000001 \\ \hline
+pico& 	p& 	0.000000000001 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+If we consider a square of side $1m$ then its surface is $1\text{m}^2$.
+If we consider a square of side $1\text{dm} = 10\text{m}$ then its surface is
+$1\text{dm}^2 = 10 \times 10 = 100 \text{m}^2$. We then note that the ``deci''
+factor $10$ is squared, that is $1\text{dm}^2 = 100 \text{m}^2$. Similar
+thing happens for volume in $\text{dm}^3$ etc. People often use alternative
+units like Litres or Hectares so that the prefixes and factors keep the same
+meaning.
+
+\subsection*{Exercício 9}
+
+Convert the following units:
+
+\begin{enumerate}
+  \item $10000 \text{m}$ in $\text{km}$
+  \item $0.5 \text{L}$ in $\text{dL}$
+  \item $1 \text{Å} = 10^{-10} \text{m}$ in $\text{nm}$
+\end{enumerate}
+
+\subsection*{Exercício 10}
+
+\begin{enumerate}
+\item Convert $5 \text{L}$ in $\text{m}^3$.
+\item What is the volume in $1\text{m}^3$ of a cube of side $1\text{cm}$?
+\item Convert $5 \text{cL}$ in $\text{cm}^3$.
+\end{enumerate}
+
+\subsection*{Exercício 11}
+
+1 are represents a surface of 100 square metres, while 1 alqueire paulista is
+2.42 hectares. Bruna owns a land of 5 alqueire paulista. What is the superficie
+of her land in $\text{km}^2$?
+
+\section{Solução dos exercícios}
+
+\subsection*{Exercício 1}
+
+\begin{enumerate}
+\item $0.001 < 2.89 = 2.890 < 10 = 10.00 < 50.2013$.
+\item No, because we can add some zero digits like $1=01=001=001.000$.
+\item Yes, by definition since the case $c_{-1}=c_{-2}=\dots c_{-m} = 0$
+  gives the writing of a natural number in base 10.
+\item
+  $12.34 = 10 + 2 + \frac{3}{10} = \frac{4}{100} =
+  \frac{1000+200+30+4}{1000} = \frac{1234}{1000} =
+  \frac{617}{500}$. In general, we can always put everything in a big fraction:
+
+$$D=
+\frac{{c_n \times 10^{n+m}} + \dots + {c_2 \times 10^{2+m}} + {c_1 \times 10^{1+m}} + {c_0 \times 10^m} +
+{c_{-1} \times 10^{m-1}} +
+{c_{-2} \times 10^{m-2}} + \cdots +
+{c_{-m}}}{10^{m}}
+$$
+
+\item Just like multiplying a natural number by $10,100$ etc is like
+  appending $0$ to the decimal writing,
+  multiplying of dividing by a power of $10$ is like shifting the decimal
+  separator and adding $0$'s if necessary.
+  For example for $D=5$, we have
+  $10D=50$, $100D=500$, $D \div 10 = 0.5$ and $D \div 100 = 0.05$.
+  If $D=0.7$,
+  $10D=7$, $100D=70$, $D \div 10 = 0.07$ and $D \div 100 = 0.007$.
+
+\end{enumerate}
+
+\subsection*{Exercício 2 (difficult)}
+
+\begin{enumerate}
+\item We get $3000.0009 > 1$, $3.0003 > 1$, $1.2003 > 1$,
+  $0.6<1$, $0.87<1$ and $0.897 < 1$.
+\item As seen in the previous question, if $c_0 \geq 1$
+  we have $3D \geq 3c_0 \geq 3 > 1$ so we can not have $f=D$.
+\item We also saw in the first question
+  that $c_{3} \geq 1$ implies $3D \geq 3000 > 1$. More generally
+  if we want $f=D$, all the digits before the decimal mark must be zero:
+  $c_n = c_{n-1} = \ldots = c_{0} = 0$.
+\item Again, this is seen in the first question.
+  If $c_{-1} \geq 4$ we have
+  $3D \geq 3c_{-1} \times \frac{1}{10} \geq \frac{12}{10} > 1$
+\item
+  As suggested in the first question,
+  the best we can do for the rightmost part is to take
+  $c_{-2} = c_{-3} = \dots c_{-m} = 9$. But the numerator in
+%%
+  $$
+  \frac{3 \left(c_{-2} + \frac{c_{-3}}{10} + \cdots \frac{c_{-m}}{10^{m-2}}\right)}{100}
+  $$
+%%
+  will never exceed $30$ and so the fraction will never exceed $\frac{3}{10}$.
+  If $c_{-1} \leq 2$, $\frac{3 c_{-1}}{10} \leq \frac{6}{10}$ so
+  the sum can not exceed $3D=\frac{6+3}{10}=\frac{9}{10}<1$.
+
+\item If $f=D$ then we have neither $c_{-1} \leq 2$ nor $c_{-1} \geq 4$ by
+  the two previous questions. So the only possibility is $c_{-1}=3$.
+
+\item $10f-3=10 \frac{1}{3} - 3 = \frac{10-9}{3} = \frac{1}{3}=f$
+  Moreover, by the previous assumptions
+  $10D - 3$ will have $0$ digits for dizains, centains etc
+  $c_{-1} - 3 = 0$ for the unity and
+  $c_{-2}, c_{-3}, \dots c_{-m}$ for the digits after the decimal mark.
+  But then with $f=10f-3=10D - 3$ we come back to the case of the third
+  question, except that the digits have been shift. In particular the role
+  of $c_{-2}$ is now the role of $c_{-1}$ in previous questions and
+  we deduce as above that $c_{-2} = 3$.
+
+\item
+  $100f-33=10 \frac{100}{3} - 33 = \frac{100-99}{3} = \frac{1}{3}=f$
+  The decimal expansion of $100D - 33$
+  will again be 0 for the digits before the decimal separator and
+  $c_{-3}, c_{-4}, \dots c_{-m}$ for the digits after the decimal mark.
+  With the same reasoning, we get $f=D$ implies $c_{-3} = 3$.
+
+\item We just continue the reasoning until $c_{-m}$. Then
+  $D = 0.333333 \cdots 333$ and
+  $3D = 0.999999 \cdots 999 < 1$
+
+\item If $D=f$ we have shown above that $3D < 1$ and
+  so $D < \frac{1}{3} = f$. This is a contradiction and so the assumption
+  $D=f$ is impossible. Hence $f = \frac{1}{3}$ can not be a decimal number.
+
+\end{enumerate}
+
+\subsection*{Exercício 3}
+
+\begin{enumerate}
+\item $a = \frac{23}{1}$
+\item $b = \frac{1235}{100}=\frac{247}{20}$
+\item $c = \frac{140625}{100000} = \frac{45}{32}$
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+\item $0.375$
+\item $12.6875$
+\item $1.3076923076923076923\ldots$ (not a decimal number)
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+\begin{enumerate}
+\item $1.39$
+\item $124.8$
+\item $101.619$
+\item $0.85$
+\item $1.01$
+\end{enumerate}
+
+\subsection*{Exercício 6}
+
+$0.001 \times 1000 = 1 \text{kg}$
+
+\subsection*{Exercício 7}
+
+The meter was initially defined to be $\frac{1}{10000000}$ of the distance
+between the of the distance from the Earth's equator to the North Pole.
+It was then replaced by the length of the path travelled by light in vacuum
+during a time interval of $\frac{1}{299792458}$ seconds.
+
+\begin{enumerate}
+
+\item The speed of light is
+  $299792458 \approx 3 \times 10^8 \text{m}/\text{s}$.
+
+\item The circumference of the earth is $4$ times
+  the distance from the Earth's equator to the North Pole that is
+  $4 \times 10000000 = 4 \times 10^7 \text{m}$.
+
+  The electromagnetic communication on Earth should
+  is essentially of the same magnitude of speed as the light in vacuum.
+  ($10^8 \text{m}/\text{s}$) distances on Earth are of the same magnitude
+  as the circumference ($10^7 \text{m}$) so communication should be
+  instantaneous.
+
+\item
+  $\frac{4\times10^8}{3 \times 10^8} \approx 1.33 \text{s}$
+
+\item
+  At least
+  $\frac{5\times10^{10}}{3 \times 10^8} \approx 166 \text{s} \approx 3
+  \text{minutes}$ and at most
+  $\frac{4\times10^{11}}{3 \times 10^8} \approx 1333 \text{s} \approx 
+  22 \text{minutes}$
+\end{enumerate}
+
+\subsection*{Exercício 8}
+
+If $T_1$ is a temperature in Kelvin and $T_2$ a temperature in degree Celsius
+then we can go from one to another by the formula $T_1 = T_2 + 273.15$.
+
+Guilherme who lives near Campos do Jordão says that the temperature in his
+city is around $10\text{°C}$ in August. His friend Flavio from Rio de Janeiro
+says that it's is about twice as hot where he lives.
+
+\begin{enumerate}
+\item $10+273.15=283.15\text{K}$.
+\item $2 \times 283.15 = 566.3\text{K}$
+\item $566.3 - 273.15 = 293.15\text{°C}$!
+\item Flavio's remark is not correct. He is probably using a relative unit
+  (degree Celcius) instead of an absolute unit (Kelvin) to measure the
+  temperature.
+\end{enumerate}
+
+\subsection*{Exercício 9}
+
+\begin{enumerate}
+  \item $10000 \text{m} = 10\text{km}$
+  \item $0.5 \text{L}  = 5 \text{dL}$
+  \item $1 \text{Å} = 10^{-10} \text{m} = 0.1 \text{nm}$
+\end{enumerate}
+
+\subsection*{Exercício 10}
+
+\begin{enumerate}
+
+\item $5 \text{L} = 0.005 \text{m}^3$.
+
+\item The side is $1\text{cm} = 0.01 \text{m}$ so the volume is
+  $0.01 \times 0.01 \times 0.01 = 0.000001 \text{m}^3 = 1 \text{cm}^3$.
+
+\item $5 \text{cL} = 0.05 \text{L} = 0.00005 \text{m}^3 = 50 \text{cm}^3$.
+
+\end{enumerate}
+
+\subsection*{Exercício 11}
+
+$50 \times 2.42 = 121$ hectares, that is $121 \times 100 = 12100$ ares,
+$12100 \times 100 = 1210000 \text{m}^2$. Finally, we get
+$1210000 \div 1000^2 = 1.21 \text{km}^2$.

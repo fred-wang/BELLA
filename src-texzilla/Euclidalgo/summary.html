@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Euclidalgo</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="localization" href="locales/manifest.json"/>
+    <script type="text/javascript" src="l20n.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1 data-l10n-id="courseSummary"></h1>
+    </header>
+
+    <p data-l10n-id="p1"></p>
+
+      $$
+      0 < b \leq a
+      $$
+
+    <p data-l10n-id="p2"></p>
+      
+    $$a = q_0 b + r_0$$
+
+    <ul>
+      <li>$q_0$: <span data-l10n-id="quotient"></span>
+      <li>$r_0 < b$: <span data-l10n-id="remainer"></span></li>
+    </ul>
+  
+    <p data-l10n-id="p3"></p>
+
+    $$b = q_1 r_0 + r_1$$
+
+    <p data-l10n-id="p4"></p>
+
+    $$
+    \begin{aligned}
+      a &= q_0 b + r_0 \\
+      b &= q_1 r_0 + r_1 \\
+      r_0 &= q_2 r_1 + r_2 \\
+      r_1 &= q_3 r_2 + r_3 \\
+      \vdots &= \vdots \\
+      r_{N-1} &= q_{N+1} r_N + r_{N+1} \\
+      & r_{N} \neq 0 = r_{N+1}
+    \end{aligned}
+    $$
+
+    <p data-l10n-id="p5"></p>
+
+    <a data-l10n-id="backToIndex" href="index.html"></a>
+
+  </body>
+</html>

@@ -1,0 +1,502 @@
+\chapter{Números (1º Bimestre)}
+
+\section{Sistemas de numeração}
+
+\subsection*{Positional notation}
+
+In this kind of system, we are given a base $b \geq 2$ and $b$ different symbols
+$s_0, s_1, \ldots s_{b-1}$. Any nonnegative integer $n$ can be uniquely written
+as a sum
+%%
+$$
+n = a_0 + {a_1 \times b} + {a_2 \times b^2} + \ldots
+{a_k \times b^k}
+$$
+%%
+for some natural numbers $k$ and integers $0 \leq a_0, a_1, \ldots a_k \leq b-1$
+with $a_k \neq 0$. This number $n$ is then written in positional notation
+with the succession of symbols
+%%
+$$s_{a_k}s_{a_{k-1}} \cdots s_{a_1}s_{a_0}$$
+
+Moroever, if we use an additional symbol $S$ as a decimal separator then
+for any integers $l > 0$, the fraction $\frac{n}{b^l}$ is written as
+%%
+$$s_{a_k}s_{a_{k-1}} \cdots s_{l} S s_{l-1} \cdots s_{a_1}s_{a_0}$$
+
+As an example, for the decimal base $b=10$ we use the
+Hindu-Arabic digits $s_0 = 0, s_1 = 1, \ldots s_9 = 9$.
+The decimal separator $S$
+varies from country to country. In Brazil it is generally a comma ``$,$'' while
+you often see a dot ``$.$'' in calculator.
+
+\subsection*{Exercício 1 (binary and hexadecimal)}
+
+\begin{enumerate}
+
+\item The binary base $b=2$ uses two symbols $s_0 = 0$ and $s_1 = 0$.
+  We let $N_0=77$ and $a_0 = 1$. Let $N_1 = \frac{N_0 - a_0}{2}$ and
+  $a_1 = 0$ if $N_1$ is even and $a_1 = 1$ otherwise. What are the values
+  of $N_1, a_1$?
+
+\item We let $N_2 = \frac{N_1 - a_1}{2}$ and
+  $a_2 = 0$ if $N_2$ is even and $a_2 = 1$ otherwise. What are the values
+  of $N_2, a_2$?
+
+\item Continue the same way to determine $N_3, a_3, N_4, a_4, N_3, a_4,
+  N_4, a_5, N_5, a_5, N_6, a_6$. What is $N_7 = \frac{N_6-a_6}{2}$?
+
+\item What can you say about
+%%
+  $${2^6 \times a_6} + {2^5 \times a_5} + {2^4 \times a_4} + {2^3 \times a_3}
+  + {2^2 \times a_2} + {5 \times a_1} + a_0$$
+
+\item What is the writting of $N_0 = 125$ in base $2$?
+
+\item We consider $b=16$ and symbols $s_0=0,s_1=1,s_2=2,s_3=3,s_4=4,s_5=5,
+  s_6=6,s_7=7,s_8=8,s_9=9,s_{10}=A,s_{11}=B,s_{12}=C,s_{13}=D,s_{14}=E,s_{15}=F$.
+  Which numbers are written ``$4$'', ``$\text{D}$'' and ``$4\text{D}$'' in base
+  $16$?
+
+\item Write $4$ and $13$ in base $2$. What do you notice?
+
+\end{enumerate}
+
+\subsection*{Exercício 2 (Divisibility criterium, Babylonian numerals)}
+
+\begin{enumerate}
+\item What are the divisors of $b_1=10$?
+\item For each of the divisors $d\neq1$, write the beginning of the list of
+  multiple of $d$. What do you notice for the last digit?
+\item What are the divisors of $b_2=16$?
+  Indicate if the following numbers written in base $b=16$ (exercício 1)
+  multiple of $4$: $\text{FA5BE7C29E3}$, $\text{E8EF3A2B9CD4}$,
+  $\text{E8EFD43A2B9C}$, $\text{E8B9CE123D43E}$.
+\item The oldest known positional notation is the Babylonian system which uses
+  base $b_3=60$. What are the divisors of $b_3$? Which comment
+  can you do on that?
+\end{enumerate}
+
+\subsection*{Sistemas de numeração na Antiguidade}
+
+In antiquity, many numeral systems (e.g. Egyptian, Attic, Roman) are based
+on this simple idea: use $k$ symbols $s_0,s_1,\dots, s_k$, each one representing
+a value $1 = v_0 < v_1 < v_2 < \dots < v_k$. Writing a group of several
+symbols among $s_0, s_1, \dots, s_k$ represents the number corresponding
+to the sum of each value $v_0, v_1, \dots v_k$. For example, any number $N$
+can be written with $N$ symbols $v_0$ but this takes a lot of place when
+$N$ is large. To make the writing unique and optimal, one should use the
+Euclidean division: take as many symbols $s_k$ as possible, then add as many
+symbols $s_k$ as possible... and finish with $s_0$ symbols.
+
+\subsection*{Exercício 3}
+
+The Egyptian system used $7$ symbols: a stroke to represent the value $1$,
+a heel bone to represent value $10$, a coil of rope to represent value
+$100$, a Lotus to represent value $1000$, a finger to represent value $10000$,
+an animal to represent value $100000$ and a man to represent value $1000000$.
+
+\begin{enumerate}
+\item How many symbols do you need to write $1205314$? $9999999$? $100000000$?
+\item We consider $17$ ($7$ strokes and one heel bone) and
+  $123$ ($1$ coil of rope, $2$ heel bones and $3$ strokes). How do you perform
+  the sum of the two numbers? Is there a simple rule to compute the product?
+\item Compare with the decimal positional system.
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+The Roman numerals used the symbols $\text{I},\text{V},\text{X},\text{L},\text{C},\text{D},\text{M}$ with respective values $1,5,10,50,100,500,1000$. The
+symbols are generally written from left to right in decreasing values. For
+example $XVI$ represents $20+5+1=26$.
+
+\begin{enumerate}
+\item Write $1653$ with the roman numeral. Which number does
+  $\text{MCCXXXV}$ represent?
+\item Roman numerals introduced the following shorthand when a
+  symbol follows a smaller one then this represents the substraction of the
+  smaller from the larger. For example $9$ is generally written $\text{IX}$
+  ($10-1$) instead of $\text{VIIII}$. How would you write $954$?
+\item Special decorations (e.g. overbar) are used to
+  indicate that a symbol is multiplied by $1000$. How does it improve over
+  the Egyptian system?
+\end{enumerate}
+
+\section{Números negativos}
+
+\subsection*{Introduction}
+
+The reader should already be familiar with negative numbers,
+for example these numbers are used to measure
+negative temperatures in Celcius like $-5°\text{C}$. We have the classical
+order: $-25°\text{C}$ is less than $-10°\text{C}$ which is itself less than
+$5°\text{C}$.
+
+Let's consider the sum of numbers.
+Suppose that two people have $200\text{R\$}$ and $750\text{R\$}$ on
+their respective bank accounts and decide to put their money together.
+Then together they have $200+750=950\text{R\$}$ available. If the
+two people have a debt of $200\text{R\$}$ and $750\text{R\$}$ then together
+they have a debt of $950\text{R\$}$. If one has $750\text{R\$}$
+on his bank account and the second a debt of $200\text{R\$}$, then the
+total money available is $750 - 200 = 550\text{R\$}$. If one has a debt
+of $750\text{R\$}$ and the second $200\text{R\$}$ then together they have debt
+of $750-250=550\text{R\$}$.
+On a bank account, the money available is written on your bank statement
+with positive or negative numbers. For example if you have fifty reales on your
+bank account then the bank statement contains will be written $50\text{R\$}$
+while a debt of ten reales will be written $-10\text{R\$}$. When two people
+put their money together we are doing the sum of the two amounts. As a
+consequence, the previous discussion translates to the following definition of
+sum: $750+200=950$, ${(-750)} + {(-200)} = -950$,
+${(750)} + {(-200)} = 550$, ${(-750)} + {(200)} = -550$.
+
+Now, let's consider the difference. Suppose one has $75\text{R\$}$ and that he
+withdraws $50\text{R\$}$ to buy something, it remains $75-50=25\text{R\$}$
+which is the classical definition of substraction. If he withdraw
+$50\text{R\$}$ again, he now has a debt of $25\text{R\$}$ so with the
+negative number notation it's $25 - 50 = -25\text{R\$}$. If the bank decides
+to cancel a debt of $10\text{R\$}$ then it only remains a debt of
+$15\text{R\$}$ and so with the negative number notation it's
+${(-25)} - {(-10)} = -15$. If the bank decides to cancel another debt of
+$20\text{R\$}$ then there is finally $5\text{R\$}$ on the bank account and
+so with the negative number notation it's ${(-15)} - {(-20)} = 5$.
+
+The same reasoning gives a natural defition of a product of a negative and a
+positive number. The product of two negative numbers does not really have a
+natural interpretation, but the desired properties of addition, substraction
+and multiplication does not leave any choice, as shown by the following
+exercise:
+
+\subsection*{Exercício 5 (multiplication)}
+
+Consider two numbers $x,y > 0$
+
+\begin{enumerate}
+
+\item Suppose that you have a debt of $1\text{R\$}$ on your bank account.
+  What is the amount displayed on your bank statement?
+  If the debt is multiplied by $x$, what is the amount displayed
+  on your bank statement? How do your write this operation as a
+  product of a positive and a negative number?
+\item Multiplication of nonnegative numbers is commutative and associative,
+  for example $2 \times 3 = 6 = 3 \times 2$ and
+  ${(2 \times 3)} \times 4 = {6 \times 4} = 24 = {2 \times 12} =
+  2 \times {(3 \times 4)}$. Assuming this is also true for negative
+  numbers, show that
+  ${(-x)} \times y = x \times {(-y)} = {(-1)} \times {(x \times y)}$
+  and
+  ${(-x)} \times {(-y)} =
+  \left({(-1)} \times {(-1)}\right) \times \left(x \times y\right)$.
+\item Suppose you
+  have $1\text{R\$}$ on your bank account and that a debt of $1\text{R\$}$
+  is added. What is the new amount on your bank statement?
+  Write this statement as a sum of a positive and a negative number.
+  What is the value of $1 + {(1 + (-1))} \times {(-1)}$?
+\item For nonnegative numbers, multiplication is distributive over
+  the addition, for example ${(1+2)} \times 3 =
+  {1 \times 3} + {2 \times 3}$. Assuming this is
+  also true for negative numbers, show that
+  $1 + {(1 + (-1))} \times {(-1)} = {{(-1)} \times {(-1)}}$.
+\item
+  Conclude that
+  ${(-x)} \times y = x \times {(-y)} = -{(x \times y)}$ and
+  ${(-x)} \times {(-y)} = x \times y$
+\end{enumerate}
+
+\subsection*{Definition and operations}
+
+For any positive number $x > 0$ we define a negative number denoted by
+a minus sign in front of the number $x$, for example $-2$ or $-13.7$.
+Given nonnegative numbers $0 \leq x \leq y$
+(so $y - x$, $x + y$ and $x \times y$ are also nonnegative)
+we define the following:
+
+\begin{enumerate}
+\item ${(-x)} + {(-y)} = {(-y)} + {(-x)} = -{(x+y)}$
+\item $x + {(-y)} = {(-y)} + x = -{(y - x)}$
+\item ${(-x)} + y = y + {(-x)} = {y - x}$
+\item ${(-x)} - {(-y)} = {y - x}$
+\item $x - {(-y)} = x + y$
+\item ${(-x)} - y = -{(x + y)}$
+\item ${(-x)} \times {(-y)} = {(-y)} \times {(-x)} = x \times y$
+\item ${x \times {(-y)}} = {{(-y)} \times x} =
+  {(-x)} \times y = y \times {(-x)} = -{x \times y}$
+\end{enumerate}
+
+For example $0 \leq 2 \leq 5$ so $-5 \leq -2 \leq 0$,
+$2 + {(-5)} = -3$, $-2-5 = -7$, $-2 \times 5 = -10$ etc
+This extends addition, multiplication and substraction to any number
+(positive or not). By defition, addition and multiplication are still
+commutative. We assume that this also preserves associativity:
+${(A + B)} + C = A + {(B+C)}$ and
+${(A \times B)} \times C = A \times {(B \times C)}$ for any numbers $A,B,C$.
+We assume that this also preserves distributivity of the multiplication over
+the addition and substraction:
+$A \times {(B + C)} =  A \times B + A \times C$ and
+$A \times {(B - C)} =  A \times B - A \times C$.
+
+Finally, if $A \neq 0$ is a decimal number (maybe negative) and $N$ is a
+nonnegative integer, we define the power
+%%
+$$A^N =
+\underset{N\,\text{times}}{\underbrace{A \times A \times \ldots \times A}}$$
+%%
+with the special case $A^0 = 1$.
+
+\subsection*{Exercício 6}
+
+Calculate:
+
+\begin{enumerate}
+\item $2 + 7\times2 - 8$
+\item $17-33$
+\item $-8+11$
+\item $2 - {(-8)}$
+\item ${(-20)} - 11$
+\item $-5 \times 8$
+\item $-11 \times -7$
+\item $7 - 11\times2 - \left(2-17+5\right) \times 3 + 5$
+\item $\left( 2 - 8 + {(-17)} - {(-3)} \right) \times
+  \left( {(-5)} + 11 - 7 \right) - 30$
+\item $2.7 - 3.8 \times 4.1 - {(-9.3)}$
+\item ${(-2)}^3$
+\end{enumerate}
+
+\section{Números racionais}
+
+\subsection*{Definition and operations}
+
+For any $p, q$ such that $p \geq 0$ and $q > 0$ we already
+defined the fraction $\frac{p}{q} = p \div q$
+in the 5ª série do Ensino Fundamental de Matemática e suas tecnologias and
+showed that any nonnegative decimal numbers can be written as such a fraction
+(for example $2.374 = \frac{2374}{1000}$). We also defined some operations
+(for example $\frac{1}{2} + \frac{1}{4} = \frac{3}{4}$).
+Thanks to the previous section,
+we can now generalize this by allowing $p,q$ to be negative:
+
+$$\frac{p_1}{q_1} + \frac{p_2}{q_2} = \frac{p_1 \times q_2 + q_1 \times p_2}{q_1 \times q_2}$$
+$$\frac{p_1}{q_1} - \frac{p_2}{q_2} = \frac{p_1 \times q_2 - q_1 \times p_2}{q_1 \times q_2}$$
+$$\frac{p_1}{q_1} \times \frac{p_2}{q_2} = \frac{p_1 \times p_2}{q_1 \times q_2}$$
+$$\frac{p_1}{q_1} \div \frac{p_2}{q_2} = \frac{p_1 \times q_2}{q_1 \times p_2}$$
+
+Finally, we for any numbers integers $p,q \neq 0$ and $N$ a nonnegative
+number we define:
+
+$$\left(\frac{p}{q}\right)^N =
+\underset{N\,\text{times}}{\underbrace{\frac{p}{q} \times \frac{p}{q} \times
+    \ldots \times \frac{p}{q}}} = \frac{p^N}{q^N}$$
+$$\left(\frac{p}{q}\right)^{-N} =
+\left(\frac{q}{p}\right)^{N} = \frac{q^N}{p^N}$$
+
+with the special case $\left(\frac{p}{q}\right)^{0} = 1$.
+
+\subsection*{Exercício 7}
+
+Calculate:
+
+\begin{enumerate}
+\item $-\frac{3}{7} + \left(-\frac{2}{5}\right)$
+\item $\frac{1}{6} - \frac{3}{8}$
+\item $\frac{7}{6} \times \frac{-1}{5} \times \frac{-9}{-2}$
+\item $\frac{-3}{4} \div \frac{5}{-16}$
+\item $\left(\frac{2}{-3}\right)^{-3}$
+\item $-{(0.9)}^2 \times 5 +
+  \left( \frac{-17}{3} + \frac{2^2}{-6} \right) \div \frac{-140}{-21}$
+\end{enumerate}
+
+\subsection*{Comparison}
+
+Suppose that $p_1,q_1,p_2,q_2 \geq 0$. Then
+in the 5ª série do Ensino Fundamental de Matemática e suas tecnologias
+we defined $\frac{p_1}{q_1}, \frac{p_2}{q_2} \geq 0$ and
+
+$$\frac{p_1}{q_1} \leq \frac{p_2}{q_2} \Leftrightarrow
+p_1 \times q_2 \leq p_2 \times q_1$$
+
+We extend this ordering by noting that
+$\frac{p_1}{q_1} = \frac{-p_1}{-q_1}$ and defining
+$\frac{-p_2}{q_2} = \frac{p_2}{-q_2} \leq
+\frac{-p_1}{q_1} = \frac{p_1}{-q_1} \leq 0 $
+if $0 \leq \frac{p_1}{q_1} \leq \frac{p_2}{q_2}$.
+
+\subsection*{Exercício 8}
+
+Put the following rational numbers in increasing order:
+$0, \frac{2}{3}, \frac{-1}{2}, \frac{3}{-4}, \frac{-7}{-8}, -\frac{3}{5}$
+
+\section{Solução dos exercícios}
+
+\subsection*{Exercício 1 (binary and hexadecimal)}
+
+\begin{enumerate}
+
+\item $N_1 = \frac{77-1}{2} = 38$ is even so $a_1=0$
+
+\item $N_2 = \frac{38 - 0}{2} = 19$ is odd so $a_2=1$.
+
+\item $N_3 = \frac{19-1}{2} = 9$ is odd so $a_3=1$.
+  $N_4 = \frac{9-1}{2} = 4$ is even so $a_4=0$.
+  $N_5 = \frac{4-0}{2} = 2$ is even so $a_5=0$.
+  $N_6 = \frac{2-0}{2} = 1$ is odd so $a_6=1$. Finally,
+  $N_7 = \frac{1-1}{2} = 0$.
+
+\item We get
+%%
+  $${2^6 \times 1} + {2^5 \times 0} + {2^4 \times 0} + {2^3 \times 1}
+  + {2^2 \times 1} + {2 \times 0} + 1 = 64+8+4+1=77=N_0$$
+
+  Note that ``by construction'' we have
+  $N_0 = 2N_1+a_0 = 2 \left(2N_2+a_1\right) + a_0 =
+  2 \left(2\left(2N_3+a_2\right)+a_1\right) + a_0 = \dots =
+  2 \left(2\left(2\left(2\left(2\left(2\left(2N_7+a_6\right)+a_5\right)+a_4\right)+a_3\right)+a_2\right)+a_1\right) + a_0 $ and $N_7=0$.
+
+\item We have $s_{a_0} = s_{1} = 1 = a_0$ and similarly
+  $s_{a_1} = a_1 = 0$, $s_{a_2} = a_2 = 1$, $s_{a_3} = a_3 = 1$,
+  $s_{a_4} = a_4 = 0$, $s_{a_5} = a_5 = 0$ and $s_{a_6} = a_6 = 1$. By the
+  previous equality, the writing of $N_0= 77$ in base 2 is then
+  $1001101$.
+
+\item $s_4=4$ represents $4$ and  $s_{13}=\text{D}$ represents $13$.
+  ${s_4s_{13}}=\text{4D}$ represents
+  $4 \times 16 + 13 = 77$.
+
+\item We have $4=2^2$ and
+  $13=12+1 = 2^2 \times 3 + 1 = 2^3 + 2^2 + 1$. As a consequence in base $2$,
+  $4$ is written $100$ and $13$ is written $1101$. We notice that the
+  concatenation of the digits of $4$ and $13$ in base $16$ (``4D'') and the
+  concatenation of digits in base $2$ (``1001101'') represents the same
+  number $N_0=77$.
+
+\end{enumerate}
+
+\subsection*{Exercício 2 (Divisibility criterium, Babylonian numerals)}
+
+\begin{enumerate}
+\item $1,2,5,10$
+\item $2,4,6,8,10,12,14,16,18\ldots$ ($d=2$, always ends by $0,2,4,6,8$) ;
+  $5,10,15,20,25,30\ldots$ ($d=5$, always ends by $0,5$) ;
+  $10,20,30,40,50,60\ldots$ ($d=10$, always ends by $0$).
+  We notice that the last digit of the multiple of $d$ belongs to a fixed set.
+  Conversely, if the last digit is in this fixed set, then we have a multiple
+  of $d$. Indeed, this is because we can always write
+  $N = 10 \times N_1 + c_0$ where $c_0$ is the number of unity and
+  $10 \times N_1$ is always multiple of $d$.
+
+\item The divisors of $b_2=16$ are $1,2,4,8,16$. Hence
+  to know if a number is multiple of $4$ we only need to check if the
+  last digit is one of $0,4,8,C$.
+\item The divisors of $60$ are $1,2,3,4,5,6,10,15,12,20,30,60$.
+  Hence we get a quick way to determine if a number written in base $60$ is a
+  multiple of these divisors (by checking the last digit). Actually, one can
+  check that any multiple of $3,4,5$ is also a multiple of $60$ so this is the
+  smallest base possible.
+\end{enumerate}
+
+\subsection*{Exercício 3}
+
+\begin{enumerate}
+\item For $1205314$, we need
+  $4$ strokes, $1$ heel bone, $3$ coils of rope, $5$ Lotus,
+  $2$ animals and $1$ man, that is $4+1+3+5+2+1=16$ symbols.
+  Similarly, for $9999999$ we need $9+9+9+9+9+9+9=63$ symbols.
+  For $100000000$ we will need to draw $100$ men!
+\item For the sum, we just group the symbols:
+  $7+3=10$ strokes, $1+2=3$ heel bones and $1+0=1$ coil of rope. We can
+  also convert the $10$ strokes into one heel bone and so finally the sum
+  is written with $1$ coil of rope and $4$ heel bones.
+  The product is $2091$ that is $2$ Lotus, $9$ coil of ropes and $1$ stroke but
+  there is not an obvious rule to deduce that easily.
+\item The decimal positional system has a more compact writing and makes
+  performing product easier.
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+\item $\text{MVILIII}$, $1235$.
+\item $\text{CMLIV}$
+\item This allows to write large numbers like $100000000$ without too many
+  symbols.
+\end{enumerate}
+
+\subsection*{Exercício 5 (multiplication)}
+
+Consider two numbers $x,y > 0$
+
+\begin{enumerate}
+
+\item The amount initially displayed on the bank statement is $-1\text{R\$}$.
+  It then becomes $-x\text{R\$}$. This can be written
+  as ${{(-1)} \times x} = -x$.
+\item By the previous question,
+  ${(-x)} \times y = {({(-1)} \times x)} \times y$,
+  $x \times {(-y)} = x \times {({(-1)} \times y)}$ and
+  ${(-x)} \times {(-y)} =
+  {({{(-1)} \times x)} \times {({(-1)} \times y})}$ by the previous questions.
+  Using associativity and commutativity, this can be rewritten
+  ${(-x)} \times y = x \times {(-y)} = {(-1)} \times {(x \times y)}$ and
+  ${(-x)} \times {(-y)} =
+  \left({(-1)} \times {(-1)}\right) \times \left(x \times y\right)$.
+\item The available money and debt cancels and the
+  new amount becomes $0\text{R\$}$. This can be written
+  $1+{(-1)}=0$. Consequently,
+  $1 + {(1 + (-1))} \times {(-1)} = 1 + 0 \times {(-1)} = 1$.
+\item By distributivity and associativity,
+  $1 + {(1 + (-1))} \times {(-1)} =
+  1 + {1\times{(-1)}} + {{(-1)} \times {(-1)}} =
+  {(1 + {(-1)})} + {{(-1)} \times {(-1)}} = {{(-1)} \times {(-1)}}$.
+\item
+  By second question, we have
+  ${(-x)} \times y = x \times {(-y)} = {(-1)} \times {(x \times y)}$ and
+  by the first question this is equal to $-{(x \times y)}$.
+  By the second question, we have
+  ${(-x)} \times {(-y)} = \left({(-1)} \times {(-1)}\right) \times \left(x \times y\right)$ and by the two previous questions, this is equal to ${x \times y}$.
+\end{enumerate}
+
+\subsection*{Exercício 6}
+
+\begin{enumerate}
+\item $8$
+\item $-16$
+\item $3$
+\item $10$
+\item $-31$
+\item $-40$
+\item $77$
+\item $-10$
+\item $-3.58$
+\item $-8$
+\end{enumerate}
+
+\subsection*{Exercício 7}
+
+\begin{enumerate}
+\item $-\frac{29}{35}$
+\item $-\frac{5}{24}$
+\item $-\frac{21}{20}$
+\item $\frac{12}{5}$
+\item $-\frac{27}{8}$
+\item $-5$
+\end{enumerate}
+
+\subsection*{Exercício 8}
+
+\begin{enumerate}
+
+\item We have $3 \times 5 < 3 \times 4$ so $\frac{3}{5} < \frac{3}{4}$ and
+$-\frac{3}{5} > \frac{3}{-4}$.
+
+\item We have $3 \times 2 = 6 > 5 = 1 \times 5$ so
+  $\frac{3}{5} > \frac{1}{2}$ and
+  $-\frac{3}{5} < \frac{-1}{2}$.
+
+\item From the signs, we have $\frac{-1}{2} < 0 < \frac{2}{3}$.
+
+\item We have $2 \times 8 = 16 < 3 \times 7 = 21$ so
+  $\frac{2}{3} < \frac{7}{8} = \frac{-7}{-8}$
+
+\end{enumerate}
+
+Finally, $$\frac{3}{-4} < -\frac{3}{5} < \frac{-1}{2} < 0 < \frac{2}{3} < \frac{-7}{-8}$$

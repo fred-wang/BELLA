@@ -1,0 +1,16 @@
+<polynomialDivision "Division de polynômes">
+<dividePolynomial "Effectuez la division des polynômes suivants:">
+<showSolution "Montrer la solution">
+<newDivision "Nouvelle division">
+<courseSummary "Résumé de cours">
+<p1 "Pour définir la division euclidienne, nous supposons disposer de deux polynômes:">
+<polyA "dividende">
+<polyB "diviseur">
+<p2 "Il existe un unique couple de polynômes avec les propriétés suivantes:">
+<polyQ "quotient">
+<polyR "reste (doit être nul ou de degré strictement plus petit que celui du diviseur)">
+<p3 "Par exemple:">
+<p4 "On peut généraliser le calcul classique sur papier computation de la division d'entiers pour effectuer la division euclidienne des polynômes.">
+<backToIndex "Retour à l'index">
+<license "Distribué sous license CC BY-SA 4.0">
+<bella "Projet BELLA">

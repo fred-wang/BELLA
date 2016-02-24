@@ -1,0 +1,294 @@
+\chapter{Números (1º Bimestre)}
+
+\section{Números Racionais}
+
+\subsection*{Definição}
+
+Se $p$ e $q$ são dois inteiros e $q > 0$ então podemos considerar o valor $p$
+dividido por $q$. Esse é um número racional e geralmente é escrito como uma
+fração, $\frac{p}{q}$.
+
+\subsection*{Exercício 1}
+
+Como você escreve os seguintes números racionais:
+
+\begin{enumerate}
+\item Três pedaços de um bolo dividido em oito pedaços.
+\item Uma sacola com $7$ bolas vermelhas de um total de 10 bolas.
+\item O número $0.25$.
+\item Um copo cheio pela metade de água.
+\item A porcentagem $87\%$.
+\end{enumerate}
+
+\subsection*{Exercício 2}
+
+\begin{enumerate}
+\item Todos os inteiros são racionais? (considere frações onde $q = 1$).
+
+\item Todos os números decimais são racionais? (considere frações com $q = 10,
+  100, 1000, \ldots$)
+
+\item Compare as frações $\frac{1}{2}$ e $\frac{5}{10}$. Existe uma única
+  maneira de escrever um racional como uma fração?
+\end{enumerate}
+
+\subsection*{Dízimas periódicas e fração geratriz}
+
+Quando você realiza a divisão euclidiana de um inteiro $p$ por $q$, o resto é um
+inteiro $0 \leq r < q$ e portanto o número de possibilidades é finita. Como
+consequência, quando seguimos o algoritmo da divisão para calcular a expansão
+decimal de $\frac{q}{q}$, em algum ponto iremos encontrar o mesmo resto que
+encontramos em um passo anterior. Continuando com o algoritmo de divisão iremos
+obter o mesmo dígito e como consequência obtemos uma dízima periódica.
+
+Como um exemplo, considere $\frac{180}{11}$. As únicas possibilidades para o
+resto são $0$, $1$, $2$, $3$, \ldots, $10$ e podemos encontrar rapidamente a
+periodicidade como indicado a seguir:
+\begin{align*}
+  \frac{180}{11} &= 16 + \frac{4}{11} \\
+  &= 16 + \frac{1}{10} \frac{40}{11} \\
+  &= 16 + \frac{3}{10} + \frac{1}{10} \frac{7}{11} \\
+  &= 16 + \frac{3}{10} + \frac{1}{10} \frac{1}{10} \frac{70}{11} \\
+  &= 16 + \frac{3}{10} + \frac{6}{100} + \frac{1}{100} \frac{4}{11} \\
+  &= 16 + \frac{3}{10} + \frac{6}{100} + \frac{1}{100} \frac{1}{10} \frac{40}{11} \\
+  &= 16 + \frac{3}{10} + \frac{6}{100} + \frac{3}{1000} + \frac{1}{1000} \frac{7}{11} \\
+  &= 16,36363636\ldots
+\end{align*}
+
+De forma parecida, podemos mostrar que qualquer expansão decimal de um número
+que é eventualmente periódica é racional. Um método informal para obter a fração
+de uma dízima periódica é multiplicar o número por uma potência suficientemente
+grande de 10. Por exemplo, $x = 16.363636\ldots$ e $100 x = 1636.3636\ldots$ de
+forma que $99 x = 100 x - x = 1636.3636\ldots - 16.363636\ldots = 1620$ e
+portanto $x = \frac{1620}{99}$.
+
+\subsection*{Exercício 3}
+
+Utilize o algoritmo da divisão para determinar a expansão decimal das frações:
+
+\begin{enumerate}
+\item $\frac{3}{8}$
+\item $\frac{2}{3}$
+\item $\frac{23}{11}$
+\item $\frac{17}{13}$
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+Determine a fração reduzida correspondente as dízimas periódicas abaixo:
+
+\begin{enumerate}
+\item $a = 12.350000000000000000\ldots$
+\item $b = 0.7777777777777777777\ldots$
+\item $c = 3.4545454545454545454\ldots$
+\item $d = 14.285714285714285714\ldots$
+\end{enumerate}
+
+\section{Potenciação}
+
+\subsection*{Definição}
+
+Se $n > 0$ é um número inteiro e $r$ um número qualquer, escrevemos
+$$r^n =
+\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}}.$$
+
+Se $r \neq 0$, podemos mostrar que $r^n \neq 0$ e assim definimos
+$$r^{-n} = \frac{1}{r^n}.$$
+
+Também assumimos a convenção de $r^0 = 1$.
+
+\subsection*{Exercício 5}
+
+\begin{enumerate}
+\item Determine $2^0$, $2^1$, $2^2$, $2^3$, $2^4$, \ldots, $2^{10}$. Compare com
+$0^2$, $2^2$, $3^2$, $4^2$, \ldots, $10^2$.
+\item Determine $10^{-1}$, $10^{-2}$, $10^{-3}$, \ldots, $10^{-5}$.
+Compare $10^{-100}$ e $\frac{1}{1000000}$.
+\end{enumerate}
+
+\subsection*{Exercício 6}
+
+\begin{enumerate}
+\item Compare $2^3$ e $3^2$
+\item Compare $2^{\left(2^3\right)}$ e ${\left(2^2\right)}^3$
+\item Compare $12^2 + 5^2$, $13^2$ e $\left(12+5\right)^2$.
+\end{enumerate}
+
+\subsection*{Exercício 7}
+
+Seja $n, m > 0$ inteiros e $r, s$ números quaisquer.
+
+\begin{enumerate}
+\item Expresse $r^n \times r^m$ como uma potência de $r$.
+\item Expresse $\left(r^{n}\right)^m$ como uma potência de $r$.
+\item Expresse $r^n \times s^n$ como uma potência de $r \times s$
+\item Assumindo que $r, s \neq 0$ e removendo a suposição de $n, m$ serem
+  positivos, mostre que as seguintes afirmações continuam válidas.
+\end{enumerate}
+
+\subsection*{Exercício 8}
+
+\begin{enumerate}
+\item Determine o quadrado dos números pares
+  $0^2$, $2^2$, $4^2$, $6^2$, \ldots O que você nota?
+\item Determine o quadrado dos números ímpares
+  $1^2$, $3^2$, $5^2$, $7^2$, \ldots O que você nota?
+\item Simplifique a fração $\frac{26}{22}$, $\frac{56}{80}$, $\frac{24}{52}$.
+  O que você pode dizer sobre a paridade dos numeradores e denominadores das
+  frações reduzidas?
+\item Seja $p, q > 0$ inteiros tal que
+  $\left(\frac{p}{q}\right)^2 = 2$.
+  Mostre que $p^2 = 2 q^2$ e deduza que se $p$ é par, então podemos escrever $p
+  = 2 r$ para algum inteiro $r$. Deduza $q^2 = 2 r^2$ e a paridade de $q$.
+\item Podemos encontrar um racional $x$ tal que $x^2 = 2$?
+\end{enumerate}
+
+\section{Solução dos exercícios}
+
+\subsection*{Exercício 1}
+
+\begin{enumerate}
+\item $\frac{3}{8}$ de um bolo.
+\item $\frac{7}{10}$ bolas são red.
+\item $\frac{1}{4}$.
+\item A água ocupa $\frac{1}{2}$ do volume do copo.
+\item $\frac{87}{100}$ de algo.
+\end{enumerate}
+
+\subsection*{Exercício 2}
+
+\begin{enumerate}
+\item Se $q = 1$ temos $\frac{p}{q} = p$. Portanto, todos os inteiros são
+  racionais.
+\item Números decimais são obtidos a partir de um inteiro $p$ movendo a vírgula
+  para a esquerda. Portanto, todos os decimais são racionais.
+\item Ambos representam $0,5$. Portanto, a forma de representar um racional como
+  uma fração não é única.
+\end{enumerate}
+
+\subsection*{Exercício 3}
+
+\begin{enumerate}
+\item $0.375$
+\item $0.666666666666\ldots$
+\item $2.090909090909\ldots$
+\item $1.3076923076923076923\ldots$
+\end{enumerate}
+
+\subsection*{Exercício 4}
+
+\begin{enumerate}
+\item $1000 a = 375$ portanto $a = \frac{375}{1000} = \frac{3}{8}$
+\item $10b = 7+b$ portanto $b = \frac{7}{9}$
+\item $100c = 342 + c$ portanto $c = \frac{342}{99} = \frac{38}{11}$
+\item $1000000 d = 14285700 + d$ portanto $d = \frac{14285700}{999999} =
+  \frac{100}{7}$
+\end{enumerate}
+
+\subsection*{Exercício 5}
+
+\begin{enumerate}
+\item Obtemos
+  $2^0 = 1$,
+  $2^1 = 2$,
+  $2^2 = 4$,
+  $2^3 = 8$,
+  $2^4 = 16$,
+  $2^5 = 32$,
+  $2^6 = 64$,
+  $2^7 = 128$,
+  $2^8 = 256$,
+  $2^9 = 512$,
+  $2^{10} = 1024$ e
+  $0^2 = 0$,
+  $1^2 = 1$,
+  $2^2 = 2$,
+  $3^2 = 9$,
+  $4^2 = 8$,
+  $5^2 = 25$,
+  $6^2 = 36$,
+  $7^2 = 49$,
+  $8^2 = 64$,
+  $9^2 = 81$,
+  $10^2 = 100$.
+  Notamos que $2^n$ é torna-se muito maior que $n^2$ a medida que $n$ cresce.
+\item Obtemos
+  $10^{-1} = 0.1$,
+  $10^{-2} = 0.01$,
+  $10^{-3} = 0.001$,
+  $10^{-4} = 0.0001$,
+  $10^{-5} = 0.00001$.
+  $10^{-100}$ teria a mesma forma decimal com cem zeros enquanto 
+  $\frac{1}{1000000} = 0.000001$. Notamos que $10^{-n}$ torna-se muito menor que
+  $\frac{1}{n}$ a medida que $n$ cresce.
+\end{enumerate}
+
+\subsection*{Exercício 6}
+
+\begin{enumerate}
+\item $2^3 = 8 \neq 9 = 3^2$
+\item $2^{\left(2^3\right)} = 2^8 = 256 \neq 64 = 4^3 = {\left(2^2\right)}^3$
+\item $12^2 + 5^2 = 144 + 25 = 169 = 13^2 \neq 17^2 = \left(12+5\right)^2$
+\end{enumerate}
+
+\subsection*{Exercício 7}
+
+Seja $n, m > 0$ e $r, s$ números quaisquer.
+
+\begin{enumerate}
+\item
+$r^n \times r^m =
+\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} \times
+\underset{m\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} =
+\underset{n+m\,\text{times}}{\underbrace{r \times r \times \ldots \times r}}
+= r^{n+m}$
+
+\item
+$\left(r^{n}\right)^m =
+\underset{m\,\text{times}}{
+\underbrace{{\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} \times
+\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} \times
+\ldots \times
+\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}}}}} =
+\underset{n \times m\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} =
+r^{n \times m}
+$
+
+\item $r^n \times s^n =
+\underset{n\,\text{times}}{\underbrace{r \times r \times \ldots \times r}} \times
+\underset{n\,\text{times}}{\underbrace{s \times s \times \ldots \times s}} =
+\underset{n\,\text{times}}{\underbrace{{r \times s} \times {r \times  s} \times \ldots \times {r \times s}}}
+= {\left(r \times s\right)}^{n}$
+
+\item Temos
+$r^{-n} \times s^{-n} = \frac{1}{r^n} \frac{1}{s^n} =
+\frac{1}{r^n \times s^n} = \frac{1}{{r \times s}^{n}} =
+{\left(r \times s\right)}^{-n}$. Os outros casos são parecidos, alterando as
+várias possibilidades para o sinal.
+
+\end{enumerate}
+
+\subsection*{Exercício 8}
+
+\begin{enumerate}
+\item $0$, $4$, $16$, $36$, $64$, $100$, \ldots. O quadrado de um número par é
+  par.
+\item $1$, $9$, $25$, $49$, $81$, \ldots. O quadrado de um número ímpar é ímpar.
+\item $\frac{26}{22} = \frac{13}{11}$,
+  $\frac{56}{80} = \frac{28}{40} = \frac{14}{20} = \frac{7}{10}$ e
+  $\frac{24}{52} = \frac{12}{26} = \frac{6}{13}$.
+  Notamos que o par numerador-denominador das frações reduzidas pode ser
+  par-ímpar, ímpar-par, ímpar-ímpar mas não par-par pois nesse caso podemos
+  simplificar a fração dividindo o numerador e denominador por 2.
+\item $2 = \frac{p}{q} \times \frac{p}{q} = \frac{p \times p}{q \times q}
+= \frac{p^2}{q^2}$ e portanto $p^2 = 2 q^2$ é par.
+Como uma consequência $p$ é par, e podemos escrever $p = 2r$ para algum inteiro
+$r$. Então $2 q^2 = \left(2r\right)^2 = 4 r^2$ e portanto
+$q^2 = 2 r^2$ é ímpar. Finalmente, $q$ também é par
+\item Se $x^2 = 2$ é racional, podemos escrevê-lo como a fração reduzida
+  $x = \frac{p}{q}$. Pela questão anterior, $p, q$ são pares mas vimos que é
+  impossível reduzir a fração!
+\end{enumerate}
+
+Nota: podemos definir um número real $x > 0$ como $x^2 = 2$ que denotamos por
+$\sqrt{2}$. Esse exercício mostra que $\sqrt{2}$ não é racional.

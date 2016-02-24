@@ -1,0 +1,16 @@
+<polynomialDivision "Divisão de polinômios">
+<dividePolynomial "Realize a divisão dos polinômios a seguir:">
+<showSolution "Mostrar Solução">
+<newDivision "Nova Divisão">
+<courseSummary "Resumo do Curso">
+<p1 "Para definir a divisão euclidiana, supomos que temos dois polinômios:">
+<polyA "dividendo">
+<polyB "divisor">
+<p2 "Existe um único par de polinômios com a seguinte propriedade:">
+<polyQ "quociente">
+<polyR "resto (deve ser zero ou possuir grau menor que o do divisor)">
+<p3 "Por exemplo:">
+<p4 "Podemos generalizar o clássico cálculo utilizando lápis e papel pela longa divisão de inteiros para realizar a divisão euclidiana de polinômios.">
+<backToIndex "Voltar ao índice">
+<license "Licenciado sob CC BY-SA 4.0">
+<bella "Projeto BELLA">

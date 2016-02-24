@@ -1,0 +1,20 @@
+<solvingSystem "Résolution de systèmes linéaires">
+<solveSystem "Résoudre le système lineaire suivant:">
+<showSolution "Montrer la solution">
+<newSystem "Nouveau système">
+<courseSummary "Résumé de cours">
+<p1 "Un système d'équations linéaires s'écrit">
+<p2 "Nombre d'inconnus:">
+<p3 "Nombre d'équations:">
+<p4 "Inconnues:">
+<p5 "Coefficients:">
+<p6 "Termes constants:">
+<p7 "Il existe diverses techniques de résolution de systèmes linéaires. Vous pouvez utiliser les opérations élémentaires sur les lignes suivantes pour transformer le système en un système équivalent:">
+<p8 "Échanger deux lignes">
+<p9 "Multiplier une ligne par un scalaire non nul">
+<p10 "Ajouter à une ligne un multiple d'une autre">
+<p11 "Dans la méthode du pivot de Gauss, vous choisissez un coeffcient non nul (le pivot) dans une colonne pour éliminer les autres coefficients de la colonne. Par exemple:">
+<p12 "À la fin, vous obtenez un système linéaire réduit que vous pouvez facilement résoudre. Il peut y avoir aucune, une ou une infinité de solutions.">
+<backToIndex "Retour à l'index">
+<license "Distribué sous license CC BY-SA 4.0">
+<bella "Projet BELLA">

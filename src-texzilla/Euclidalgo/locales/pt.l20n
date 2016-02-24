@@ -1,0 +1,15 @@
+<euclidalgo "Utilizando o Algoritmo de Euclides">
+<euclidalgoQuestion "Aplique o Algoritmo de Euclides nos inteiros a seguir:">
+<showSolution "Mostrar Solução">
+<newQuestion "Nova Questão">
+<courseSummary "Resumo do Curso">
+<p1 "Desejamos determinar o máximo divisor comum de dois inteiros:">
+<p2 "Começamos executando a divisão euclidiana dos inteiros:">
+<p3 "Se o resto é diferente de zero, podemos fazer outra divisão euclidiana onde o divisor anterior torna-se o dividendo e o resto torna-se o divisor:">
+<p4 "Continuamos com o procedimento anterior até obtermos resto igual a zero:">
+<p5 "O último resto diferente de zero é denominado máximo divisor comum.">
+<quotient "quociente">
+<remainer "resto">
+<backToIndex "Voltar ao índice">
+<license "Licenciado sob CC BY-SA 4.0">
+<bella "Projeto BELLA">

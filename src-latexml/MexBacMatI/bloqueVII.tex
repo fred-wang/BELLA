@@ -1,0 +1,357 @@
+\chapter{Resuelve ecuaciones lineales II}
+
+\section{Sistema de ecuaciones con dos incógnitas}
+
+\subsection*{Resumen}
+
+Un sistema de ecuaciones (linaeles) con dos incógnitas es un conjunto finito
+de ecuación $ax + by = c$ donde $x, y$ son incógnitas y $a,b,c$ constantes. Un
+sistema de $n$ ecuaciones se puede escribir
+
+$\left\{
+\begin{aligned}
+  a_1 x + b_1 y = c_1 \\
+  a_2 x + b_2 y = c_2 \\
+  \ldots \\
+  a_n x + b_n y = c_n  
+\end{aligned}\right.$
+
+Podemos efectuar muchas operaciones para tratar de resolver un sistema. Las
+operaciones deben ser invertibles para conservar la equivalencia con el sistema
+original.
+
+\begin{enumerate}
+\item Tomar la suma de dos ecuaciones para obtener otra ecuación:
+${(a_1+a_2)} x + {(b_1+b_2)} y = c_1 + c_2$.
+\item O la resta: ${(a_1-a_2)} x + {(b_1-b_2)} y = c_1 - c_2$.
+\item Multiplicar/Dividir por una ecuación coeficiente $k$:
+  $k a_1 x + k b_1 y = k c_1$.
+\item Realizar una substitución. Por ejemplo, si $a_1 = 1$,
+  $x = c_1 - b_1 y$ y haciendo esta substitución en la secunda ecuación,
+  obtenemos $a_2 c_1 + (b_2 - a_2 b_1) y  = c_2$.
+\end{enumerate}
+
+Suponemos que el sistema comporte sólo una ecuación $ax+by=c$.
+Si $a = b = c = 0$, todos los $(x,y) \in {\mathbb R}^2$ son soluciones.
+Si $a = b = 0$ y $c \neq 0$ no hay solución. Si $b \neq 0$, obtenemos la
+ecuación $y = -\frac{a}{c}x +\frac{c}{b}$ entonces hay una infinitad de
+soluciones
+$(x, y)$ para cada $x \in {\mathbb R}$. De la misma manera, si $a \neq 0$, hay 
+una infinitad de soluciones $({-\frac{b}{a}y+\frac{c}{a}}, y)$
+para cada $y \in {\mathbb R}$.
+
+Ahora, consideramos dos ecuaciones $ax+by=k$ y $cx+dy=l$. Multiplicando
+la primera equación por $c$ y la segunda por $a$, obtenemos
+
+$\left\{
+\begin{aligned}
+  ca x + cb y = ck \\
+  ac x + ad y = al \\
+\end{aligned}\right.$
+
+y si tomamos la resta de los dos obtenemos
+${(ad - bc)} y = ck - al$. Entonces, si el determinante
+$\Delta = ad - bc$ no es cero obtenemos $y = \frac{al - ck}{\Delta}$. De la
+misma manera, obtenemos $x = \frac{dk - bl}{\Delta}$ y entonces el sistema
+tiene una solución $(x, y)$. Si $\Delta = 0$, $ad = bc$ y 
+$al = a{(cx+dy)} = acx + ady = acx+bcy = c{(ax+by)} = ck$ y de la misma manera
+$bl = dk$. Entonces si $a \neq 0$, las soluciones son la de la ecucación 
+$ax + by = k$ si $l = -\frac{ck}{a}$ y si no, no hay solución. Si $b \neq 0$,
+las soluciones son la de la ecucación $ax + by = k$ si $l = -\frac{dk}{b}$
+y si no, no hay solución. Si $a = b = 0$, las soluciones son la de la ecucación
+$cx + dy = l$ si $k = 0$ y si no, no hay solución.
+
+Podemos aplicar esos metodos para resolver un sistema de $n \geq 3$ ecuaciones.
+En general, dos ecuaciones determinan una única solución $(x,y)$ y entonces
+un sistema de $n \geq 3$ ecuaciones no tiene solución si esas soluciones no
+son compatibles.
+
+\subsection*{Ejemplo}
+
+\begin{enumerate}
+\item 
+$\left\{\begin{aligned}
+  4x + 3y = 0 \\
+  z = x + y
+\end{aligned}\right.$ no es un sistema de dos ecuaciones (tiene tres
+incógnitas).
+
+\item 
+$\left\{\begin{aligned}
+  x^2 + 2y = 1 \\
+  x + \sqrt{y} = -2
+\end{aligned}\right.$ no es un sistema linear (contene $x^2, \sqrt{y}$)
+
+\item
+$\left\{
+\begin{aligned}
+  4x + 3y = 2x - 7 \\
+  3x = 2x + 3y
+\end{aligned}\right.$ es un sistema de dos ecuaciones, equivalente a la forma
+simplificada
+$\left\{
+\begin{aligned}
+  2x+3y = -7 \\
+  x -4y = 0
+\end{aligned}\right.$
+\item $2x + y = 1$ tiene una infinitad de solución
+  $\{ {(x, y)} : x \in \mathbb R, y = 1 - 2x \}$
+\item $5x = 2$ tiene una infinitad de solución
+  $\{ {(\frac{2}{5}, y)} : y \in {\mathbb R} \}$
+\item  Para resolver $\left\{
+\begin{aligned}
+  2x+3y = -7 \\
+  x -4y = 0
+\end{aligned}\right.$ podemos hacer la subsitución $x = 4y$ en la primera
+ecuación: $8y + 3y = -7$ es decir
+$y = -\frac{7}{11}$ y $x = 4y = -\frac{28}{11}$.
+\item  Para resolver $\left\{
+\begin{aligned}
+  2x+3y = -7 \\
+  x -4y = 0
+\end{aligned}\right.$ podemos multiplicar la segunda ecuacíon por 2:
+$2x - 8y = 0$ y tomar la resta con la primera:
+$-7 - 0 = {(2x + 3y)} - {(2x-8y)} = 11y$. Entonces $y = -\frac{7}{11}$ y
+$x = 4y = -\frac{28}{11}$.
+\item  Para resolver $\left\{
+\begin{aligned}
+  2x+3y = -7 \\
+  x -4y = 0
+\end{aligned}\right.$ podemos calcular el determinante
+$\Delta = 2 \times -4 - 3 \times 1 = -11$ y utilizar las formulas
+$x = \frac{-4 \times -7 - 2 \times 0}{-11} = -\frac{28}{11}$ y
+$y = \frac{2 \times 0 - 1 \times -7}{-11} = -\frac{7}{11}$.
+\item  El determinante de $\left\{
+\begin{aligned}
+  -21x+6y = 3 \\
+  7x-2y = 2
+\end{aligned}\right.$ es $\Delta = -21 \times -2 - 6 \times 7 = 0$. Si
+multiplicamos la primera por $-\frac{1}{3}$, obtenemos $7x-2y=-1$ entonces
+no es compatible con la secunda ecuación $7x-2y = 2$ y el sistema no tiene
+solución.
+\item En el sistema de tres ecuaciones $\left\{
+\begin{aligned}
+  -4x-6y = 14 \\
+  x -4y = 0 \\
+  2x+3y = -7
+\end{aligned}\right.$ la primera ecuacion es equivalente a la tercera y
+entonces se reduce al sistema de dos ecuaciones $\left\{\begin{aligned}
+  2x+3y = -7 \\
+  x -4y = 0
+\end{aligned}\right.$ de solución $y = -\frac{7}{11}$ y
+$x = -\frac{28}{7}$.
+\item $y = -\frac{7}{11}$ y $x = -\frac{28}{11}$ es la única solucíon de las
+dos últimas ecuaciones de $\left\{
+\begin{aligned}
+  22y = -14 \\
+  x -4y = 0 \\
+  2x+3y = -7
+\end{aligned}\right.$ y $22 \times -\frac{7}{11} = -14$ entonces es también la
+solución del sistema de tres ecuaciones.
+
+\item $y = -\frac{7}{11}$ y $x = -\frac{28}{11}$ es la única solucíon de las
+dos últimas ecuaciones de $\left\{
+\begin{aligned}
+  11x = 2 \\
+  x -4y = 0 \\
+  2x+3y = -7
+\end{aligned}\right.$ pero
+$11 \times -\frac{28}{11} = -28 \neq 2$ entonces el sistema de tres ecuaciones
+no tiene solución.
+
+\end{enumerate}
+
+\subsection*{Ejercicio 1}
+
+Resolver las sistemas siguientes con dos incógnitas $x,y$:
+
+\begin{enumerate}
+\item $x + 2 - 9y = 8 - 3y + 2x$
+\item $\left\{\begin{aligned}
+  3x + 2y = 8 \\
+  y - 7 = 2y + 3
+\end{aligned}\right.$
+\item $\left\{\begin{aligned}
+   7x  - 8y = 4 \\
+  -3x + 5y = 7
+\end{aligned}\right.$
+
+\item $\left\{\begin{aligned}
+   21x  - 14y = 4 \\
+  -3x + 2y = 7
+\end{aligned}\right.$
+
+\item $\left\{\begin{aligned}
+   3x-2y=2+6y \\
+  4x-8y=4-2x+8y
+\end{aligned}\right.$
+
+\item $\left\{\begin{aligned}
+   2x-7y=9 \\
+  2x=2-9y \\
+  4x-10y-9=9+4y
+\end{aligned}\right.$
+
+\item $\left\{\begin{aligned}
+   7x  - 8y = 4 \\
+  -3x + 5y = 7 \\
+  x - y = 0
+\end{aligned}\right.$
+
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+Determinar el determinante de esos sistemas y deducir las soluciones.
+
+\begin{enumerate}
+\item $\left\{\begin{aligned}
+  3x+y=-2 \\
+  27x-9y=0
+\end{aligned}\right.$
+\item $\left\{\begin{aligned} 3x+y=-2\\ 27x+9y=0\end{aligned}\right.$
+\item $\left\{\begin{aligned} 8x+y=64\\ \frac{x}{2}+\frac{y}{16}=4\end{aligned}\right.$
+\end{enumerate}
+
+\section{Interpretación gráfica}
+
+\subsection*{Resumen}
+
+Como hemos visto en el capítulo precedente,
+si $a,b \neq 0$, las soluciones de la ecuación $ax+by=c$ en el plano
+${\mathbb R}^2$ son los puntos de la recta pasando por $(0, -\frac{c}{b})$ y
+$(-\frac{c}{a}, 0)$. Si $a = 0$ y $b \neq 0$, es la recta pasando por
+$(0, -\frac{c}{b})$ y paralela a eje $Y$. Si $a = 0$ y $b \neq 0$, es la recta
+pasando por $(-\frac{c}{a}, 0)$ y paralela a eje $X$. Finalmente, si
+$a = b = 0$ es todo el plano (si $c = 0$) o el conjunto vació ($c \neq 0$).
+
+Para un sistema de dos ecuaciones, tomemos la interseción de los conjuntos.
+En general (si ningúno es vacío o todo el plano) tenemos dos rectas. Si las
+ecuaciones son incompatibles, las rectas son paralelas y la interseción es
+vacía. De otra manera, hay una única solución que es la interseción de las dos
+rectas.
+
+Para un sistema de $n \geq 3$ ecuaciones, en general tenemos tres $n$ rectas
+que tienen poco suerte que intersectarse.
+
+\subsection*{Ejemplo}
+
+Podemos ver las rectas representando las soluciones de las ecuaciones
+$x=-4$, $y=-5$, $x-2y=6$, $x-2y=0$, $5x-4y=0$. Las rectas $x=-4$ y $y = -5$ son
+paralela a los ejes. Las rectas de $x - 2y$ y $x - 2y = 6$ son paralelas y
+entonces el sistema $\left\{\begin{aligned}
+   x-2y=0 \\
+  x-2y=6
+\end{aligned}\right.$ no tiene solución. Las rectas de $5x - 4y = 0$ y
+$x - 2y = 6$ se intersectan en $(-4, -5)$ y entonces es la única solución del
+sistema $\left\{\begin{aligned}
+   5x-4y=0 \\
+  x-2y=6
+\end{aligned}\right.$
+
+\begin{center}
+  \begin{tikzpicture}[domain=-10:10, xscale=.5, yscale=.5]
+    \draw[->] (-11,0) -- (11,0) node[right] {$x$}; 
+    \draw[->] (0,-11) -- (0,11) node[above] {$y$};
+    \draw[color=blue] plot (\x,\x/2-3) node[left] {$x - 2y = 6$};
+    \draw[color=red] (-10,-5)--(8,-5) node[above] {$y = -5$};
+    \draw[color=green] (-4,-10)--(-4,10) node[left] {$x = -4$};
+    \draw[color=orange] plot (\x,\x/2) node[left] {$x - 2y = 0$};
+    \draw[color=purple] plot (\x,5*\x/4) node[left] {$5x - 4y = 0$};
+
+    \foreach \x in {-10,-5,5,10}
+      \draw (\x,-.1) --(\x,.1) node[above] {$\x$};
+    \foreach \y in {-10,-5,5,10}
+      \draw (-.1,\y) --(.1,\y) node[left] {$\y$};
+  \end{tikzpicture}
+\end{center}
+
+\subsection*{Ejercicio 3}
+
+Graficar las rectas de ecuaciones $3x-y=5$ y $2x-3y=7$. Deducir la solución
+del sistema $\left\{\begin{aligned}
+   3x-y=5 \\
+  2x-3y=7
+\end{aligned}\right.$
+
+\subsection*{Ejercicio 4 (problema)}
+
+Juan vende $1$ litro de leche $15$MXN y la comida de sus vacas le cuesta
+$24$ MXN más $3$MXN para cada litro.
+Representar el costo de $x$ litros y de la comida de las
+vacas sobre un gráfico, para $0 \leq x \leq 5$. Deducir el mínimo de leche
+que debe vender para obtener un beneficio positivo.
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+\begin{enumerate}
+\item La ecuación se simplifia en $y = \frac{x}{6} - 1$. Hay una infinitad de
+  solución ${(x, \frac{x}{6} - 1)}$
+\item $\left\{\begin{aligned}
+  3x + 2y = 8 \\
+  y - 7 = 2y + 3
+\end{aligned}\right.$ La secunda ecuación se simplifia en $y = -10$.
+  Entonces la primera devene $3x - 20 = 8$ y $x = \frac{28}{3}$.
+\item $x = \frac{76}{11}$, $y = \frac{61}{11}$
+\item No tiene solución.
+\item Una infinidad de soluciones $x=\frac{8y+2}{3}$, $y \in {\mathbb R}$.
+\item $x = \frac{95}{32}$, $y = -\frac{7}{16}$
+\item No tiene solución.
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+\begin{enumerate}
+\item $\Delta = 3 \times -9 - 1 \times 27 = -54$, $x=-\frac{1}{3}$,
+  $y = -1$
+\item $\Delta = 3 \times 9 - 1 \times 27 = 0$. La secunda ecuación
+  se simplifia en $3x+y=0$ y no es compatible con la primera. No hay solución.
+\item $\Delta = 8 \times \frac{1}{16} - \frac{1}{2} = 0$. La secunda ecuación
+  es un múltiplo de la primera. Hay una infinidad de soluciones
+  $y \in \mathbb R$ y $x = -\frac{y}{8} - 8$.
+\end{enumerate}
+
+\subsection*{Ejercicio 3}
+
+Las rectas se intersectan en ${(x,y)}={(2,1)}$ que es la única solución del
+sistema.
+
+\begin{center}
+  \begin{tikzpicture}[domain=-10:10, xscale=.5, yscale=.5]
+    \draw[->] (-10,0) -- (10,0) node[right] {$x$}; 
+    \draw[->] (0,-10) -- (0,10) node[above] {$y$};
+    \draw[color=blue] plot (\x,7/3-2*\x/3) node[left] {$2x - 3y = 7$};
+    \draw[color=purple] plot [domain=-2:5] (\x,3*\x-5) node[left] {$3x-y =5$};
+
+    \foreach \x in {-7.5,-5,-4,-3,-2,-1,1,2,3,4,5,7.5}
+      \draw (\x,-.1) --(\x,.1) node[below] {$\x$};
+    \foreach \y in {-7.5,-5,-4,-3,-2,-1,1,2,3,4,5,7.5}
+      \draw (-.1,\y) --(.1,\y) node[left] {$\y$};
+
+    \draw[style=dashed,color=red] (2,0) -- (2,1) -- (0,1); 
+  \end{tikzpicture}
+\end{center}
+
+\subsection*{Ejercicio 4}
+
+El costo de $x$ litros es $y_1 = 15x$ y el de la comida de vacas es
+$y_2 = 24 + 3x$. El beneficio es positivo si $y_1 \geq y_2$ es decir cuando
+la recta $y_1 = 15x$ es arriba de la recta $y_2 = 24 + 3x$. Es el caso si
+$x \geq 2$.
+
+\begin{center}
+  \begin{tikzpicture}[domain=0:3, xscale=1, yscale=.1]
+    \draw[->] (0,0) -- (6,0) node[right] {$x$}; 
+    \draw[->] (0,0) -- (0,50) node[above] {$y$};
+    \draw[color=blue] plot (\x,15*\x) node[left] {$y_1=15x$};
+    \draw[color=orange] plot (\x,3*\x+24) node[left] {$y_2 =3x+24$};
+    \draw[style=dashed,color=red] (2,0) -- (2,30); 
+
+    \foreach \x in {1,2,3,4,5}
+      \draw (\x,-.1) --(\x,.1) node[above] {$\x$};
+    \foreach \y in {10,20,30,40}
+      \draw (-.1,\y) --(.1,\y) node[left] {$\y$};
+  \end{tikzpicture}
+\end{center}

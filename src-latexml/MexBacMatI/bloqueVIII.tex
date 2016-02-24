@@ -1,0 +1,262 @@
+\chapter{Resuelve ecuaciones lineales III}
+
+\section{Sistema de ecuaciones con tres incógnitas}
+
+\subsection*{Resumen}
+
+Un sistema de ecuaciones (linaeles) con tres incógnitas es un conjunto finito
+de ecuación $ax + by + cz = d$ donde $x, y, y$ son incógnitas y $a,b,c,d$
+constantes. Un sistema de $n$ ecuaciones se puede escribir
+
+$\left\{
+\begin{aligned}
+  a_1 x + b_1 y + c_1 z = d_1 \\
+  a_2 x + b_2 y + c_2 z = d_2 \\
+  \ldots \\
+  a_n x + b_n y + c_n z = d_n  
+\end{aligned}\right.$
+
+El caso el más interesante es $n = 3$.
+Definimos el discrimante $\Delta = \begin{vmatrix}
+  a_1 & b_1 & c_1 \\
+  a_2 & b_2 & c_2 \\
+  a_3 & b_3 & c_3 \\
+ \end{vmatrix} = {{a_1 b_2 c_3} + {b_1 c_2 a_3} + {c_1 a_2 b_3}} - \left( 
+{{a_3 b_2 c_1} + {b_3 c_2 a_1} + {c_3 a_2 b_1}}
+\right)$. Un método fácil para memorizar esa expresión es la regla de Sarrus
+"sumar los productos de las diagonales descendentes y sustraer los productos de las diagonales ascendentes''. Si $\Delta \neq 0$, el sistema tiene una solución
+dada por la regla de Cramer:
+
+$x = \frac{1}{\Delta} \begin{vmatrix}
+  d_1 & b_1 & c_1 \\
+  d_2 & b_2 & c_2 \\
+  d_3 & b_3 & c_3 \\
+ \end{vmatrix}$, $y = \frac{1}{\Delta} \begin{vmatrix}
+  a_1 & d_1 & c_1 \\
+  a_2 & d_2 & c_2 \\
+  a_3 & d_3 & c_3 \\
+ \end{vmatrix}$ y $z = \frac{1}{\Delta} \begin{vmatrix}
+  a_1 & b_1 & d_1 \\
+  a_2 & b_2 & d_2 \\
+  a_3 & b_3 & d_3 \\
+ \end{vmatrix}$.
+
+Si $\Delta = 0$ o $n \leq 2$, podemos simplificar el sistema para volver a los
+casos vistos antes.
+
+\subsection*{Ejemplo}
+
+\begin{enumerate}
+\item $3x - 2y + 5z = 7$ tiene una infinitad de soluciones
+  $\left\{ \left(x, y, \frac{7 - 3x + 2y}{5}\right) :
+x, y \in {\mathbb R}\right\}$
+
+  \item El sistema 
+    $\left\{
+\begin{aligned}
+  x + 2 y -5z = 8 \\
+  3x + 3 y + z = -2
+\end{aligned}\right.$ tiene una infinitad de soluciones: para cada
+$z \in \mathbb R$ consideremos la única solución $(x,y)$
+ del sistema de dos incógnitas $\left\{
+\begin{aligned}
+  x + 2 y = 8 + 5z \\
+  3x + 3 y = -2 - z
+\end{aligned}\right.$ (de determinate $1 \times 3 - 2 \times 3 = -3 \neq 0$).
+
+\item El sistema
+  $\left\{
+\begin{aligned}
+  2x - 3y +5z = 11 \\
+  -5x - 3y + 7z = 10 \\
+  5x + 4y - 3z = 4
+\end{aligned}\right.$ tiene el determinante
+$\Delta = \begin{vmatrix}
+  2 & -3 & 5 \\
+  -5 & -3 & 7 \\
+  5 & 4 & -3 \\
+ \end{vmatrix} =
+2 \times -3 \times -3 + 3 \times 7 \times 5 + 5 \times -5 \times 4
+- {(5 \times -3 \times 5 + 4 \times 7 \times 2 + -3 \times -5 \times -3)} =
+-123$. La regla de Cramer da
+$z = \frac{1}{\Delta} \begin{vmatrix}
+  2 & -3 & 11 \\
+  -5 & -3 & 10 \\
+  5 & 4 & 4 \\
+ \end{vmatrix} = \frac{-369}{-123} = 3$ y de misma manera $x = 1$ y $y = 2$.
+
+\item Consideramos el sistema
+  $\left\{
+\begin{aligned}
+  2x - 3y +5z = 11 \\
+  -5x - 3y + 7z = 10 \\
+  5x + 4y - 3z = 4
+\end{aligned}\right.$. Si añadimos $\frac{5}{2}$ veces la primera linea a la
+segunda linea y sustreamos $\frac{5}{2}$ veces la primera linea a la
+tercera linea, multiplicamos las dos últimas lineas por $2$, obtenemos
+$\left\{
+\begin{aligned}
+  2x - 3y +5z = 11 \\
+  -15y + 39z = 87 \\
+ 15y - 31z = -63
+\end{aligned}\right.$. Si ãnadimos la segunda linea a la tercera, obtenemos
+$\left\{
+\begin{aligned}
+  2x - 3y +5z = 11 \\
+  -15y + 39z = 87 \\
+   8z = 24
+\end{aligned}\right.$. Finalmente, $z = \frac{24}{8} = 3$,
+$y = \frac{87 - 39 \times 3}{-15} = 2$ y
+$x = \frac{11 + 3 \times 2 - 5 \times 3}{2} = 1$.
+\end{enumerate}
+
+\subsection*{Ejercicio 1}
+
+Resolver los sistemas siguientes con tres incógnitas utilizando operaciones
+sobre las lineas.
+
+\begin{enumerate}
+\item $\left\{
+\begin{aligned}
+  x + 4y + 7z = 10 \\
+  2x + 5y + 8z = 11 \\
+ 3x + 6z +9z = 12
+\end{aligned}\right.$
+\item $\left\{
+\begin{aligned}
+  2x + 3y - z = 0 \\
+  4x - 7y + 5z = -4 \\
+  -6x -11y + 5z = 4
+\end{aligned}\right.$
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+Calcular los determinantes de los sistemas del ejercicio 1 y deducir la
+solución del segundo.
+
+\section{Interpretación gráfica}
+
+\subsection*{Resumen}
+
+En el espacio en tres dimensiones, el conjunto de las soluciones de una ecuación
+$ax + by + cz = d$ es representado por un plano (en general) o una recta o
+el conjunto vacio o ${\mathbb R}^3$. Las soluciones de un sistema de ecuaciones
+es la intersecición de esos conjuntos para cada ecuación del sistema.
+
+\subsection*{Ejercicio 3 (problema)}
+
+Tenemos tres tipos de objetos $A, B, C, D$ y una balanza. Cada objeto de tipo
+$D$ pesa 1 kilo y queremos determinar los pesos de los objetos de tipo
+$A, B, C$. Con la balanza, constatamos que un objeto
+$B$ con un objeto $C$ tienen el el mismo peso como cinco objetos de tipo $D$ y
+que un objeto de tipo $B$ con un objeto de tipo $D$ tienen el mismo peso como
+un objeto de tipo $C$.
+
+\begin{enumerate}
+\item Traducir el problema como un sistema de tres incógnitas.
+\item Tratar de resolver de manera gráfica. ¿Que notamos?
+\item Medimos que un objeto de tipo $A$ con dos objetos de tipo $B$ tienen el
+  mismo peso como tres objetos de tipo $C$. ¿Cuales son los pesos de los
+  objetos de tipo $A, B, C$?
+\end{enumerate}
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+Si substreamos la secunda linea a la tercera y la primera a la secunda,
+obtenemos el sistema equivalente
+
+\begin{enumerate}
+\item $\left\{
+\begin{aligned}
+  x + 4y + 7z = 10 \\
+  x + y + z = 1 \\
+ x + y + z = 1
+\end{aligned}\right.$. Podemos ignorar la última linea y substrear la secunda
+a la primera: $\left\{
+\begin{aligned}
+   3y + 6z = 9 \\
+  x + y + z = 1 \\
+\end{aligned}\right.$. Entonces hay una infinidad de soluciones:
+para cada $z \in \mathbb R$, $y = 3 - 2z$ y
+$x = 1 - y - z =  z - 2$.
+
+\item El sistema es equivalente a $\left\{
+\begin{aligned}
+  2x + 3y - z = 0 \\
+  -13y + 7z = -4 \\
+  -2y + 2z = 4
+\end{aligned}\right.$ y $\left\{\begin{aligned}
+  2x + 3y - z = 0 \\
+  y - z = -2
+   -6z = -30 \\
+\end{aligned}\right.$ entonces $z = 5$, $y = -2 + z = 3$ y
+$x = \frac{z - 3y}{2} = -2$.
+
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+\begin{enumerate}
+\item $\begin{vmatrix}
+  1 & 4 & 7 \\
+  2 & 5 & 8 \\
+  3 & 6 & 9 \\
+ \end{vmatrix} = 45 + 96 + 84 - 105 - 48 - 72 = 0$
+\item $\Delta =
+\begin{vmatrix}
+  2 & 3 & -1 \\
+  4 & -7 & 5 \\
+  -6 & -11 & 5 \\
+ \end{vmatrix} =
+ -24$. $x = \frac{1}{\Delta} \begin{vmatrix}
+   2 & 3 & 0 \\
+   4 & -7 & -4 \\
+   -6 & -11 & 4 \\
+ \end{vmatrix} = \frac{-120}{-24} = 5$,
+  $y = \frac{1}{\Delta} \begin{vmatrix}
+   2 & 0 & -1 \\
+   4 & -4 & 5\\
+   -6 & 4 & 5 \\
+ \end{vmatrix} = \frac{-72}{-24} = 3$,
+ $z = \frac{1}{\Delta} \begin{vmatrix}
+   0 & 3 & -1 \\
+   -4 & -7 & 5\\
+   4 & -11 & 5 \\
+ \end{vmatrix} = \frac{48}{-24} = -2$
+\end{enumerate}
+
+\subsection*{Ejercicio 3 (problema)}
+
+\begin{enumerate}
+
+\item
+El problema se traduce como el sistema
+$\left\{
+\begin{aligned}
+  D = 1 \\
+  B + C = 5D \\
+  B + D = C
+\end{aligned}\right.$, es decir $\left\{
+\begin{aligned}
+  B + C = 5 \\
+  B + 1 = C
+\end{aligned}\right.$
+\item Las soluciones de $B + C = 5$ estan sobre el plano determinado por las
+  rectas paralelas al eje $A$ y pasando por los puntos $(0, 0, -5)$ y
+  $(0, -5, 0)$. Las soluciones de $C = B + 1$ son sobre el plano determinado
+  por las rectas paralelas al eje $A$ y pasando por los puntos $(0, 0, 1)$ y
+  $(0, -1, 0)$. Los dos planos se intersectan en una recta paralela al
+  eje $A$: entonces hay
+  una infinidad de soluciónes y nos falta información para resolver el sistema.
+\item Ahora, el sistema es  $\left\{
+\begin{aligned}
+  B + C = 5 \\
+  B + 1 = C \\
+  A + 2B = 3C
+\end{aligned}\right.$. Al final, encuentramos los pesos en kilos:
+$A = 5, B = 2, C = 3$.
+
+\end{enumerate}

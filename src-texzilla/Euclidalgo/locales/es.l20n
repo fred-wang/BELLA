@@ -1,0 +1,15 @@
+<euclidalgo "Utilizar el algoritmo de Euclides">
+<euclidalgoQuestion "Aplicar el algoritmo de Euclides a los enteros siguientes:">
+<showSolution "Mostrar la solución">
+<newQuestion "Nueva pregunta">
+<courseSummary "Resumen del curso">
+<p1 "Queremos determinar el máximo común divisor de dos enteros:">
+<p2 "Empezamos con la división euclídea de los enteros:">
+<p3 "Si el resto es nulo, podemos efectuar otra división euclídea donde el antiguo divisor viene a ser el dividendo y el resto se convierte en el divisor:">
+<p4 "Siguemos hasta que el resto se vuelva nulo:">
+<p5 "El último resto no nulo es el máximo común divisor deseado.">
+<quotient "cociente">
+<remainer "resto">
+<backToIndex "Volver al index">
+<license "Distribuido bajo la licencia CC BY-SA 4.0">
+<bella "Proyecto BELLA">

@@ -1,0 +1,111 @@
+\chapter{Comprendes la congruencia de triángulos}
+
+\section{Resumen del curso}
+
+\subsection{Definición}
+
+Dos triángulos son congruentes si sus lados correspondientes tienen la misma
+longitud y sus ángulos correspondientes tienen la misma amplitud. 
+
+\subsection{Ejercicio 1}
+
+Dibujar los triángulos siguientes y indique cuales son congruentes.
+
+\begin{enumerate}[(i)]
+  \item Triángulo de lados $4, 3, 3.5$
+  \item Triángulo de lados $4, 3$ formando un ángulo de 60°.
+  \item Triángulo de lados $7, 8, 6$
+  \item Triángulo de lados $3, 4, \sqrt{13}$
+\end{enumerate}
+
+\subsection{Criterios de congruencia}
+
+Dos triángulos son congruentes en uno de los casos siguientes:
+
+\begin{itemize}
+\item Caso L, L, L: Los lados correspondientes tienen la misma longitud.
+\begin{center}
+ \begin{tikzpicture}
+   \draw (-1,-2)--(1,2)[color=red];
+   \draw (1,2)--(2,0)[color=green];
+   \draw (2,0)--(-1,-2)[color=blue];
+   \begin{scope}[shift={(5,0)},rotate around={75:(0,0)}]
+   \draw(-1,-2)--(1,2)[color=red];
+   \draw(1,2)--(2,0)[color=green];
+   \draw(2,0)--(-1,-2)[color=blue];
+   \end{scope}
+ \end{tikzpicture}
+\end{center}
+\item Caso L, A, L: Dos de sus lados corespondientes tienen la misma longitud,
+y el ángulo comprendido entre ellos tiene la misma amplitud.
+\begin{center}
+ \begin{tikzpicture}
+   \draw (-1,-2) -- (1,2) [color=blue];
+   \draw (1,2) -- (2,0) [color=green];
+   \draw (0.5305284372141,1.117052407141073) arc (242:297:1)[color=red];
+   \draw (-2,-4) -- (-1,-2) [dashed];
+   \draw (2.5,-1) -- (2,0) [dashed];
+   \begin{scope}[shift={(5,0)},rotate around={75:(0,0)}]
+   \draw (-1,-2) -- (1,2) [color=blue];
+   \draw (1,2) -- (2,0) [color=green];
+   \draw (0.5305284372141,1.117052407141073) arc (242:297:1)[color=red];
+   \draw (-2,-4) -- (-1,-2) [dashed];
+   \draw (2.5,-1) -- (2,0) [dashed];
+   \end{scope}
+ \end{tikzpicture}
+\end{center}
+
+\item Caso A, L, A: Dos ángulos de un triángulo y el lado entre ellos son
+  respectivamente congruentes con los mismos del otro triángulo.
+\begin{center}
+ \begin{tikzpicture}
+   \draw (-1,-2) -- (1,2) [color=red];
+   \draw (0.5305284372141,1.117052407141073) arc (242:297:1)[color=blue];
+   \draw (2.5,-1) -- (1,2) [dashed];
+   \draw (-1,-2) -- (3.5,1) [dashed];
+   \draw(-0.180847955711,-1.426423563648954) arc (35:65:1)[color=green];
+   \begin{scope}[shift={(7,0)},rotate around={75:(0,0)}]
+   \draw (-1,-2) -- (1,2) [color=red];
+   \draw (0.5305284372141,1.117052407141073) arc (242:297:1)[color=blue];
+   \draw (2.5,-1) -- (1,2) [dashed];
+   \draw (-1,-2) -- (3.5,1) [dashed];
+   \draw(-0.180847955711,-1.426423563648954) arc (35:65:1)[color=green];
+   \end{scope}
+ \end{tikzpicture}
+\end{center}
+
+\end{itemize}
+
+\subsection{Ejercicio 2}
+
+Construye:
+
+\begin{itemize}
+\item Dos triángulos con dos angúlos de amplitudes 40° y 60° y un lado de
+  longitud 8 que no son congruentes (``A, L, A'' menos la condición sobre
+  la posición del lado).
+\item Dos triángulos con dos lados de longitudes 5 y 7 que no son congruentes
+  (``L, L'' menos un lado).
+\item Dos triángulos con un angúlo de amplitud 30° y dos lados de
+  longitudes 5 y 7 que no son congruentes (``L, A, L'' menos la condición sobre
+  la posición del ángulo).
+\end{itemize}
+
+\section{Soluciones de los ejercicios}
+
+\subsection{Ejercicio 1}
+
+(i) y (iii) tienen los mismos ángulos pero lados de diferentes longitudes.
+(ii) y (iv) son congruentes.
+
+\subsection{Ejercicio 2}
+
+\begin{itemize}
+\item La amplitud del tercer angulo es 80°. Considere el caso A, L, A
+  para $(40°,8,80°)$ y $(40°,8,60°)$.
+\item Considere el caso L, A, L para e.g $(5,45°,7)$ y $(5,90°,7)$.
+\item Sean dos puntos $A, B$ tales que la longitud de $[AB]$ es 7. La recta
+  pasando por $A$ y formando un ángulo de $30°$ con $[AB]$ corta el círculo
+  de centro $B$ y radio $5$ en dos puntos $P, Q$. Considere los
+  triángulos $ABP$ y $ABQ$.
+\end{itemize}

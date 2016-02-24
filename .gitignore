@@ -1,0 +1,11 @@
+*~
+*.aux
+*.log
+*.toc
+tmp
+Makefile
+autom4te.cache
+config.status
+deps
+pdf
+webapps

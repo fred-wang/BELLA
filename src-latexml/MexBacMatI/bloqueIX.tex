@@ -1,0 +1,176 @@
+\chapter{Resuelve ecuaciones cuadráticas I}
+
+\section{Ecuaciones Cuadráticas Incompletas}
+
+\subsection*{Resumen}
+
+Una ecuaciones cuadráticas incompleta se escribe
+$a x^2 + b x = 0$ o $a x^2 + c = 0$ donde $a \neq 0$ y $b, c \in \mathbb{R}$.
+
+$a x^2 + b x$ se puede factorizar con el factor común $x$ y entonces
+$x \left(ax + b \right) = 0$. El producto es cero si y solo si
+$x = 0$ o $ax + b = 0$. Finalmente, las soluciones de esta ecuación son
+$x = 0$ y $x = -\frac{b}{a}$.
+
+$a x^2 + c = 0$ se escribe $x^2 + \frac{c}{a} = 0$. Si $z^2 = -\frac{c}{a}$,
+utilizamos la formula de producto de binomio conjugados y
+se simplifia en ${(x - z)}{(x + z)} = 0$ y entonces $x = \pm z$.
+Entonces, si $-\frac{c}{a} \geq 0$, las soluciones son
+$x = \sqrt{-\frac{c}{a}}$ y $x = -\sqrt{-\frac{c}{a}}$. Si $-\frac{c}{a} < 0$,
+las soluciones son $x = i \sqrt{\frac{c}{a}}$ y $x = -i \sqrt{\frac{c}{a}}$
+donde $i$ es la unidad imaginaria.
+
+\subsection*{Ejemplo}
+
+\begin{enumerate}
+\item $2x^2 - x = 0$ se escribe $x{(2x - 1)} = 0$ y tiene soluciones
+  $x = 0$ y $x = \frac{1}{2}$.
+\item $2x^2 - 128 = 0$ se escribe $x^2  = 64$ y tiene soluciones
+  $x = 8$ y $x = -8$.
+\item $3x^2 + 48 = 0$ se escribe $x^2  = -16$ y tiene soluciones
+  $x = 4i$ y $x = -4i$.
+\end{enumerate}
+
+\subsection*{Ejercicio 1}
+
+Resolver las ecuaciones siguientes
+
+\begin{enumerate}
+\item $2x^2 - 6x = 0$
+\item $-4 + 7x^2 = 0$
+\item $3 + 5x^2 = 0$
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+Daniel tiene una casa con una area total de $36$m². Su casa se componene
+de 3 cuartos cuadrados de lado $x$ y otro cuarto de dimensión $x \times 2x$.
+¿Cual es el tamaño de cada cuarto?
+
+\section{Ecuaciones Cuadráticas Completas}
+
+\subsection*{Resumen}
+
+Consideramos una ecuacion cuadrática completa
+$a x^2 + b x + c = 0$ con $a \neq 0$. Podemos factorizar por $a$:
+$a \left( x^2 + \frac{b}{a} x + \frac{c}{a} \right) = 0$. Utilizando la
+formula del cuadrado de un binomio,
+sabemos que $\left( x + \frac{b}{2a}\right)^2 = 
+x^2 + \frac{b}{a}x + \frac{b^2}{a^2}$. Por consecuencia, la ecuación se
+escribe
+%%
+$$a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} + \frac{c}{a} \right) = 0$$
+%%
+$$a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{b^2}{a^2} + \frac{4ac}{4a^2} \right) = 0$$
+%%
+$$a \left( \left( x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2} \right) = 0$$
+%%
+donde ponemos el discriminante $\Delta = b^2 - 4ac$. Si $z^2 = \Delta$, 
+utilizamos la formula de producto de binomio conjugados y obtenemos
+%%
+$$a
+\left( x + \frac{b}{2a} - \frac{z}{2a} \right)
+\left( x + \frac{b}{2a} + \frac{z}{2a} \right) = 0$$
+%%
+$$a
+\left( x + \frac{b - z}{2a} \right)
+\left( x + \frac{b + z}{2a} \right) = 0$$
+
+Si $\Delta = 0$, la única solución es
+%%
+$$
+x = -\frac{b}{2a}
+$$
+
+Si $\Delta > 0$, hay dos soluciones son
+%%
+$$
+x = \frac{-b \pm \sqrt{\Delta}}{2a} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+Si $\Delta < 0$, hay dos soluciones conjugadas son
+%%
+$$
+x = \frac{-b \pm i \sqrt{-\Delta}}{2a} = \frac{-b \pm i \sqrt{4ac - b^2}}{2a}
+$$
+
+\subsection*{Ejemplo}
+
+\begin{enumerate}
+\item El discriminante de la ecuación $3x^2 -12x+12=0$ es
+  $\Delta = {(-12)}^2 - 4 \times 3 \times 12 = 0$. Entonces solo hay una
+  solución $x = -\frac{-12}{2 \times 3} = 2$.
+\item El discriminante de la ecuación $-7X^2 -7 X +14 = 0$ es
+  $\Delta = 441 = 21^2 > 0$. Entonces hay dos soluciones
+  $x = \frac{7+21}{2 \times -7} = -2$ y
+  $x = \frac{7-21}{2 \times -7} = 1$.
+\item El discriminante de la ecuación $2x^2 + 4x + 4 = 0$ es
+  $\Delta = -16 = {(4i)}^2$. Entonces hay dos soluciones conjugadas
+  $x = \frac{-4+4i}{2 \times 2} = -1 + i$ y
+  $x = \frac{-4-4i}{2 \times 2} = -1 - i$.
+\end{enumerate}
+
+\subsection*{Ejercicio 3}
+
+Resolver las ecuaciones siguientes
+
+\begin{enumerate}
+\item $y^2 - 5y - 14 = 0$
+\item $u^2 - \frac{9}{2}u - 9 = 0$
+\item $3t^2 - \frac{222}{5}t - 9 = 0$
+\item $v^2 + {(\sqrt3 - 8)}v - 8\sqrt3 = 0$
+\item $25z^2  - 10\sqrt7 z  + 7 = 0$
+\item $-2r^2 + 8r - 26 = 0$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+Juan tiene una casa que se compone de 2 cuartos cuadrados por una area total
+de $x$m². El primer cuarto es un rectángulo de dimension $3 \times x$ y el
+segundo mide $59$m². ¿Cual la area total de la casa?
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+Resolvar las ecuaciones siguientes
+
+\begin{enumerate}
+\item $2x{(x - 3)} = 0$. $x = 0$ o $x = 3$.
+\item $x^2 = \frac{4}{7}$. $x = \pm \frac{2\sqrt{7}}{7}$.
+\item $x^2 = -\frac{3}{5}$. $x = \pm i \frac{\sqrt{15}}{5}$.
+\end{enumerate}
+
+\subsection*{Ejercicio 2}
+
+Los cuartos cuadrados tienen una area de $x^2$ m² y el cuarto rectángulo
+una area de $2x^2$. Entonces la casa mesura $3x^2 + 2x^2 = 5x^2 = 36$m².
+Obtenemos $x = \frac{6}{\sqrt{5}}$m (porque $x > 0$).
+Entonces el tamaño de los cuartos cuadrados es $x^2 = \frac{36}{5} = 7.2$ m² y
+$2x^2 = 14.4$m².
+
+\subsection*{Ejercicio 3}
+
+Resolver las ecuaciones siguientes
+
+\begin{enumerate}
+\item $y = 7$ o $y=-2$
+\item $u = 6$ o $u = -\frac{3}{2}$
+\item $t = 15$ o $t = -\frac{1}{5}$
+\item $v = 8$ o $v = -\sqrt{3}$
+\item $z = \frac{\sqrt{7}}{5}$
+\item $r = 2 + 3i$ o $r = 2 - 3i$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+$3x + 59 = x^2$ o $x^2 - 3x - 59 = 0$. $\Delta = 245 > 0$ y
+%%
+$$x=\frac{3 \pm 7 \sqrt5}{2}$$
+
+Obtenemos $x \approx -6.33$m o $x\approx9.33$m y como $x > 0$ tomamos la
+solución positiva. La area total es
+%%
+$$
+x^2 = \frac{21 \sqrt5+127}{2} \approx 87 \text{m²}
+$$

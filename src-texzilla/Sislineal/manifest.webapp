@@ -1,0 +1,40 @@
+{
+  "name": "Sislineal",
+  "description": "Interactive book from the BELLA project (BELLA E-learning Library with Libre Authorship) on the resolution of linear systems.",
+  "version": "1.2",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/logos/128x128.png"
+  },
+  "developer": {
+    "name": "BELLA Project",
+    "url": "http://fred-wang.github.io/BELLA"
+  },
+  "default_locale": "en",
+  "locales": {
+    "de": {
+      "description": "Interaktives Buch des BELLA Projekts (BELLA E-Learning Library with Libre Authorship) über die Lösung von linearen Systemen.",
+      "developer": {
+        "name": "BELLA Projekt"
+      }
+    },
+    "es": {
+      "description": "Libro interactivo del proyecto BELLA (Biblioteca Electrónica de Libros Libres para el Aprendizaje) sobre la resolución de sistemas lineares.",
+      "developer": {
+        "name": "Proyecto BELLA"
+      }
+    },
+    "fr": {
+      "description": "Livre intéractif du projet BELLA (Bibliothèque Électronique de Livres Libres pour l'Apprentissage) sur la résolution de systèmes linéaires.",
+      "developer": {
+        "name": "Projet BELLA"
+      }
+    },
+    "pt": {
+      "description": "Livro interativo do projeto BELLA (Biblioteca Eletrônica de Livros Livres para o Aprendizado) sobre a resolução de sistemas lineares.",
+      "developer": {
+        "name": "Projeto BELLA"
+      }
+    }     
+  }     
+}

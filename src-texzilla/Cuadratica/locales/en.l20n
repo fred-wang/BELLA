@@ -1,0 +1,13 @@
+<solvingEquation "Solving Quadratic Equations">
+<solveEquation "Solve the following equation:">
+<showSolution "Show Solution">
+<newEquation "New Equation">
+<courseSummary "Course Summary">
+<p1 "A cuadratic equation with real coefficients is written">
+<p2 "The discriminant of the equation is">
+<p3 "If the discriminant is null, the equation has one solution:">
+<p4 "If the discriminant is positive, the equation has two solutions:">
+<p5 "Otherwise, the equation has two conjugate complex solutions:">
+<backToIndex "Back to index">
+<license "Licensed under CC BY-SA 4.0">
+<bella "The BELLA Project">

@@ -1,0 +1,161 @@
+\chapter{Realizas transformaciones algebraicas II}
+
+\section{Técnicas de factorización}
+
+\subsection*{Resumen}
+
+Ya hemos visto productos notables (factor común, cuadrado de un binomio,
+cubo de un binomio, binomios conjugados). Otra técnica para factorizar un
+polinomio es encontra un ``cero trivial'' $a$, para deducir un factor
+$X - a$. Podemos también tratar escribir el polinomio como un producto. Por
+ejemplo si queremos factorizar el polinomio $P = x^2 - 3x + 2$ como un
+producto de dos factores lineales,
+${(x - x_1)}{(x-x_2)} = x^2 - {(x_1+x_2)}x + x_1 x_2$ y podemos poner
+$x_1 = 1$ y $x_2 = 2$.
+
+\subsection*{Ejercico 1}
+
+\begin{enumerate}
+\item Factorizar $X^2 + 34X + 289$ (producto notable)
+
+\item Sea $P = 6 Y^2 + Y -35$. Factorizar $P$ como un producto
+  ${(aY + b)}{(cY + d)}$ donde $a, b, c, d$ son enteros
+
+\item Sea $P = X^3+33X^2+255x-289$. Calcular $P$ en $x = -1, 0, 1$. Factorizar
+  $P$.
+\end{enumerate}
+
+\subsection*{Ejercico 2}
+
+Consideramos $P = Z^2 + \left(\frac{5}{2} - \sqrt{3}\right) Z -
+\frac{5 \sqrt{3}}{2}$.
+
+\begin{enumerate}
+\item Developar $Q = \left( Z + \frac{5}{4} - \frac{\sqrt{3}}{2} \right)^2$
+\item Mostrar que $k = Q - P$ es una constante.
+\item Encontrar enteros $a, b$ tales que
+  $\left(\frac{a \sqrt{3} + b}{4}\right)^2 = k$.
+\item Utilizar un producto notable para factorizar $P = Q - k$.
+\end{enumerate}
+
+\section{Expresiones racionales y división de polinomio}
+
+\subsection*{Resumen}
+
+Una expresión racional se escribe como una fración de dos polinomios
+$\frac{P}{Q}$. Si $P, Q$ tienen un factor comúm, podemos simplifiar la fracción
+por este factor.
+
+Podemos también definir la división de dos polinomios $A$ 
+y $B$ de la misma manera como la división Euclídea de dos enteros:
+
+$$A = B Q + R$$
+
+donde el cociente $Q$ y el resto $R$ son únicos polinomios tales que el grado
+de $R$ es estrictamente menor que el grado de $B$. En particular, podemos
+escribir la egualidad de expresiónes racionales:
+
+$$\frac{A}{B} = Q + \frac{R}{B}$$
+
+\subsection*{Ejemplo}
+
+\begin{enumerate}
+\item $\frac{X^3-1}{X^2-X}$ es una expresión racional. El numerador es
+  $X^3 - 1 = {(X-1)}{(X^2+X+1)}$ y el denominador $X^2+X = X{(X-1)}$. Entonces
+  podemos simplificar la expresión racional como $\frac{X^2+X+1}{X}$.
+\item Tenemos $X^2+X+1 = Q X + R$ donde $Q = X + 1$ y $R = 1$. El grado de $R$
+  es estrictamente menor que el grado de $X$ entonces eso es la divisíon de
+  $X^2+X+1$ por $X$. La expresión racional precedente puede ser escrita
+  $X+1 + \frac{1}{X}$.
+\end{enumerate}
+
+\subsection*{Ejercicio 3}
+
+Efectuar la división de los polinomios siguientes:
+
+\begin{enumerate}
+\item $X^5+2X^3-X^2+X+2$ por $X^2+2$
+\item $X^8-2X^7+X^6+X^2-4X+3$ por $X^7 - X^6$
+\item $X^5+16X^4+64X^3-X^2-16X-64$ y $X^4+17X^3+80X^2+64X$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+Simplificar las expresión racionales siguientes:
+
+\begin{enumerate}
+\item $\frac{X^5+2X^3-X^2+X+2}{X^2+2}$
+\item $\frac{X^8-2X^7+X^6+X^2-4X+3}{X^7 - X^6}$
+\item $\frac{X^5+16X^4+64X^3-X^2-16X-64}{X^4+17X^3+80X^2+64X}$
+  (al final, utilizar $X - 1 = 2X - {(X+1)}$)
+\end{enumerate}
+
+\section{Soluciones de los ejercicios}
+
+\subsection*{Ejercicio 1}
+
+\begin{enumerate}
+\item ${(X+17)}^2$
+
+\item 
+  ${(aY + b)}{(cY + d)} = acY^2 + {(ad+bc)}Y + bd = 6 Y^2 + Y -35$.
+  Tratamos encontrar $a,b,c,d$ enteros tales que
+  $ac = 6$, $ad+bc = 1$ y $bd= -35$. Podemos suponer $c \geq 0$ (sino, podemos
+  cambiar el signo de todos los coeficientes y no cambia las egualidades).
+  Por la primera relación, $c \in \{ 1, 2, 3, 6 \}$. Podemos también suponer
+  que ${|c|} \leq {|a|}$ (sino, podemos intercambiar los dos factores). Entonces
+  $c = 1$ (y $a=6$) o $c = 2$ (y $a=3$). Para cada caso, tratamos las
+  posibilidades por $bd = -35 = -1 \times 5 \times 7$ y
+  $ad+bc = 1$. Encontramos $c = 2$, $a=3$, $b=-7$ y $d=5$.
+  Por consequencia, $P = {(2x+5)}{(3x-7)}$.
+
+\item $P(0) = -289$, $P(-1) = -1 -33 -255 -289 = -512$,
+  $P(1) = 1 + 33 + 255 - 289 = 0$. Tratamos escribir
+  $P = {(X - 1)}{(X^2 + bX + c)} = X^3 + {(b - 1)}X^2 + {(c - b)}X - c$.
+  Podemos tomar $c = 289$ y $b = 34$. Entonces
+  $P = {(X-1)}{(X^2 + 34X + 289)} = {(X-1)}{(X+17)}^2$.
+\end{enumerate}
+
+\subsection*{Ejercico 2}
+
+\begin{enumerate}
+\item $Q = Z^2 + \left(\frac{5}{2} - \sqrt{3}\right) Z + \frac{37}{16} - \frac{5 \sqrt{3}}{4}$
+\item Encontramos $k = Q - P = \frac{20\sqrt{3} + 37}{16}$.
+\item Debemos resolver $3a^2 + b^2 = 37$ y $2ab=20$. Tratamos dividores de 20
+  y finalmente $a = 2$ y $b = 5$ conviene.
+\item $P = Q - k = \left( Z + \frac{5}{4} - \frac{\sqrt{3}}{2} \right)^2 -
+  \left(\frac{2 \sqrt{3} + 5}{4} \right)^2$. Utilizamos la ley de los
+  binomios conjugados:
+
+  $$P = \left( Z + \frac{5}{4} - \frac{\sqrt{3}}{2} 
+  - \frac{2 \sqrt{3} + 5}{4}
+  \right) \left( Z + \frac{5}{4} - \frac{\sqrt{3}}{2} 
+  + \frac{2 \sqrt{3} + 5}{4}
+  \right) =
+  \left( Z - \sqrt{3} \right) \left( Z + \frac{5}{2} \right)$$
+\end{enumerate}
+
+\subsection*{Ejercicio 3}
+
+\begin{enumerate}
+\item $Q = X^3-1, R = X + 4$
+\item $Q = X - 1, R = X^2 -4X + 3$
+\item $Q = X - 1, R = X^3+15X^2+48X - 64$
+\end{enumerate}
+
+\subsection*{Ejercicio 4}
+
+\begin{enumerate}
+\item Por el precedente ejercicio, se escribe $X^3 - 1 + \frac{X+4}{X^2+2}$.
+\item Por el precedente ejercicio, se escribe
+  $X-1 + \frac{X^2-4X+3}{X^7-X^6}$. En la fracción,
+  $1$ es un cero trivial del numerador y del numerador entonces $X-1$ es un
+  factor común y finalmente obtenemos
+  $X-1 + \frac{1}{X^5} - \frac{3}{X^6}$
+\item Por el precedente ejercicio, se escribe
+  $X - 1 + \frac{X^3+15X^2+48X-64}{X^4+17X^3+80X^2+64X}$. En la fracción, $1$ es
+  un cero trivial del numerador y $0, -1$ ceros triviales del denominador.
+  Factorizando cada uno, nos damos cuenta de que $(X+8)^2$ es un factor común
+  y finalmente obtenemos $X - 1 + \frac{X-1}{X{(X+1)}} = 
+  X - 1 + \frac{2}{X+1} - \frac{1}{X}$.
+\end{enumerate}

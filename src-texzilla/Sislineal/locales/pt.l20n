@@ -1,0 +1,25 @@
+<solvingSystem "Solução de Sistemas Lineares">
+<solveSystem "Resolva os sistemas lineares a seguir:">
+<showSolution "Mostrar Solução">
+<newSystem "Novo Sistema">
+<courseSummary "Resumo do Curso">
+<p1 "Um sistema de equações lineares é escrito como">
+<p2 "Número de variáveis:">
+<p3 "Número de equações">
+<p4 "Variáveis">
+<p5 "Coeficientes:">
+<p6 "Termos constantes">
+<p7 "Existem várias técnicas para resolver sistemas de equações lineares. Você
+pode utilizar as operações elementares envolvendo as linha para transformar o
+sistema em um equivalente da forma:">
+<p8 "Trocar duas linhas">
+<p9 "Multiplicar uma linha por um escalar diferente de zero">
+<p10 "Adicionar a uma linha o múltiplo de outra">
+<p11 "Na eliminação Gaussiana, você escolhe um elemento coeficiente não zero
+(chamado de pivô) em uma coluna para eliminar os demais coeficientes naquela
+coluna. Por exemplo:">
+<p12 "No final, você obtem um sistema linear reduzido que você pode resolver
+facilmente. Pode existir nenhuma, uma ou infinitas soluções.">
+<backToIndex "Voltar ao índice">
+<license "Licenciado sob CC BY-SA 4.0">
+<bella "Projeto BELLA">

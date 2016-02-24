@@ -1,0 +1,28 @@
+{
+  "name": "Area",
+  "description": "Interactive book from the BELLA project (BELLA E-learning Library with Libre Authorship) on the areas of geometric shapes.",
+  "version": "1.1",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/logos/128x128.png"
+  },
+  "developer": {
+    "name": "BELLA Project",
+    "url": "http://fred-wang.github.io/BELLA"
+  },
+  "default_locale": "en",
+  "locales": {
+    "es": {
+      "description": "Libro interactivo del proyecto BELLA (Biblioteca Electrónica de Libros Libres para el Aprendizaje) sobre las áreas de figuras geométricas",
+      "developer": {
+        "name": "Proyecto BELLA"
+      }
+    },
+    "fr": {
+      "description": "Livre intéractif du projet BELLA (Bibliothèque Électronique de Livres Libres pour l'Apprentissage) sur les aires de figures géométriques élémentaires.",
+      "developer": {
+        "name": "Projet BELLA"
+      }
+    }
+  }     
+}

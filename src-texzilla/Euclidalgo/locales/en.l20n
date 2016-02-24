@@ -1,0 +1,15 @@
+<euclidalgo "Using the Euclidean Algorithm">
+<euclidalgoQuestion "Apply the Euclidean Algorithm to the following integers:">
+<showSolution "Show Solution">
+<newQuestion "New Question">
+<courseSummary "Course Summary">
+<p1 "We want to determine the greatest common divisor of two integers:">
+<p2 "We start by performing the Euclidean division of the integers:">
+<p3 "If the remainer is not null, we can do another Euclidean division where the former divisor becomes the dividend and the remainer becomes the divisor:">
+<p4 "We continue like this until we find a null remainer:">
+<p5 "The latest nonzero remainer is the desired greatest common divisor.">
+<quotient "quotient">
+<remainer "remainer">
+<backToIndex "Back to index">
+<license "Licensed under CC BY-SA 4.0">
+<bella "The BELLA Project">
